@@ -1,0 +1,12 @@
+# git
+.gitconfig
+
+# vim
+.vim/.netrwhist
+.viminfo
+
+# system
+*.DS_Store
+*.log
+ssh/known_hosts
+
