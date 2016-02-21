@@ -9,7 +9,7 @@ set guifont=Input\ Mono:h12
 set transparency=2
 
 " window
-set lines=32 columns=80
+set lines=30 columns=100
 set guioptions-=L
 set guioptions-=r
 set guioptions-=b

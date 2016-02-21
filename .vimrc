@@ -9,6 +9,7 @@ filetype plugin on
 filetype plugin indent on
 au BufRead,BufNewFile *.fountain set filetype=fountain
 au BufRead,BufNewFile *.md set filetype=markdown
+set wildignore=*.swp,*.DS_Store,.git/
 
 " general
 set cursorline
@@ -17,12 +18,12 @@ set expandtab
 set linebreak
 set linespace=5
 set nofoldenable
-set nonumber
 set noru
+set number
 set nosmd
-set tabstop=3
+set shiftwidth=2
+set tabstop=2
 set wrap
-filetype indent off
 
 " markdown to html
 nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
