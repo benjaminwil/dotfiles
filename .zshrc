@@ -18,9 +18,13 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom
 
 # misc
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+zstyle ':completion:*' hosts off
 
 # path
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# nvm
+source $(brew --prefix nvm)/nvm.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
