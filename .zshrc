@@ -12,6 +12,7 @@ SAVEHIST=999
 HISTFILE=~/.zsh_history
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias ls="ls -lh"
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/bin:$PATH
