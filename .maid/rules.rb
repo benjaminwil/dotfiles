@@ -1,13 +1,13 @@
 Maid.rules do
 
   watch '~/Downloads' do
-    rule 'Move all files in `~/Downloads` to `~/Desktop` except `.download`s' do
-      dir('~/Downloads/*').each do |path|
-        unless File.extname( path ) == '.download' then
-          move( dir(path), '~/Desktop' )
-        end
-      end
+    rule 'Once they are finished downloading, move all files from Downloads to Desktop' do
+      move downloading?('~/Downloads/*'), '~/Desktop'
+    end
+
+    rule 'Fallback for Chrome for the rule above' do
+      move dir_safe('~/Downloads/*'), '~/Desktop'
     end
   end
-
+  
 end
