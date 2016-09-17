@@ -1,5 +1,8 @@
 source ~/.zsh/antigen/antigen.zsh
 
+
+antigen bundle robbyrussell/oh-my-zsh lib/functions.zsh
+antigen bundle robbyrussell/oh-my-zsh lib/termsupport.zsh
 antigen bundle robbyrussell/oh-my-zsh lib/theme-and-appearance.zsh
 antigen bundle robbyrussell/oh-my-zsh plugins/git
 antigen bundle zsh-users/zsh-completions src
