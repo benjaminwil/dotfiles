@@ -24,6 +24,8 @@ set tabstop=2
 set wrap
 
 let g:goyo_width=140
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 set fillchars+=vert:│ 
 
