@@ -8,6 +8,8 @@ antigen bundle robbyrussell/oh-my-zsh plugins/git
 antigen bundle zsh-users/zsh-completions src
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 antigen apply
 
 HISTSIZE=999
