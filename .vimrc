@@ -1,11 +1,13 @@
-
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+
+color jellybeans
 
 filetype plugin on
 filetype plugin indent on
 
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.js.liquid set filetype=javascript
 
 set wildignore=*.swp,*.DS_Store,.git/
 
@@ -13,19 +15,19 @@ set backspace=2
 set cursorline
 set display+=lastline
 set expandtab
+set fillchars+=vert:│
 set linebreak
 set linespace=5
 set nofoldenable
 set noru
 set number
 set nosmd
+set paste
 set shiftwidth=2
 set tabstop=2
 set wrap
 
 let g:goyo_width=140
-
-set fillchars+=vert:│ 
 
 set laststatus=2
 set statusline=
@@ -47,4 +49,5 @@ set omnifunc=syntaxcomplete#Complete
 set spell spelllang=en_ca
 syntax on
 
-color jellybean
+nnoremap <C-I> i <ESC>r
+
