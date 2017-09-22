@@ -19,6 +19,7 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -lh"
 alias exa="exa -lgB --git -s type"
 
+export EDITOR=/usr/bin/vim
 export GEM_HOME=$HOME/.gem
 export PATH=/usr/local/bin:$HOME/.gem/bin:$HOME/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
