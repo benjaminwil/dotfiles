@@ -17,11 +17,13 @@ HISTFILE=~/.zsh_history
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -lh"
+alias exa="exa -lgB --git -s type"
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/bin:$PATH
+export GEM_HOME=$HOME/.gem
+export PATH=/usr/local/bin:$HOME/.gem/bin:$HOME/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
 
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 zstyle ':completion:*' hosts off
 
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
