@@ -1,7 +1,7 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-color jellybeans
+color zenburn
 
 filetype plugin on
 filetype plugin indent on
