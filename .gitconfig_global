@@ -1,0 +1,14 @@
+[core]
+	excludesfile = /home/benjamin/.gitignore_global
+	editor = vim
+[log]
+	date = short
+[format]
+	pretty = format:%Cgreen%h %Cblue%ci %Creset%s %Cblue<%aE> %Cred%d
+[commit]
+	template = ~/.gitmessage
+
+# You can add this to your .gitconfig file with this syntax:
+#
+# [include]
+#   path = ~/.gitconfig_global
