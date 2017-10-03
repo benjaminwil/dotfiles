@@ -16,6 +16,7 @@ SAVEHIST=999
 HISTFILE=~/.zsh_history
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias gitf="git log --pretty=full"
 alias ls="ls -lh"
 alias exa="exa -lgB --git -s type"
 
