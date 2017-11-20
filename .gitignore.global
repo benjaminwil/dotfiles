@@ -1,5 +1,7 @@
 *.DS_Store
 *.log
 *.swp
+.netrwbook
+.netrwhist
 .Spotlight-V100
 .Trashes
