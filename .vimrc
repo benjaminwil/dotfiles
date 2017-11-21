@@ -1,43 +1,50 @@
 " pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " aesthetics
+color zenburn
 set cursorline
 set display+=lastline
 set number
-set tabstop=2
-set textwidth=80
 set wrap
 
 " files
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.md,*.markdown setlocal textwidth=80
 filetype plugin on
 filetype plugin indent on
 set wildignore=*.swp,*.DS_Store,.git/
 
+" netrw
+let g:netrw_banner=0
+map - :Explore<CR>
+let g:netrw_list_hide='^\.,.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$'
+
 " status
 set display+=lastline
 set laststatus=2
-set statusline=
-set statusline+=%#ColorColumn#
-set statusline+=\ 0%n
-set statusline+=\ %y
-set statusline+=\ %t
-set statusline+=\ %{fugitive#statusline()}
-set statusline+=\ %r
-set statusline+=%= 
-set statusline+=\ %m
-set statusline+=\ %p%%
-set statusline+=\ (%c)
-set statusline+=\ %l/%L
-set statusline+=\ 
+set statusline=%#ColorColumn#0%n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p%%\ (%c)\ %l/%L
 
 " syntax
 set omnifunc=syntaxcomplete#Complete
 set spell spelllang=en_ca
 syntax on
 
+" tabs
+set expandtab
+set softtabstop=0
+set tabstop=2
+set shiftwidth=2
+ 
+" replace common punctuation
+iabbrev <buffer> --- –
+iabbrev <buffer> ---- —
+iabbrev <buffer> << «
+iabbrev <buffer> >> »
+
+" remap backspace to x in normal mode
+nnoremap <BS> X
 
 " highlight long lines with <Leader>l
 nnoremap <silent> <Leader>l
