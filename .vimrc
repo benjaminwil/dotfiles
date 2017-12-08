@@ -9,15 +9,17 @@ set display+=lastline
 set number
 set wrap
 
+" clipboard
+if has("mac")
+  set clipboard+=unnamed,unnamedplus
+elseif has("unix")
+  set clipboard=unnamed
+endif
+
 " files
 filetype plugin on
 filetype plugin indent on
 set wildignore=*.swp,*.DS_Store,.git/
-
-" markdown
-au BufRead,BufNewFile *.md set filetype=markdown
-au BufRead,BufNewFile *.md,*.markdown setlocal textwidth=80
-au BufRead,BufNewFile *.md,*.markdown setlocal spell spelllang=en_ca
 
 " netrw
 let g:netrw_banner=0
