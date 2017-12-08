@@ -10,6 +10,12 @@ alias ctags="ctags -R -f ./.ctags ."
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
 
+# chruby
+if [[ -d /usr/local/share/chruby ]]; then
+  source /usr/local/share/chruby/chruby.sh
+  source /usr/local/share/chruby/auto.sh
+fi
+
 # history
 HISTSIZE=999
 SAVEHIST=999
