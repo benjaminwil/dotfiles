@@ -6,6 +6,7 @@ antigen bundle zdharma/fast-syntax-highlighting
 antigen apply
 
 # aliases
+alias ctags="ctags -R -f ./.ctags ."
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
 
