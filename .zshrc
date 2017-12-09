@@ -26,4 +26,4 @@ export GEM_HOME=$HOME/.gem
 export PATH=/usr/local/Cellar:/usr/local/bin:$HOME/.gem/bin:$HOME/bin:$PATH
 
 # prompt
-source ~/.zsh/prompt
+source ~/.zsh/prompt.zsh

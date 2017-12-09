@@ -19,8 +19,8 @@ git_info() {
   fi
 }
 
+local NEWLINE=$'\n'
 local PROMPT_COLOR="%{$fg[blue]%}"
 
-PS1='$(ssh_info)${PROMPT_COLOR}%~$(git_info)
-${PROMPT_COLOR}%# '
+PS1='${NEWLINE}$(ssh_info)${PROMPT_COLOR}%~$(git_info) ${NEWLINE}${PROMPT_COLOR}%# '
 
