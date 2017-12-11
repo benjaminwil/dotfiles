@@ -1,0 +1,128 @@
+# monitor management
+exec xrandr --output DVI-D-0 --rotate left
+exec_always GTK_IM_MODULE=ibus XMODIFIERS=@im=ibus QT_IM_MODULE=ibus ibus-daemon -drx
+
+# dmenu
+bindsym $mod+space exec dmenu_run -fn "HK Grostesk-8" -nb '#000000' -nf '#ffffff' -sf '#ffffff' -sb '#551a8b'
+
+# terminal
+bindsym $mod+Return exec termite
+
+# mod key
+set $mod Mod4
+floating_modifier $mod
+
+# theme
+font pango:IBM Plex Sans 8
+client.focused          #551a8b #551a8b #ffffff #2e9ef4   #285577
+client.focused_inactive #000000 #000000 #ffffff #484e50   #5f676a
+client.unfocused        #000000 #000000 #888888 #292d2e   #222222
+client.background       #ffffff
+
+# kill window
+bindsym $mod+Shift+q kill
+
+# media keys
+bindsym F12 exec i3lock -c 5c0075 -u
+bindsym --release Print exec --no-startup-id "maim -s -b 1 -c 156,39,176,0.2 -p 0"
+bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -5% #decrease sound volume
+bindsym F11 exec cmus-remote -u
+bindsym F1 exec xbacklight -inc 10 # increase screen brightness
+bindsym F2 exec xbacklight -dec 10 # decrease screen brightness
+
+# floating windows
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+g focus parent; fullscreen; focus child
+bindsym $mod+Shift+f floating toggle
+bindsym $mod+Shift+s sticky toggle
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+d focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# meta
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+  bindsym j resize shrink width 10 px or 10 ppt
+  bindsym k resize grow height 10 px or 10 ppt
+  bindsym l resize shrink height 10 px or 10 ppt
+  bindsym semicolon resize grow width 10 px or 10 ppt
+
+  # back to normal
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# i3bar / i3status 
+bar {
+  colors {
+    statusline #551a8b
+    separator #000000
+    focused_workspace  #551a8b #551a8b #ffffff
+    active_workspace   #551a8b #551a8b #ffffff
+    inactive_workspace #000000 #000000 #ffffff
+    urgent_workspace   #2f343a #900000 #ffffff
+  }
+  position bottom
+}
