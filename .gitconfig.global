@@ -1,12 +1,12 @@
 [core]
-	excludesfile = /home/benjamin/.gitignore.global
-	editor = vim
+  excludesfile = /home/benjamin/.gitignore.global
+  editor = vim
 [log]
-	date = short
+  date = short
 [format]
-	pretty = format:%Cgreen%h %Cblue%ci %Creset%s %Cblue<%aE> %Cred%d
+  pretty = format:%Cgreen%h %Cblue%ci %Creset%s %Cblue<%aE> %Cred%d
 [commit]
-	template = ~/.gitcommit.global
+  template = ~/.gitcommit.global
 
 # You can add this to your .gitconfig file with this syntax:
 #
