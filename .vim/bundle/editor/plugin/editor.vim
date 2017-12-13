@@ -5,16 +5,17 @@ augroup MarkdownFiletype
   au!
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd Filetype markdown call SetMarkdownOptions()
+  autocmd Filetype markdown call RichMarkdownPunctuation()
 augroup end
 
 function SetMarkdownOptions()
   " get the system language and grabs the code that vim needs for the
   " spelllang setting. (e.g. "en_us".)
-  let g:language_setting = matchstr(system('echo $LANG'), '\a\{2}_\a\{2}')
+  let s:language_setting = matchstr(system('echo $LANG'), '\a\{2}_\a\{2}')
   
   " if the system language is retrievable, turn on spell and set the
   " spelllang to the current language. otherwise use american english.
-  if exists(g:language_setting)
+  if exists(s:language_setting)
     setlocal spell spelllang=language
   else
     setlocal spell spelllang=en_us
@@ -24,7 +25,22 @@ function SetMarkdownOptions()
   setlocal textwidth=80
 endfunction
 
-function FormatMarkdownTable()
+function RichMarkdownPunctuation()
+  " set the hyphen character `-` as a keyword. this lets us create en-dashes
+  " as well as em-dashes while only using repeated hyphens.  
+  setlocal iskeyword+=-
 
+  " create an abbreviation for en-dashes. 
+  iabbrev <buffer> --- –
+
+  " create an abbreviation for em-dashes.
+  iabbrev <buffer> ---- —
+
+  " create abbreviations for guillemets.
+  iabbrev <buffer> << «
+  iabbrev <buffer> >> »
+endfunction
+
+function FormatMarkdownTable()
   " TODO
 endfunction

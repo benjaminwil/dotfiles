@@ -1,11 +1,5 @@
 " my own custom keybindings and functions
 
-" replace common punctuation
-iabbrev <buffer> --- –
-iabbrev <buffer> ---- —
-iabbrev <buffer> << «
-iabbrev <buffer> >> »
-
 " remap backspace to x in normal mode
 nnoremap <BS> X
 
