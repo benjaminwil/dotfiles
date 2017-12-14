@@ -23,6 +23,13 @@ else
   alias ctags="ctags -R -f ./.tags ."
 fi
 
+# ctags
+if [ "$(uname)" = "Darwin" ]; then
+  alias ctags="`brew --prefix`/bin/ctags -R -f ./.tags ."
+else
+  alias ctags="ctags -R -f ./.tags ."
+fi
+
 # history
 HISTSIZE=999
 SAVEHIST=999
