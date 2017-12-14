@@ -16,15 +16,20 @@ elseif has("unix")
   set clipboard=unnamed
 endif
 
+" ctags
+set tags=.tags;
+nnoremap g<c-]> <c-]>
+vnoremap g<c-]> <c-]>
+
 " files
 filetype plugin on
 filetype plugin indent on
-set wildignore=*.swp,*.DS_Store,.git/
+set wildignore=*.swp,*.DS_Store,.git/,.tags
 
 " netrw
 let g:netrw_banner=0
 map - :Explore<CR>
-let g:netrw_list_hide='^\.,.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$'
+let g:netrw_list_hide='^\.,.*\.swp$,.DS_Store,.tags,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$'
 
 " status
 set display+=lastline

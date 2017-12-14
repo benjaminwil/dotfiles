@@ -1,7 +1,7 @@
 *.DS_Store
 *.log
 *.swp
-.ctags
+.tags
 .netrwbook
 .netrwhist
 .Spotlight-V100

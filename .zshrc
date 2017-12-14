@@ -6,7 +6,6 @@ antigen bundle zdharma/fast-syntax-highlighting
 antigen apply
 
 # aliases
-alias ctags="ctags -R -f ./.ctags ."
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
 
@@ -14,6 +13,13 @@ alias ls="ls -Glh"
 if [[ -d /usr/local/share/chruby ]]; then
   source /usr/local/share/chruby/chruby.sh
   source /usr/local/share/chruby/auto.sh
+fi
+
+# ctags
+if [ "$(uname)" = "Darwin" ]; then
+  alias ctags="`brew --prefix`/bin/ctags -R -f ./.tags ."
+else
+  alias ctags="ctags -R -f ./.tags ."
 fi
 
 # history
