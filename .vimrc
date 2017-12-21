@@ -38,6 +38,7 @@ set statusline=%#ColorColumn#0%n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p
 
 " syntax
 set omnifunc=syntaxcomplete#Complete
+set hlsearch
 syntax on
 
 " tabs
