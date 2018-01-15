@@ -3,6 +3,22 @@
 " remap backspace to x in normal mode
 nnoremap <BS> X
 
+" goyo configuration
+let g:goyo_width=100
+let g:goyo_height=60
+let g:goyo_linenr=1
+
+function! s:goyo_enter()
+  set number
+  hi LineNr          ctermfg=181   ctermbg=237
+endfunction
+
+function! s:goyo_leave()
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 " highlight long lines with <Leader>l
 nnoremap <silent> <Leader>l
 \ :if exists('w:long_line_match') <Bar>
