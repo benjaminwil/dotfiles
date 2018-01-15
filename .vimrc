@@ -12,7 +12,7 @@ set wrap
 " clipboard
 if has("mac")
   set clipboard+=unnamed,unnamedplus
-elseif has("unix")
+else
   set clipboard=unnamed
 endif
 
