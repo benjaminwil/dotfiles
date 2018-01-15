@@ -13,6 +13,7 @@ alias ls="ls -Glh"
 if [[ -d /usr/local/share/chruby ]]; then
   source /usr/local/share/chruby/chruby.sh
   source /usr/local/share/chruby/auto.sh
+  chruby ruby-2.4.3
 fi
 
 # ctags
