@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/drawit"]
 	path = .vim/bundle/drawit
 	url = https://github.com/vim-scripts/DrawIt
+[submodule ".vim/bundle/open-browser"]
+	path = .vim/bundle/open-browser
+	url = https://github.com/tyru/open-browser.vim

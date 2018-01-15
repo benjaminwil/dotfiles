@@ -19,6 +19,13 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
+" open-browser plugin settings
+if has("mac")
+  let g:netrw_nogx=1
+  nmap gx <Plug>(openbrowser-smart-search) 
+  vmap gx <Plug>(openbrowser-smart-search) 
+endif
+
 " highlight long lines with <Leader>l
 nnoremap <silent> <Leader>l
 \ :if exists('w:long_line_match') <Bar>
