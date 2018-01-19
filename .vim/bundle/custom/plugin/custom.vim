@@ -9,6 +9,7 @@ let g:goyo_height=60
 let g:goyo_linenr=1
 
 function! s:goyo_enter()
+  set nowrap
   set number
   hi LineNr          ctermfg=181   ctermbg=237
 endfunction
