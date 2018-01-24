@@ -34,11 +34,12 @@ let g:netrw_list_hide='^\.,.*\.swp$,.DS_Store,.tags,*/tmp/*,*.so,*.swp,*.zip,*.g
 " status
 set display+=lastline
 set laststatus=2
-set statusline=%#ColorColumn#0%n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p%%\ (%c)\ %l/%L
+set statusline=%#CursorColumn#\ 0%n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p%%\ (%c)\ %l/%L\ 
 
 " syntax
-set omnifunc=syntaxcomplete#Complete
 set hlsearch
+set omnifunc=syntaxcomplete#Complete
+set spellfile=~/.vim/spell/custom.utf-8.add
 syntax on
 
 " tabs
@@ -46,3 +47,4 @@ set expandtab
 set softtabstop=0
 set tabstop=2
 set shiftwidth=2
+
