@@ -3,21 +3,20 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id gnome-power-manager
 
 # monitor management
-exec xrandr --output DVI-D-1 --rotate left
 exec_always GTK_IM_MODULE=ibus XMODIFIERS=@im=ibus QT_IM_MODULE=ibus ibus-daemon -drx
 
 # dmenu
 bindsym $mod+space exec dmenu_run -fn "HK Grotesk-8" -nb '#000000' -nf '#ffffff' -sf '#ffffff' -sb '#551a8b'
 
 # terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec kitty
 
 # mod key
 set $mod Mod4
 floating_modifier $mod
 
 # theme
-font pango:HK Grotesk 8
+font pango:HK Grotesk 12
 client.focused          #551a8b #551a8b #ffffff #2e9ef4 #551a8b
 client.focused_inactive #000000 #000000 #ffffff #484e50 #5f676a
 client.unfocused        #000000 #000000 #888888 #292d2e #222222
@@ -118,7 +117,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# i3bar / i3status 
+# i3bar / i3status
 bar {
   colors {
     statusline #551a8b
