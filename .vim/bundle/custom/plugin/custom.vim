@@ -7,6 +7,7 @@ nnoremap <BS> X
 let g:goyo_width=100
 let g:goyo_height=60
 let g:goyo_linenr=1
+nnoremap <Leader>g :Goyo<CR>
 
 function! s:goyo_enter()
   set nowrap
@@ -19,6 +20,11 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" notes and todo formatting (depends on vim-markdown)
+if @% =~# 'NOTES' || @% =~# 'TODO'
+  let g:markdown_folding=1
+endif
 
 " open-browser plugin settings
 if has("mac")
