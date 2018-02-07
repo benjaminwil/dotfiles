@@ -1,5 +1,5 @@
 /encoding=utf-8
-/regions=uscagb
+/regions=us,ca,gb
 Bitlbee/=
 IRSSI
 SSL/=
@@ -25,3 +25,5 @@ timestamp
 unfollow
 utilize/!
 backorder
+CoffeeScript
+ERB
