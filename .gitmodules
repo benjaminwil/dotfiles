@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/open-browser"]
 	path = .vim/bundle/open-browser
 	url = https://github.com/tyru/open-browser.vim
+[submodule ".vim/bundle/fzf"]
+	path = /.vim/bundle/fzf
+	url = https://github.com/junegunn/fzf.vim.git
