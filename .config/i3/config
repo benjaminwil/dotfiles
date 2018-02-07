@@ -9,7 +9,8 @@ exec_always GTK_IM_MODULE=ibus XMODIFIERS=@im=ibus QT_IM_MODULE=ibus ibus-daemon
 bindsym $mod+space exec dmenu_run -fn "HK Grotesk-8" -nb '#000000' -nf '#ffffff' -sf '#ffffff' -sb '#551a8b'
 
 # terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Shift+Return exec termite
+bindsym $mod+Return exec termite -d $(xcwd) -c zsh
 
 # mod key
 set $mod Mod4
