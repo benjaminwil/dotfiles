@@ -17,8 +17,10 @@ function SetMarkdownOptions()
   " spelllang to the current language. otherwise use american english.
   if exists(s:language_setting)
     setlocal spell spelllang=language
+    setlocal spellfile=~/.vim/spell/custom.utf-8.add
   else
     setlocal spell spelllang=en_us
+    setlocal spellfile=~/.vim/spell/custom.utf-8.add
   endif
   
   " set the textwidth for the markdown file

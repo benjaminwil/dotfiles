@@ -1,7 +1,7 @@
 " my own custom keybindings and functions
 
-" remap backspace to x in normal mode
-nnoremap <BS> X
+" fzf / rg
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 
 " goyo configuration
 let g:goyo_width=100
@@ -12,7 +12,7 @@ nnoremap <Leader>g :Goyo<CR>
 function! s:goyo_enter()
   set nowrap
   set number
-  hi LineNr          ctermfg=181   ctermbg=237
+  hi LineNr ctermfg=181 ctermbg=237
 endfunction
 
 function! s:goyo_leave()
@@ -33,7 +33,7 @@ if has("mac")
   vmap gx <Plug>(openbrowser-smart-search) 
 endif
 
-" highlight long lines with <Leader>l
+" <Leader>l - toggle highlighting long lines
 nnoremap <silent> <Leader>l
 \ :if exists('w:long_line_match') <Bar>
 \   silent! call matchdelete(w:long_line_match) <Bar>
@@ -44,7 +44,7 @@ nnoremap <silent> <Leader>l
 \   let w:long_line_match = matchadd('ErrorMsg', '\%>80v.\+', -1) <Bar>
 \ endif<CR>
 
-" kill extra spaces with <Leader>w
+" <Leader>w - kill spaces at the ends of lines
 nnoremap <Leader>w :let _save_pos=getpos(".") <Bar>
 \ :let _s=@/ <Bar>
 \ :%s/\s\+$//e <Bar>
@@ -53,3 +53,6 @@ nnoremap <Leader>w :let _save_pos=getpos(".") <Bar>
 \ :unlet _s<Bar>
 \ :call setpos('.', _save_pos)<Bar>
 \ :unlet _save_pos<CR><CR>
+
+" remap backspace to x in normal mode
+nnoremap <BS> X
