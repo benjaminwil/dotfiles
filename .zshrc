@@ -8,6 +8,7 @@ antigen apply
 # aliases
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
+alias gfzf="grep --line-buffered --color=never -r \"\" * | fzf"
 
 # chruby
 if [[ -d /usr/local/share/chruby ]]; then
@@ -23,12 +24,13 @@ else
   alias ctags="ctags -R -f ./.tags ."
 fi
 
-# ctags
-if [ "$(uname)" = "Darwin" ]; then
-  alias ctags="`brew --prefix`/bin/ctags -R -f ./.tags ."
-else
-  alias ctags="ctags -R -f ./.tags ."
-fi
+# functions
+fpath=(~/.zsh/functions $fpath)
+
+# fzf / rg
+autoload fd
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow --glob \"!.git/*\""
+export FZF_DEFAULT_OPTS="--height 20"
 
 # history
 HISTSIZE=999
