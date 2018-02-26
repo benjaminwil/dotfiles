@@ -7,6 +7,8 @@
   pretty = format:%Cgreen%h %Cblue%ci %Creset%s %Cblue<%aE> %Cred%d
 [log]
   date = short
+[merge]
+	conflictstyle = diff3
 [rebase]
 	autosquash = true
 
