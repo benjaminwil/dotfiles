@@ -9,6 +9,8 @@
   date = short
 [merge]
 	conflictstyle = diff3
+[pull]
+	rebase = true
 [rebase]
 	autosquash = true
 
