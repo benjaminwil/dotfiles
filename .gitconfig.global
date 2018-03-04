@@ -8,9 +8,11 @@
 [log]
   date = short
 [merge]
-	conflictstyle = diff3
+  conflictstyle = diff3
+[pull]
+  rebase = true
 [rebase]
-	autosquash = true
+  autosquash = true
 
 # You can add this to your .gitconfig file with this syntax:
 #
