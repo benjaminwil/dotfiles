@@ -3,6 +3,8 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id gnome-power-manager
 exec --no-startup-id xsetroot -solid '#101010'
 exec --no-startup-id compton -b --inactive-dim 0.3 --focus-exclude '_NET_WM_NAME@:s = "rofi"'
+exec --no-startup-id xmodmap -e 'keycode 9 = grave asciitilde grave asciitilde'
+
 
 # monitor management
 exec_always GTK_IM_MODULE=ibus XMODIFIERS=@im=ibus QT_IM_MODULE=ibus ibus-daemon -drx
