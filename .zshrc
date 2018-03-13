@@ -43,3 +43,5 @@ export PATH=/usr/local/Cellar:/usr/local/bin:/usr/local/apps:$HOME/.gem/bin:$HOM
 
 # prompt
 source ~/.zsh/prompt.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
