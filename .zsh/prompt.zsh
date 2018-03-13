@@ -11,7 +11,7 @@ git_info() {
 
   if [ -n "$GIT_LOCATION" ]; then
     if [[ `git status -s` != '' ]]; then
-      local GIT_COLOR="\e[3m%{$fg[yellow]%}"
+      local GIT_COLOR="%{$fg[yellow]%}"
       local GIT_CHANGES='*' 
     fi
     
@@ -22,5 +22,5 @@ git_info() {
 local NEWLINE=$'\n'
 local PROMPT_COLOR="%{$fg[blue]%}"
 
-PS1='${NEWLINE}$(ssh_info)${PROMPT_COLOR}%~$(git_info) ${NEWLINE}${PROMPT_COLOR}%# '
+PS1='${NEWLINE}$(ssh_info)${PROMPT_COLOR}%~$(git_info)${NEWLINE}${PROMPT_COLOR}%%%{$reset_color%} '
 
