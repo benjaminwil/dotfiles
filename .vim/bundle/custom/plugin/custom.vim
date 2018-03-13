@@ -12,7 +12,7 @@ nnoremap <Leader>g :Goyo<CR>
 function! s:goyo_enter()
   set nowrap
   set number
-  hi LineNr ctermfg=181 ctermbg=237
+  hi LineNr ctermfg=8 ctermbg=none
 endfunction
 
 function! s:goyo_leave()
