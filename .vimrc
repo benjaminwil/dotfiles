@@ -10,7 +10,7 @@ set number
 set wrap
 
 " clipboard
-if has("mac")
+if has('Darwin')
   set clipboard+=unnamed,unnamedplus
 else
   set clipboard=unnamed
@@ -25,6 +25,9 @@ vnoremap g<c-]> <c-]>
 filetype plugin on
 filetype plugin indent on
 set wildignore=*.swp,*.DS_Store,.git/,.tags
+
+" fzf
+set rtp+=/usr/local/opt/fzf
 
 " netrw
 let g:netrw_banner=0
