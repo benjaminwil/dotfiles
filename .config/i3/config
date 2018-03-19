@@ -1,7 +1,6 @@
 # startup
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id gnome-power-manager
-exec --no-startup-id xsetroot -solid '#101010'
 exec --no-startup-id compton -b --inactive-dim 0.3 --focus-exclude '_NET_WM_NAME@:s = "rofi"'
 
 # monitor management
@@ -52,7 +51,7 @@ bindsym F12 exec i3lock -c 5c0075 -u
 # floating windows
 new_float none
 floating_modifier $mod
-floating_maximum_size 600 x 440
+floating_maximum_size 940 x 1440
 bindsym $mod+Shift+f floating enable, border normal 0
 bindsym $mod+Shift+g floating disable, border normal 2
 
