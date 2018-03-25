@@ -3,8 +3,7 @@ runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " aesthetics
-color base16-tomorrow-night
-let base16colorspace=256
+color wombat
 set cursorline
 set display+=lastline
 set number

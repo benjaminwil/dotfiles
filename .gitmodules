@@ -1,27 +1,27 @@
 [submodule ".zsh/antigen"]
-	path = .zsh/antigen
-	url = https://github.com/zsh-users/antigen
+  path = .zsh/antigen
+  url = https://github.com/zsh-users/antigen
 [submodule ".vim/bundle/fugitive"]
-	path = .vim/bundle/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+  path = .vim/bundle/fugitive
+  url = https://github.com/tpope/vim-fugitive.git
 [submodule ".vim/bundle/goyo"]
-	path = .vim/bundle/goyo
-	url = https://github.com/junegunn/goyo.vim
+  path = .vim/bundle/goyo
+  url = https://github.com/junegunn/goyo.vim
 [submodule ".vim/bundle/pathogen"]
-	path = .vim/bundle/pathogen
-	url = https://github.com/tpope/vim-pathogen
+  path = .vim/bundle/pathogen
+  url = https://github.com/tpope/vim-pathogen
 [submodule ".vim/bundle/markdown"]
-	path = .vim/bundle/markdown
-	url = https://github.com/tpope/vim-markdown
+  path = .vim/bundle/markdown
+  url = https://github.com/tpope/vim-markdown
 [submodule ".vim/bundle/drawit"]
-	path = .vim/bundle/drawit
-	url = https://github.com/vim-scripts/DrawIt
+  path = .vim/bundle/drawit
+  url = https://github.com/vim-scripts/DrawIt
 [submodule ".vim/bundle/open-browser"]
-	path = .vim/bundle/open-browser
-	url = https://github.com/tyru/open-browser.vim
+  path = .vim/bundle/open-browser
+  url = https://github.com/tyru/open-browser.vim
 [submodule ".vim/bundle/fzf"]
-	path = .vim/bundle/fzf
-	url = https://github.com/junegunn/fzf.vim.git
-[submodule "/Users/home/.vim/bundle/wombat"]
-	path = /Users/home/.vim/bundle/wombat
-	url = https://github.com/vim-scripts/Wombat
+  path = .vim/bundle/fzf
+  url = https://github.com/junegunn/fzf.vim.git
+[submodule ".vim/bundle/wombat"]
+  path = .vim/bundle/wombat
+  url = https://github.com/vim-scripts/Wombat
