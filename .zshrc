@@ -39,7 +39,7 @@ HISTFILE=~/.zsh_history
 
 # paths
 export GEM_HOME=$HOME/.gem
-export PATH=/usr/local/Cellar:/usr/local/bin:/usr/local/apps:$HOME/.gem/bin:$HOME/.npm/bin:$HOME/bin:$PATH
+export PATH=$RUBY_ROOT/bin:/usr/local/Cellar:/usr/local/bin:/usr/local/apps:$HOME/.gem/bin:$HOME/.npm/bin:$HOME/bin:$PATH
 
 # prompt
 source ~/.zsh/prompt.zsh

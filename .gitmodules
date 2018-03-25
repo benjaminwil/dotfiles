@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/fzf"]
 	path = .vim/bundle/fzf
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "/Users/home/.vim/bundle/wombat"]
+	path = /Users/home/.vim/bundle/wombat
+	url = https://github.com/vim-scripts/Wombat
