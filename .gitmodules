@@ -16,12 +16,9 @@
 [submodule ".vim/bundle/drawit"]
   path = .vim/bundle/drawit
   url = https://github.com/vim-scripts/DrawIt
-[submodule ".vim/bundle/open-browser"]
-  path = .vim/bundle/open-browser
-  url = https://github.com/tyru/open-browser.vim
 [submodule ".vim/bundle/fzf"]
   path = .vim/bundle/fzf
   url = https://github.com/junegunn/fzf.vim.git
-[submodule ".vim/bundle/wombat"]
-  path = .vim/bundle/wombat
-  url = https://github.com/vim-scripts/Wombat
+[submodule ".vim/bundle/paramount"]
+  path = .vim/bundle/paramount
+  url = https://github.com/owickstrom/vim-colors-paramount
