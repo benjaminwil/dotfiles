@@ -38,8 +38,7 @@ SAVEHIST=999
 HISTFILE=~/.zsh_history
 
 # paths
-export GEM_HOME=$HOME/.gem
-export PATH=$RUBY_ROOT/bin:/usr/local/Cellar:/usr/local/bin:/usr/local/apps:$HOME/.gem/bin:$HOME/.npm/bin:$HOME/bin:$PATH
+typeset -U path
 
 # prompt
 source ~/.zsh/prompt.zsh
