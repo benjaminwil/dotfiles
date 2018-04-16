@@ -52,3 +52,8 @@ set softtabstop=0
 set tabstop=2
 set shiftwidth=2
 
+" undo
+set undofile
+set undodir=~/.vim/undo/
+set undolevels=999
+set undoreload=9999
