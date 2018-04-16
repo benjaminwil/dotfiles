@@ -14,7 +14,7 @@ alias gfzf="grep --line-buffered --color=never -r \"\" * | fzf"
 if [[ -d /usr/local/share/chruby ]]; then
   source /usr/local/share/chruby/chruby.sh
   source /usr/local/share/chruby/auto.sh
-  chruby ruby-2.4.3
+  chruby ruby-2.4.4
 fi
 
 # ctags
