@@ -25,6 +25,7 @@ vnoremap g<c-]> <c-]>
 " files
 filetype plugin on
 filetype plugin indent on
+set hidden
 set wildignore=*.swp,*.DS_Store,.git/,.tags
 
 " fzf
