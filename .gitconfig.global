@@ -1,3 +1,5 @@
+[alias]
+	pusher = push --force-with-lease
 [commit]
   template = ~/.gitcommit.global
 [core]
