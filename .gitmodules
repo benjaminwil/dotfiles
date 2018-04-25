@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/fzf"]
   path = .vim/bundle/fzf
   url = https://github.com/junegunn/fzf.vim.git
+[submodule ".vim/bundle/languagetool"]
+  path = .vim/bundle/languagetool
+  url = https://github.com/dpelle/vim-LanguageTool
