@@ -38,7 +38,7 @@ let g:netrw_list_hide='^\.,.*\.swp$,.DS_Store,.tags,*/tmp/*,*.so,*.swp,*.zip,*.g
 " status
 set display+=lastline
 set laststatus=2
-set statusline=%#CursorColumn#\ \ %n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p%%\ (%c)\ %l/%L\ \ 
+set statusline=\ %n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p%%\ (%c)\ %l/%L\ \
 
 " syntax
 set hlsearch

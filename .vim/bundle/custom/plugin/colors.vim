@@ -1,29 +1,37 @@
 set t_Co=16 " sets the terminal to use 16 colors
 
-hi Comment      cterm=none  ctermbg=none  ctermfg=8
-hi CursorLine   cterm=none  ctermbg=0     ctermfg=none
-hi CursorLineNr cterm=bold  ctermbg=8     ctermfg=7
-hi EndOfBuffer  cterm=none  ctermbg=none  ctermfg=8
-hi LineNr       cterm=none  ctermbg=8     ctermfg=7
-hi Normal       cterm=none  ctermbg=none  ctermfg=15
-hi VertSplit    cterm=none  ctermbg=none  ctermfg=8
+if &background ==# 'dark'
+  hi Boolean      cterm=none  ctermbg=none  ctermfg=3
+  hi Comment      cterm=none  ctermbg=none  ctermfg=8
+  hi Constant     cterm=none  ctermbg=none  ctermfg=4
+  hi CursorLine   cterm=none  ctermbg=0     ctermfg=none
+  hi CursorLineNr cterm=none  ctermbg=none  ctermfg=1
+  hi Delimiter    cterm=none  ctermbg=none  ctermfg=1
+  hi EndOfBuffer  cterm=none  ctermbg=none  ctermfg=8
+  hi Identifier   cterm=none  ctermbg=none  ctermfg=15
+  hi LineNr       cterm=none  ctermbg=0     ctermfg=3
+  hi NonText      cterm=none  ctermbg=none  ctermfg=3
+  hi Number       cterm=none  ctermbg=none  ctermfg=4
+  hi PreProc      cterm=none  ctermbg=none  ctermfg=1
+  hi Search       cterm=none  ctermbg=3     ctermfg=15
+  hi Special      cterm=none  ctermbg=none  ctermfg=15 
+  hi Statement    cterm=none  ctermbg=none  ctermfg=4 
+  hi String       cterm=none  ctermbg=none  ctermfg=7
+  hi Title        cterm=bold  ctermbg=none  ctermfg=1
+  hi Type         cterm=none  ctermbg=none  ctermfg=7
+  hi VertSplit    cterm=none  ctermbg=none  ctermfg=8
+  hi Visual       cterm=none  ctermbg=15    ctermfg=8
+endif
+
+hi markdownCodeDelimiter  cterm=none ctermbg=none ctermfg=7 
 
 " colors reference
-" NR-16   NR-8    COLOR NAME 
-" 0       0       Black
-" 1       4       DarkBlue
-" 2       2       DarkGreen
-" 3       6       DarkCyan
-" 4       1       DarkRed
-" 5       5       DarkMagenta
-" 6       3       Brown, DarkYellow
-" 7       7       LightGray, LightGrey, Gray, Grey
-" 8       0*      DarkGray, DarkGrey
-" 9       4*      Blue, LightBlue
-" 10      2*      Green, LightGreen
-" 11      6*      Cyan, LightCyan
-" 12      1*      Red, LightRed
-" 13      5*      Magenta, LightMagenta
-" 14      3*      Yellow, LightYellow
-" 15      7*      White
-
+" DARK LIGHT
+" 0    8     black (grey)
+" 1    9     red
+" 2    10    green 
+" 3    11    yellow
+" 4    4    purple 
+" 5    13    pink
+" 6    14    cyan
+" 7    15    white
