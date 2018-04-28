@@ -34,10 +34,10 @@ function RichMarkdownPunctuation()
   setlocal iskeyword+=-
 
   " create an abbreviation for en-dashes.
-  iabbrev <buffer> --- –
+  iabbrev <buffer> n-- –
 
   " create an abbreviation for em-dashes.
-  iabbrev <buffer> ---- —
+  iabbrev <buffer> m-- —
 
   " create abbreviations for guillemets.
   iabbrev <buffer> << «
