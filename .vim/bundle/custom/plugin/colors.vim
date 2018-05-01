@@ -8,8 +8,10 @@ if &background ==# 'dark'
   hi CursorLineNr cterm=none       ctermbg=none  ctermfg=1
   hi Delimiter    cterm=none       ctermbg=none  ctermfg=1
   hi EndOfBuffer  cterm=none       ctermbg=none  ctermfg=8
+  hi Folded       cterm=none       ctermbg=none  ctermfg=4
   hi Identifier   cterm=none       ctermbg=none  ctermfg=15
   hi LineNr       cterm=none       ctermbg=0     ctermfg=3
+  hi MatchParen   cterm=none       ctermbg=3     ctermfg=0
   hi NonText      cterm=none       ctermbg=none  ctermfg=3
   hi Number       cterm=none       ctermbg=none  ctermfg=4
   hi PreProc      cterm=none       ctermbg=none  ctermfg=1
@@ -24,7 +26,7 @@ if &background ==# 'dark'
   hi Type         cterm=none       ctermbg=none  ctermfg=7
   hi Underlined   cterm=underline  ctermbg=none  ctermfg=15
   hi VertSplit    cterm=none       ctermbg=none  ctermfg=8
-  hi Visual       cterm=none       ctermbg=15    ctermfg=8
+  hi Visual       cterm=none       ctermbg=15    ctermfg=0
 endif
 
 " colors reference
