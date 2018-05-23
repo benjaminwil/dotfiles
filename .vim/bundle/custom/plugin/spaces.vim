@@ -1,9 +1,9 @@
-" <Leader>w - kill spaces at the ends of lines
-nnoremap <Leader>w :let _save_pos=getpos(".") <Bar>
-\ :let _s=@/ <Bar>
-\ :%s/\s\+$//e <Bar>
-\ :let @/=_s <Bar>
-\ :nohl <Bar>
-\ :unlet _s<Bar>
-\ :call setpos('.', _save_pos)<Bar>
-\ :unlet _save_pos<CR><CR>
+" <leader>w - kill spaces at the ends of lines
+nnoremap <leader>w :let _save_pos=getpos(".") <bar>
+\ :let _s=@/ <bar>
+\ :%s/\s\+$//e <bar>
+\ :let @/=_s <bar>
+\ :nohl <bar>
+\ :unlet _s<bar>
+\ :call setpos('.', _save_pos)<bar>
+\ :unlet _save_pos<cr><cr>
