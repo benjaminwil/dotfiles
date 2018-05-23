@@ -81,9 +81,11 @@ chunkc core::load ffm.so
 # NOTE: sample rules for the tiling plugin
 chunkc tiling::rule --owner Finder --name Copy --state float
 chunkc tiling::rule --owner Harvest --state float
-chunkc tiling::rule --owner iTunes --name MiniPlayer --state float
+chunkc tiling::rule --owner iTunes --state float
 chunkc tiling::rule --owner Messages --state float
 chunkc tiling::rule --owner Notes --state float
 chunkc tiling::rule --owner Preview --state float
+chunkc tiling::rule --owner Reeder --state float
+chunkc tiling::rule --owner Spark --state float
 chunkc tiling::rule --owner Tweetbot --state float
-
+chunkc tiling::rule --owner VOX --state float
