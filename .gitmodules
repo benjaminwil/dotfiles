@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/languagetool"]
   path = .vim/bundle/languagetool
   url = https://github.com/dpelle/vim-LanguageTool
+[submodule ".vim/bundle/lexima"]
+	path = .vim/bundle/lexima
+	url = https://github.com/cohama/lexima.vim
