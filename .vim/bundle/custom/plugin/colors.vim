@@ -6,7 +6,7 @@ if &background ==# 'dark'
   hi Constant     cterm=none       ctermbg=none  ctermfg=4
   hi CursorLine   cterm=none       ctermbg=0     ctermfg=none
   hi CursorLineNr cterm=none       ctermbg=none  ctermfg=1
-  hi Delimiter    cterm=none       ctermbg=none  ctermfg=1
+  hi Delimiter    cterm=none       ctermbg=none  ctermfg=15
   hi EndOfBuffer  cterm=none       ctermbg=none  ctermfg=8
   hi Folded       cterm=none       ctermbg=none  ctermfg=4
   hi Identifier   cterm=none       ctermbg=none  ctermfg=15
@@ -21,9 +21,9 @@ if &background ==# 'dark'
   hi SpellLocal   cterm=none       ctermbg=none  ctermfg=none
   hi SpellBad     cterm=none       ctermbg=none  ctermfg=1
   hi Statement    cterm=none       ctermbg=none  ctermfg=4 
-  hi String       cterm=none       ctermbg=none  ctermfg=7
+  hi String       cterm=none       ctermbg=none  ctermfg=15
   hi Title        cterm=bold       ctermbg=none  ctermfg=1
-  hi Type         cterm=none       ctermbg=none  ctermfg=7
+  hi Type         cterm=none       ctermbg=none  ctermfg=15
   hi Underlined   cterm=underline  ctermbg=none  ctermfg=15
   hi VertSplit    cterm=none       ctermbg=none  ctermfg=8
   hi Visual       cterm=none       ctermbg=15    ctermfg=0
