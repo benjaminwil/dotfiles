@@ -1,5 +1,5 @@
 # open terminal
-alt - return : open -na Terminal 
+alt - return : open -na Alacritty 
 
 # focus window
 alt - h : chunkc tiling::window --focus west

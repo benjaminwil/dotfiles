@@ -6,7 +6,6 @@ augroup MarkdownFiletype
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd Filetype markdown call SetMarkdownOptions()
   autocmd Filetype markdown call RichMarkdownPunctuation()
-  inoremap <tab> <c-r>=TabComplete()<CR>
 augroup end
 
 function SetMarkdownOptions()
@@ -34,10 +33,10 @@ function RichMarkdownPunctuation()
   setlocal iskeyword+=-
 
   " create an abbreviation for en-dashes.
-  iabbrev <buffer> --- –
+  iabbrev <buffer> n-- –
 
   " create an abbreviation for em-dashes.
-  iabbrev <buffer> ---- —
+  iabbrev <buffer> m-- —
 
   " create abbreviations for guillemets.
   iabbrev <buffer> << «
@@ -48,30 +47,3 @@ function FormatMarkdownTable()
   " TODOs
 endfunction
 
-function! TabComplete()
-  " gets the currently selected line
-  let line = getline('.')
-
-  " gets the first part of the line -- from the start to one character after
-  " the cursor position.
-  let substr = strpart(line, -1, col('.')+1)
-
-  " gets the current word until the cursor position. it matches nothing on an
-  " empty string, and it is smart about punctuation.
-  let substr = matchstr(substr, "[^ \t]*$")
-
-  if (strlen(substr)==0)
-    return "\<tab>"
-  endif
-
-  let has_period = match(substr, '\.') != -1
-  let has_slash = match(substr, '\/') != -1
-
-  if (!has_period && !has_slash)
-    return "\<C-X>\<C-P>"
-  elseif ( has_slash )
-    return "\<C-X>\<C-F>"
-  else
-    return "\<C-X>\<C-O>"
-  endif
-endfunction

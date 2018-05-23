@@ -13,12 +13,12 @@
 [submodule ".vim/bundle/markdown"]
   path = .vim/bundle/markdown
   url = https://github.com/tpope/vim-markdown
-[submodule ".vim/bundle/drawit"]
-  path = .vim/bundle/drawit
-  url = https://github.com/vim-scripts/DrawIt
 [submodule ".vim/bundle/fzf"]
   path = .vim/bundle/fzf
   url = https://github.com/junegunn/fzf.vim.git
-[submodule ".vim/bundle/paramount"]
-  path = .vim/bundle/paramount
-  url = https://github.com/owickstrom/vim-colors-paramount
+[submodule ".vim/bundle/languagetool"]
+  path = .vim/bundle/languagetool
+  url = https://github.com/dpelle/vim-LanguageTool
+[submodule ".vim/bundle/lexima"]
+	path = .vim/bundle/lexima
+	url = https://github.com/cohama/lexima.vim

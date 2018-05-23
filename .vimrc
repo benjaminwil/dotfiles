@@ -3,7 +3,6 @@ runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " aesthetics
-color paramount
 set background=dark
 set cursorline
 set display+=lastline
@@ -31,15 +30,19 @@ set wildignore=*.swp,*.DS_Store,.git/,.tags
 " fzf
 set rtp+=/usr/local/opt/fzf
 
+" leader
+let mapleader="\<space>"
+
 " netrw
+autocmd FileType netrw setl bufhidden=wipe
 let g:netrw_banner=0
-map - :Explore<CR>
 let g:netrw_list_hide='^\.,.*\.swp$,.DS_Store,.tags,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$'
+map - :Explore<CR>
 
 " status
 set display+=lastline
 set laststatus=2
-set statusline=%#CursorColumn#\ \ %n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p%%\ (%c)\ %l/%L\ \ 
+set statusline=\ %n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p%%\ (%c)\ %l/%L\ \
 
 " syntax
 set hlsearch
@@ -52,9 +55,3 @@ set expandtab
 set softtabstop=0
 set tabstop=2
 set shiftwidth=2
-
-" undo
-set undofile
-set undodir=~/.vim/undo/
-set undolevels=999
-set undoreload=9999
