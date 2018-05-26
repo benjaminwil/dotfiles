@@ -38,7 +38,7 @@ map - :Explore<CR>
 " status
 set display+=lastline
 set laststatus=2
-""" set statusline=\ %n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p%%\ (%c)\ %l/%L\ \
+set statusline=\ %n\ %y\ %t\ %{fugitive#statusline()}\ %r%=\ %m\ %p%%\ (%c)\ %l/%L\ \
 
 " syntax
 set hlsearch
