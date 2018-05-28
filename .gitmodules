@@ -7,9 +7,6 @@
 [submodule ".vim/pack/benjaminwil/start/fugitive"]
 	path = .vim/pack/benjaminwil/start/fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/pack/benjaminwil/start/lexima"]
-	path = .vim/pack/benjaminwil/start/lexima
-	url = https://github.com/cohama/lexima.vim
 [submodule ".vim/pack/benjaminwil/opt/languagetool"]
 	path = .vim/pack/benjaminwil/opt/languagetool
 	url = https://github.com/dpelle/vim-LanguageTool
