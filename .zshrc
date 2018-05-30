@@ -8,7 +8,6 @@ antigen apply
 # aliases
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
-alias gfzf="grep --line-buffered --color=never -r \"\" * | fzf"
 
 # chruby
 if [[ -d /usr/local/share/chruby ]]; then
@@ -27,11 +26,6 @@ fi
 # functions
 fpath=(~/.zsh/functions $fpath)
 
-# fzf / rg
-autoload fd
-export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow --glob \"!.git/*\""
-export FZF_DEFAULT_OPTS="--height 20"
-
 # history
 HISTSIZE=999
 SAVEHIST=999
@@ -44,5 +38,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # prompt
 source ~/.zsh/prompt.zsh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
