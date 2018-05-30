@@ -85,19 +85,13 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: true
 
-
-
-# Colors (One Dark)
-colors:
+one: &one
   cursor:
     background: '0xabb2bf'
     foreground: '0x1e2127'
-  # Default colors
   primary:
     background: '0x1e2127'
     foreground: '0xabb2bf'
-
-  # Normal colors
   normal:
     black:   '0x1e2127'
     red:     '0xe06c75'
@@ -107,8 +101,6 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0xabb2bf'
-
-  # Bright colors
   bright:
     black:   '0x5c6370'
     red:     '0xe06c75'
@@ -118,6 +110,33 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0xffffff'
+pencil: &pencil
+  cursor:
+    foreground: '0xfafafb'
+    background: '0x607080'
+  primary:
+    foreground: '0xff1414'
+    background: '0xfafafb'
+  normal:
+    black:   '0xfafafb'
+    red:     '0xc30771'
+    green:   '0x73be73'
+    yellow:  '0xe3c68e'
+    blue:    '0xc773d9'
+    magenta: '0xec7d8f'
+    cyan:    '0x316bcd'
+    white:   '0x607080'
+  bright:
+    black:   '0xd9dde2'
+    red:     '0x660000'
+    green:   '0x008800'
+    yellow:  '0xcd9731'
+    blue:    '0x9900bb'
+    magenta: '0xdd1133'
+    cyan:    '0x2222dd'
+    white:   '0x212121'
+
+colors: *one
 
 # Visual Bell
 #
