@@ -7,6 +7,10 @@ if &background ==# 'dark'
   hi CursorLine   cterm=none       ctermbg=0     ctermfg=none
   hi CursorLineNr cterm=none       ctermbg=none  ctermfg=1
   hi Delimiter    cterm=none       ctermbg=none  ctermfg=15
+  hi DiffAdd      cterm=none       ctermbg=none  ctermfg=2
+  hi DiffChange   cterm=none       ctermbg=none  ctermfg=6
+  hi DiffDelete   cterm=none       ctermbg=none  ctermfg=1
+  hi DiffText     cterm=none       ctermbg=6     ctermfg=15
   hi EndOfBuffer  cterm=none       ctermbg=none  ctermfg=8
   hi Folded       cterm=none       ctermbg=none  ctermfg=4
   hi Identifier   cterm=none       ctermbg=none  ctermfg=15
