@@ -87,7 +87,7 @@ custom_cursor_colors: true
 
 one: &one
   cursor:
-    background: '0xabb2bf'
+    background: '0x98c379'
     foreground: '0x1e2127'
   primary:
     background: '0x1e2127'
