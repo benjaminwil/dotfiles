@@ -12,11 +12,6 @@ else
   set clipboard=unnamed
 endif
 
-" ctags
-set tags=.tags;
-nnoremap g<c-]> <c-]>
-vnoremap g<c-]> <c-]>
-
 " files
 filetype plugin on
 filetype plugin indent on
@@ -27,16 +22,8 @@ set wildignore=*.swp,*.DS_Store,.git/,.tags
 " leader
 let mapleader="\<space>"
 
-" netrw
-autocmd FileType netrw setl bufhidden=wipe
-let g:netrw_banner=0
-let g:netrw_list_hide='^\.,.*\.swp$,.DS_Store,.tags,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$'
-map - :Explore<CR>
-
 " syntax
 set hlsearch
-set omnifunc=syntaxcomplete#Complete
-set spellfile=~/.vim/spell/custom.utf-8.add
 syntax on
 
 " tabs
