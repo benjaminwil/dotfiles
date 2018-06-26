@@ -10,3 +10,6 @@
 [submodule ".vim/pack/benjaminwil/opt/languagetool"]
 	path = .vim/pack/benjaminwil/opt/languagetool
 	url = https://github.com/dpelle/vim-LanguageTool
+[submodule ".vim/pack/benjaminwil/opt/goyo"]
+	path = .vim/pack/benjaminwil/opt/goyo
+	url = https://github.com/junegunn/goyo.vim
