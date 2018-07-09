@@ -10,6 +10,6 @@
 [submodule ".vim/pack/benjaminwil/opt/goyo"]
 	path = .vim/pack/benjaminwil/opt/goyo
 	url = https://github.com/junegunn/goyo.vim
-[submodule "/Users/benjaminwil/.vim/pack/benjaminwil/start/markdown"]
-	path = /Users/benjaminwil/.vim/pack/benjaminwil/start/markdown
+[submodule ".vim/pack/benjaminwil/start/markdown"]
+	path = .vim/pack/benjaminwil/start/markdown
 	url = https://github.com/tpope/vim-markdown
