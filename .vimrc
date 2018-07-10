@@ -1,4 +1,5 @@
 " aesthetics
+colorscheme anise
 set background=dark
 set cursorline
 set display+=lastline

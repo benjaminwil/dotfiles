@@ -1,3 +1,9 @@
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name = "anise"
+
 set t_Co=16 " sets the terminal to use 16 colors
 
 if &background ==# 'dark'
