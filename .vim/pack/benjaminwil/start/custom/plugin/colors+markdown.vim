@@ -1,5 +1,4 @@
 hi link markdownBold Identifier
-hi link markdownCode Identifier
 hi link markdownCodeDelimiter Identifier
 hi link markdownHeadingDelimiter PreProc
 hi link markdownId Identifier
