@@ -4,6 +4,7 @@
 .tags
 .netrwbook
 .netrwhist
+.tool-versions
 .Spotlight-V100
 .Trashes
 vendor/bundle
