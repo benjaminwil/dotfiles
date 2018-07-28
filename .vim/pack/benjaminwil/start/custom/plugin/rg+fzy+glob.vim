@@ -6,7 +6,6 @@ function RgFzyGlobSearch(vim_command)
           \ --no-heading
           \ --fixed-strings
           \ --ignore-case
-          \ --no-ignore
           \ --hidden
           \ --follow
           \ --glob '!.git/*'"

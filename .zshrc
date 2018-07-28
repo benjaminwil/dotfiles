@@ -23,6 +23,9 @@ else
   alias ctags="ctags -R -f ./.tags ."
 fi
 
+# direnv
+eval "$(direnv hook zsh)"
+
 # functions
 fpath=(~/.zsh/functions $fpath)
 
