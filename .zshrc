@@ -1,13 +1,12 @@
 # antigen
-source ~/.zsh/antigen/antigen.zsh
-antigen bundle robbyrussell/oh-my-zsh lib/functions.zsh
-antigen bundle robbyrussell/oh-my-zsh lib/termsupport.zsh
-antigen bundle zdharma/fast-syntax-highlighting
-antigen apply
+source ~/.zsh/antigen.zsh
 
 # aliases
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
+
+# keybinding
+bindkey -e
 
 # chruby
 if [[ -d /usr/local/share/chruby ]]; then
