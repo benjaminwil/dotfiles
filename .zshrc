@@ -5,15 +5,8 @@ source ~/.zsh/antigen.zsh
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
 
-# keybinding
-bindkey -e
-
-# chruby
-if [[ -d /usr/local/share/chruby ]]; then
-  source /usr/local/share/chruby/chruby.sh
-  source /usr/local/share/chruby/auto.sh
-  chruby ruby-2.4.4
-fi
+# asdf
+source ~/.asdf/asdf.sh
 
 # ctags
 if [ "$(uname)" = "Darwin" ]; then
@@ -23,7 +16,7 @@ else
 fi
 
 # direnv
-eval "$(direnv hook zsh)"
+if [[ -d /usr/local/bin/direnv ]]; then eval "$(direnv hook zsh)"; fi
 
 # functions
 fpath=(~/.zsh/functions $fpath)
@@ -33,10 +26,8 @@ HISTSIZE=999
 SAVEHIST=999
 HISTFILE=~/.zsh_history
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# keybinding
+bindkey -e
 
 # prompt
 source ~/.zsh/prompt.zsh
