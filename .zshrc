@@ -16,7 +16,7 @@ else
 fi
 
 # direnv
-if [[ -d /usr/local/bin/direnv ]]; then eval "$(direnv hook zsh)"; fi
+if [[ -r /usr/local/bin/direnv ]]; then eval "$(direnv hook zsh)"; fi
 
 # functions
 fpath=(~/.zsh/functions $fpath)
