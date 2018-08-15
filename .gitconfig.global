@@ -1,7 +1,5 @@
 [alias]
 	push-fwl = push --force-with-lease
-[commit]
-  template = ~/.gitcommit.global
 [core]
   excludesfile = ~/.gitignore.global
   editor = vim
