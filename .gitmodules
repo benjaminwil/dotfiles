@@ -13,3 +13,6 @@
 [submodule ".vim/pack/benjaminwil/start/markdown"]
 	path = .vim/pack/benjaminwil/start/markdown
 	url = https://github.com/tpope/vim-markdown
+[submodule ".vim/pack/benjaminwil/start/rhubarb"]
+	path = .vim/pack/benjaminwil/start/rhubarb
+	url = https://github.com/tpope/vim-rhubarb
