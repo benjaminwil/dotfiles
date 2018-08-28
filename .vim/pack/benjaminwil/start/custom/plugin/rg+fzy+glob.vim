@@ -8,7 +8,7 @@ function RgFzyGlobSearch(vim_command)
           \ --ignore-case
           \ --hidden
           \ --follow
-          \ --glob '!.git/*'"
+          \ --glob '!{.git,node_modules}'"
     " Right now, this function requires rg to print path:line#:column# so awk can replace the output.
     let filename_and_location = system(rg_command . " | fzy | awk -F ':' '{print $1 \"\|\" $2 \"\|\" $3}' ") 
   catch /Vim:Interrupt/
