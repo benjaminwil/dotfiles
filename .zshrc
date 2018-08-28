@@ -29,5 +29,8 @@ HISTFILE=~/.zsh_history
 # keybinding
 bindkey -e
 
+# private
+source ~/.zsh/private.zsh
+
 # prompt
 source ~/.zsh/prompt.zsh
