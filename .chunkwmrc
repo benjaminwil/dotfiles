@@ -81,10 +81,12 @@ chunkc core::load ffm.so
 # NOTE: sample rules for the tiling plugin
 chunkc tiling::rule --owner "Emacs.*" --state tile
 chunkc tiling::rule --owner Calendar --state float
+chunkc tiling::rule --owner Dictionary --state float
 chunkc tiling::rule --owner Finder --name Copy --state float
 chunkc tiling::rule --owner Harvest --state float
 chunkc tiling::rule --owner iTunes --state float
 chunkc tiling::rule --owner iTerm --state float
+chunkc tiling::rule --owner Mail --state float
 chunkc tiling::rule --owner Messages --state float
 chunkc tiling::rule --owner Notes --state float
 chunkc tiling::rule --owner Preview --state float
