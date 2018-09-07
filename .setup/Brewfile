@@ -1,0 +1,15 @@
+cask_args appdir: "/Applications"
+
+tap "homebrew/cask"
+
+tap "crisidev/homebrew-chunkwm"
+
+brew "fzy"
+brew "irssi"
+brew "ripgrep"
+brew "syncthing"
+brew "tmux"
+brew "vim"
+
+cask "launchbar"
+cask "slack"
