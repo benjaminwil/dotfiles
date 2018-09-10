@@ -1,6 +1,6 @@
 [submodule ".zsh/antigen"]
-  path = .zsh/antigen
-  url = https://github.com/zsh-users/antigen
+	path = .zsh/antigen
+	url = https://github.com/zsh-users/antigen
 [submodule ".vim/pack/benjaminwil/start/fugitive"]
 	path = .vim/pack/benjaminwil/start/fugitive
 	url = https://github.com/tpope/vim-fugitive
@@ -16,3 +16,6 @@
 [submodule ".vim/pack/benjaminwil/start/rhubarb"]
 	path = .vim/pack/benjaminwil/start/rhubarb
 	url = https://github.com/tpope/vim-rhubarb
+[submodule ".vim/pack/benjaminwil/start/polyglot"]
+	path = .vim/pack/benjaminwil/start/polyglot
+	url = https://github.com/sheerun/vim-polyglot
