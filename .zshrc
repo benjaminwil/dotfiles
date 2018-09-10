@@ -22,9 +22,11 @@ if [[ -r /usr/local/bin/direnv ]]; then eval "$(direnv hook zsh)"; fi
 fpath=(~/.zsh/functions $fpath)
 
 # history
-HISTSIZE=999
-SAVEHIST=999
+HISTSIZE=999999999
+SAVEHIST=999999999
 HISTFILE=~/.zsh_history
+setopt HIST_IGNORE_ALL_DUPS
+setopt INC_APPEND_HISTORY
 
 # keybinding
 bindkey -e
