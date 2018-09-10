@@ -27,22 +27,6 @@ function SetMarkdownOptions()
   setlocal textwidth=80
 endfunction
 
-function RichMarkdownPunctuation()
-  " set the hyphen character `-` as a keyword. this lets us create en-dashes
-  " as well as em-dashes while only using repeated hyphens.
-  setlocal iskeyword+=-
-
-  " create an abbreviation for en-dashes.
-  iabbrev <buffer> n-- –
-
-  " create an abbreviation for em-dashes.
-  iabbrev <buffer> m-- —
-
-  " create abbreviations for guillemets.
-  iabbrev <buffer> << «
-  iabbrev <buffer> >> »
-endfunction
-
 function FormatMarkdownTable()
   " TODOs
 endfunction
