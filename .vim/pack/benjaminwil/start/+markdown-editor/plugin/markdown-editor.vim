@@ -5,7 +5,6 @@ augroup MarkdownFiletype
   au!
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd Filetype markdown call SetMarkdownOptions()
-  autocmd Filetype markdown call RichMarkdownPunctuation()
 augroup end
 
 function SetMarkdownOptions()
