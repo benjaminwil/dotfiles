@@ -2,7 +2,7 @@
 source ~/.zsh/antigen.zsh
 
 # aliases
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles="/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
 
 # asdf
