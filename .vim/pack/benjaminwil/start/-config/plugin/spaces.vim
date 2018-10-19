@@ -1,5 +1,5 @@
 " <leader>w - kill spaces at the ends of lines
-nnoremap <leader>w :let _save_pos=getpos(".") <bar>
+nnoremap <silent> <leader>w :let _save_pos=getpos(".") <bar>
 \ :let _s=@/ <bar>
 \ :%s/\s\+$//e <bar>
 \ :let @/=_s <bar>
