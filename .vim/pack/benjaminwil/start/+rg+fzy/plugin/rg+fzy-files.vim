@@ -1,7 +1,7 @@
 function! RgFzyFileSearch(vim_command)
   try
    let rg_command = "rg --files"
-   let output = system(rg_command . " | fzy ")
+   let output = system(rg_command . " | fzy --lines=20 ")
   catch /Vim:Interrupt/
     " Swallow errors from ^C, allow redraw! below
   endtry

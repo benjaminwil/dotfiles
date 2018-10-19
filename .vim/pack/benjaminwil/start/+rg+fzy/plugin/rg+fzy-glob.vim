@@ -10,7 +10,7 @@ function! RgFzyGlobSearch(vim_command)
           \ --follow
           \ --glob '!{.git,node_modules}'"
     " Right now, this function requires rg to print path:line#:column# so awk can replace the output.
-    let filename_and_location = system(rg_command . " | fzy | awk -F ':' '{print $1 \"\|\" $2 \"\|\" $3}' ")
+    let filename_and_location = system(rg_command . " | fzy --lines=20 | awk -F ':' '{print $1 \"\|\" $2 \"\|\" $3}' ")
   catch /Vim:Interrupt/
     " Swallow errors from ^C, allow redraw! below
   endtry
@@ -56,7 +56,7 @@ if has('nvim')
     endfunction
 
     botright 10 new
-    let l:terminal_command = l:rg_command . " | fzy | awk -F ':' '{print $1 \"\|\" $2 \"\|\" $3}' > " . l:callback.filename
+    let l:terminal_command = l:rg_command . " | fzy --lines=20 | awk -F ':' '{print $1 \"\|\" $2 \"\|\" $3}' > " . l:callback.filename
     silent call termopen(l:terminal_command, l:callback)
     setlocal nonumber norelativenumber
     startinsert
