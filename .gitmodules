@@ -19,3 +19,6 @@
 [submodule ".vim/pack/benjaminwil/start/polyglot"]
 	path = .vim/pack/benjaminwil/start/polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule ".vim/pack/benjaminwil/start/rspec"]
+	path = .vim/pack/benjaminwil/start/rspec
+	url = https://github.com/thoughtbot/vim-rspec
