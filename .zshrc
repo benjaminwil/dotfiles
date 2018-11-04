@@ -2,11 +2,11 @@
 source ~/.zsh/antigen.zsh
 
 # aliases
-alias dotfiles="/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles="command git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
 
 # asdf
-source ~/.asdf/asdf.sh
+if ! [ -x $(command -v asdf) ]; then source ~/.asdf/asdf.sh; fi
 
 # ctags
 if [ "$(uname)" = "Darwin" ]; then
@@ -16,7 +16,7 @@ else
 fi
 
 # direnv
-if [[ -r /usr/local/bin/direnv ]]; then eval "$(direnv hook zsh)"; fi
+if ! [ -x $(command -v direnv) ]; then eval "$(direnv hook zsh)"; fi
 
 # functions
 fpath=(~/.zsh/functions $fpath)
