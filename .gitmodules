@@ -22,3 +22,6 @@
 [submodule ".vim/pack/benjaminwil/start/rspec"]
 	path = .vim/pack/benjaminwil/start/rspec
 	url = https://github.com/thoughtbot/vim-rspec
+[submodule "/Users/bwillems/.vim/pack/benjaminwil/start/rg"]
+	path = /Users/bwillems/.vim/pack/benjaminwil/start/rg
+	url = https://github.com/gevann/vim-rg
