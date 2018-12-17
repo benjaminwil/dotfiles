@@ -15,9 +15,6 @@ else
   alias ctags="ctags -R -f ./.tags ."
 fi
 
-# direnv
-if ! [ -x $(command -v direnv) ]; then eval "$(direnv hook zsh)"; fi
-
 # functions
 fpath=(~/.zsh/functions $fpath)
 
@@ -35,8 +32,8 @@ bindkey -e
 if [ -e ~/.zsh/private.zsh ]; then
   source ~/.zsh/private.zsh
 else
-  echo "Creating new ~/.zsh/private.zsh for uncommittable business scripts."
-  touch ~/.zsh/private.zsh
+  cat ~/.zsh/benjaminwil.txt
+  echo "Initializing ~/.zsh/private.zsh 👌" && touch ~/.zsh/private.zsh
 fi
 
 # prompt
