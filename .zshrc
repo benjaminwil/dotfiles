@@ -32,7 +32,12 @@ setopt INC_APPEND_HISTORY
 bindkey -e
 
 # private
-source ~/.zsh/private.zsh
+if [ -e ~/.zsh/private.zsh ]; then
+  source ~/.zsh/private.zsh
+else
+  echo "Creating new ~/.zsh/private.zsh for uncommittable business scripts."
+  touch ~/.zsh/private.zsh
+fi
 
 # prompt
 source ~/.zsh/prompt.zsh
