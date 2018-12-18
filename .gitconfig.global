@@ -1,7 +1,9 @@
 [alias]
   autosquash = rebase -i --autosquash
-  fixup = "!fixup() { git commit --fixup=`git log -10 | fzy | cut -f2 -d ' '`; }; fixup"
-	push-fwl = push --force-with-lease
+  lease = push --force-with-lease
+  staged = diff --cached
+  uncommit = reset --soft HEAD^
+  unstage = reset
 [core]
   excludesfile = ~/.gitignore.global
   editor = vim
