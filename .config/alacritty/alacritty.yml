@@ -1,5 +1,5 @@
 env:
-  TERM: xterm-256color
+  TERM: screen-256color
 
 window:
   dimensions:
@@ -12,7 +12,7 @@ window:
 
 tabspaces: 8
 
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 scrolling:
   history: 99999
@@ -22,11 +22,11 @@ scrolling:
 
 font:
   normal:
-    family: Operator Mono Lig Book
+    family: Operator Mono Book
   bold:
-    family: Operator Mono Lig Medium
+    family: Operator Mono Bold
   italic:
-    family: Operator Mono Lig Book Italic
+    family: Operator Mono Book Italic
   size: 14.0
   offset:
     x: 0
@@ -43,6 +43,8 @@ font:
 render_timer: false
 
 custom_cursor_colors: true
+cursor_style: Block
+hide_cursor_when_typing: true
 
 one: &one
   cursor:
@@ -167,16 +169,6 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
 dynamic_title: true
-
-hide_cursor_when_typing: false
-
-# Style of the cursor
-#
-# Values for 'cursor_style':
-# - Block
-# - Underline
-# - Beam
-cursor_style: Block
 
 # Live config reload (changes require restart)
 live_config_reload: true
