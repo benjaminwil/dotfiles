@@ -1,15 +1,32 @@
 cask_args appdir: "/Applications"
 
 tap "homebrew/cask"
-
 tap "crisidev/homebrew-chunkwm"
 
+# primary
+brew "git"
+brew "tmux"
+brew "vim"
+brew "zsh"
+
+# secondary
+brew "chunkwm"
 brew "fzy"
 brew "irssi"
 brew "ripgrep"
 brew "syncthing"
-brew "tmux"
-brew "vim"
 
 cask "launchbar"
 cask "slack"
+
+# common dependencies
+brew "automake"
+brew "autoconf"
+brew "coreutils"
+brew "libtool"
+brew "libxslt-dev"
+brew "libyaml"
+brew "libyaml-dev"
+brew "openssl"
+brew "readline"
+brew "unixodbc"
