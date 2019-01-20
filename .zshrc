@@ -6,7 +6,7 @@ alias dotfiles="command git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="ls -Glh"
 
 # asdf
-if ! [ -x $(command -v asdf) ]; then source ~/.asdf/asdf.sh; fi
+source ~/.asdf/asdf.sh
 
 # ctags
 if [ "$(uname)" = "Darwin" ]; then
