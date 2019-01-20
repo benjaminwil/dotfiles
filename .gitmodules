@@ -16,15 +16,15 @@
 [submodule ".vim/pack/benjaminwil/start/rhubarb"]
 	path = .vim/pack/benjaminwil/start/rhubarb
 	url = https://github.com/tpope/vim-rhubarb
-[submodule ".vim/pack/benjaminwil/start/polyglot"]
-	path = .vim/pack/benjaminwil/start/polyglot
-	url = https://github.com/sheerun/vim-polyglot
 [submodule ".vim/pack/benjaminwil/start/rspec"]
 	path = .vim/pack/benjaminwil/start/rspec
 	url = https://github.com/thoughtbot/vim-rspec
-[submodule "/Users/bwillems/.vim/pack/benjaminwil/start/rg"]
-	path = .vim/pack/benjaminwil/start/rg
-	url = https://github.com/gevann/vim-rg
 [submodule ".vim/pack/benjaminwil/start/prettier"]
 	path = .vim/pack/benjaminwil/start/prettier
 	url = https://github.com/prettier/vim-prettier
+[submodule ".vim/pack/benjaminwil/start/rg"]
+	path = .vim/pack/benjaminwil/start/rg
+	url = https://github.com/gevann/vim-rg
+[submodule ".vim/pack/benjaminwil/start/polyglot"]
+	path = .vim/pack/benjaminwil/start/polyglot
+	url = https://github.com/sheerun/vim-polyglot
