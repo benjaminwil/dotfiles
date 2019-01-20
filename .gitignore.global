@@ -7,4 +7,5 @@
 .tool-versions
 .Spotlight-V100
 .Trashes
+node_modules
 vendor/bundle
