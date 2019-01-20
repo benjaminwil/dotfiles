@@ -23,5 +23,8 @@
 	path = .vim/pack/benjaminwil/start/rspec
 	url = https://github.com/thoughtbot/vim-rspec
 [submodule "/Users/bwillems/.vim/pack/benjaminwil/start/rg"]
-	path = /Users/bwillems/.vim/pack/benjaminwil/start/rg
+	path = .vim/pack/benjaminwil/start/rg
 	url = https://github.com/gevann/vim-rg
+[submodule ".vim/pack/benjaminwil/start/prettier"]
+	path = .vim/pack/benjaminwil/start/prettier
+	url = https://github.com/prettier/vim-prettier
