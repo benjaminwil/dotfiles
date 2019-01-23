@@ -8,6 +8,9 @@ alias ls="ls -Glh"
 # asdf
 source ~/.asdf/asdf.sh
 
+# colours
+export TERM=screen-256color
+
 # ctags
 if [ "$(uname)" = "Darwin" ]; then
   alias ctags="`brew --prefix`/bin/ctags -R -f ./.tags ."
