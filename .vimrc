@@ -36,3 +36,5 @@ set shiftwidth=2
 " project-specific vim configuration
 set exrc
 set secure
+
+set updatetime=100
