@@ -5,22 +5,14 @@
 ##   qute://help/settings.html
 
 one_dark = {
-    '00': '#1e2127',
-    '01': '#e06c75',
-    '02': '#98c379',
-    '03': '#d19a66',
-    '04': '#61afef',
-    '05': '#c678dd',
-    '06': '#56b6c2',
-    '07': '#abb2bf',
-    '08': '#5c6370',
-    '09': '#e06c75',
-    '10': '#98c379',
-    '11': '#d19a66',
-    '12': '#61afef',
-    '13': '#c678dd',
-    '14': '#56b6c2',
-    '15': '#ffffff'
+  '00': '#1e2127', '08': '#5c6370',
+  '01': '#e06c75', '09': '#e06c75',
+  '02': '#98c379', '10': '#98c379',
+  '03': '#d19a66', '11': '#d19a66',
+  '04': '#61afef', '12': '#61afef',
+  '05': '#c678dd', '13': '#c678dd',
+  '06': '#56b6c2', '14': '#56b6c2',
+  '07': '#abb2bf', '15': '#ffffff'
 }
 
 ## Aliases for commands. The keys of the given dictionary are the
@@ -206,7 +198,7 @@ c.content.media_capture = 'ask'
 c.content.netrc_file = None
 # c.content.notifications = 'ask'
 c.content.pdfjs = False
-c.content.plugins = False
+c.content.plugins = True
 c.content.print_element_backgrounds = True
 c.content.private_browsing = False
 
