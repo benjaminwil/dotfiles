@@ -4,6 +4,7 @@ set background=dark
 set cursorline
 set display+=lastline
 set number
+set scrolloff=12
 set wrap
 
 " clipboard
