@@ -6,9 +6,9 @@ window:
     columns: 160
     lines: 48
   padding:
-    x: 24
+    x: 8
     y: 8
-  decorations: true
+  decorations: buttonless
 
 tabspaces: 8
 
@@ -42,14 +42,11 @@ font:
 
 render_timer: false
 
-custom_cursor_colors: true
-cursor_style: Block
-hide_cursor_when_typing: true
-
 one: &one
   cursor:
     background: '0x98c379'
     foreground: '0x1e2127'
+    style: Block
   primary:
     background: '0x1e2127'
     foreground: '0xabb2bf'
@@ -75,6 +72,7 @@ pencil: &pencil
   cursor:
     foreground: '0xfafafb'
     background: '0x607080'
+    style: Block
   primary:
     foreground: '0xff1414'
     background: '0xfafafb'
@@ -154,6 +152,7 @@ mouse:
   # or triple click.
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
+  hide_when_typing: true
 
   # Faux Scrollback
   #
@@ -163,7 +162,7 @@ mouse:
   # scrolling for applications like `man`.
   #
   # To disable this completely, set `faux_scrollback_lines` to 0.
-  faux_scrollback_lines: 1
+  faux_scrolling_lines: 1
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
