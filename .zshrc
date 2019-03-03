@@ -31,6 +31,9 @@ setopt INC_APPEND_HISTORY
 # keybinding
 bindkey -e
 
+# man colorscheme
+source ~/.zsh/man.zsh
+
 # private
 if [ -e ~/.zsh/private.zsh ]; then
   source ~/.zsh/private.zsh
