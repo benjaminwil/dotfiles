@@ -1,0 +1,67 @@
+# general
+color attachment brightwhite black
+color bold brightwhite black
+color error red black
+color hdrdefault blue black
+color indicator black yellow
+color markers red black
+color message white black
+color normal white black
+color search black yellow
+color signature brightwhite black
+color status yellow black
+color tilde green black
+color tree red black
+
+color quoted white black
+color quoted1 green black
+color quoted2 magenta black
+color quoted3 cyan black
+color quoted4 brightgreen black
+color quoted5 brightmagenta black
+color quoted6 brightcyan black
+color quoted7 brightblue black
+color quoted8 brightred black
+color quoted9 brightwhite black
+
+mono bold bold
+mono underline underline
+mono indicator reverse
+
+# header
+color header red black "^X-Junked-Because: "
+color header black red "^X-Virus-hagbard: .* FOUND"
+
+mono header bold "^(From|Subject|X-Junked-Because|X-Virus-hagbard):"
+
+# index
+color index white black ~N
+color index red white ~F
+color index black green ~T
+color index brightwhite black ~D
+
+mono index bold ~N
+mono index bold ~F
+mono index bold ~T
+mono index bold ~D
+
+# messages
+color body brightwhite black "(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
+color body brightwhite black "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+color body brightwhite black "news:[^ \">\t\r\n]*"
+color body brightwhite black "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+mono body bold "(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
+mono body bold "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+mono body bold "news:[^ \">\t\r\n]*"
+mono body bold "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+color body brightwhite black "<[Gg]>
+color body brightwhite black "<[Bb][Gg]>"
+color body brightwhite black " [;:]-*[)>(<|]"
+color body white black "(^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$)"
+color body white black "(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)"
+color body brightwhite black "(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)"
+
+mono body bold "(^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$)"
+mono body underline "(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)"

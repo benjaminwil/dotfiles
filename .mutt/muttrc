@@ -1,0 +1,3 @@
+set folder = "~/mail"
+
+source ~/.mutt/colours
