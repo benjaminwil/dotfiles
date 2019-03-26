@@ -23,7 +23,7 @@ if &background ==# 'dark'
   hi Folded       cterm=none ctermbg=none ctermfg=4
   hi Identifier   cterm=none ctermbg=none ctermfg=12
   hi LineNr       cterm=none ctermbg=0 ctermfg=3
-  hi MatchParen   cterm=none ctermbg=3 ctermfg=0
+  hi MatchParen   cterm=none ctermbg=none ctermfg=3
   hi NonText      cterm=none ctermbg=none ctermfg=3
   hi Number       cterm=none ctermbg=none ctermfg=5
   hi PreProc      cterm=none ctermbg=none ctermfg=7
