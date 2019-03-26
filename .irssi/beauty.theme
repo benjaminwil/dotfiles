@@ -87,5 +87,5 @@ abstracts = {
   sb_act_text = "$*";
   sb_act_msg = "%k$*";
   sb_act_hilight = "%k$*";
-  sb_act_hilight_color = "$k$1-%n";
+  sb_act_hilight_color = "%k$1-%n";
 };
