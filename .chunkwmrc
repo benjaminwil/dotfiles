@@ -54,5 +54,6 @@ chunkc core::load tiling.so
 chunkc core::load ffm.so
 
 # set custom tiling rules for applications
+chunkc tiling::rule --owner Emacs --except "^$" --state tile
 chunkc tiling::rule --owner Messages --state float
 chunkc tiling::rule --owner Preview --state float
