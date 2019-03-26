@@ -3,7 +3,12 @@ source ~/.zsh/antigen.zsh
 
 # aliases
 alias dotfiles="command git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias ls="ls -Glh"
+
+if [ -x "$(command -v exa)" ]; then
+  alias ls="exa --classify --git --group-directories-first --long"
+else
+  alias ls="ls -Glh"
+fi
 
 # asdf
 source ~/.asdf/asdf.sh
