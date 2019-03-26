@@ -1,4 +1,5 @@
 setopt prompt_subst
+unsetopt PROMPT_SP
 autoload -U colors && colors
 
 ssh_info() {
