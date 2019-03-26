@@ -8,4 +8,5 @@
 .Spotlight-V100
 .Trashes
 node_modules
+Procfile.local
 vendor/bundle
