@@ -33,6 +33,8 @@ if &background ==# 'dark'
   hi SpellLocal   cterm=none ctermbg=none ctermfg=none
   hi SpellBad     cterm=none ctermbg=none ctermfg=1
   hi Statement    cterm=none ctermbg=none ctermfg=4
+  hi StatusLine   cterm=none ctermbg=7 ctermfg=0
+  hi StatusLineNC cterm=none ctermbg=8 ctermfg=0
   hi String       cterm=none ctermbg=none ctermfg=15
   hi Title        cterm=bold ctermbg=none ctermfg=1
   hi Type         cterm=none ctermbg=none ctermfg=15
