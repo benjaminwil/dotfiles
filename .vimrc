@@ -27,6 +27,9 @@ let mapleader="\<space>"
 set hlsearch
 syntax on
 
+" swap
+set directory=.swp/,~/.swp/,/tmp//
+
 " tabs
 set expandtab
 set softtabstop=0
