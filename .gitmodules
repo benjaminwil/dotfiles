@@ -28,3 +28,6 @@
 [submodule ".vim/pack/benjaminwil/start/polyglot"]
 	path = .vim/pack/benjaminwil/start/polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule ".vim/pack/benjaminwil/opt/plist"]
+	path = .vim/pack/benjaminwil/opt/plist
+	url = https://github.com/darfink/vim-plist
