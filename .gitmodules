@@ -25,3 +25,6 @@
 [submodule ".vim/pack/plugins/start/rhubarb"]
 	path = .vim/pack/plugins/start/rhubarb
 	url = https://github.com/tpope/vim-rhubarb
+[submodule ".vim/pack/plugins/start/projectionist"]
+	path = .vim/pack/plugins/start/projectionist
+	url = https://github.com/tpope/vim-projectionist

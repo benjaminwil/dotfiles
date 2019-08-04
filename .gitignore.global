@@ -1,9 +1,10 @@
 *.DS_Store
 *.log
 *.swp
-.tags
 .netrwbook
 .netrwhist
+.projections.json
+.tags
 .tool-versions
 .Spotlight-V100
 .Trashes
