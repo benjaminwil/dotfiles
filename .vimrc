@@ -28,7 +28,7 @@ set hlsearch
 syntax on
 
 " swap
-set directory=.swp/,~/.swp/,/tmp//
+set directory=$HOME/.vim/swap//
 
 " tabs
 set expandtab
