@@ -1,33 +1,27 @@
 [submodule ".zsh/antigen"]
 	path = .zsh/antigen
 	url = https://github.com/zsh-users/antigen
-[submodule ".vim/pack/benjaminwil/start/fugitive"]
-	path = .vim/pack/benjaminwil/start/fugitive
+[submodule ".vim/pack/plugins/start/fugitive"]
+	path = .vim/pack/plugins/start/fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/pack/benjaminwil/opt/languagetool"]
-	path = .vim/pack/benjaminwil/opt/languagetool
-	url = https://github.com/dpelle/vim-LanguageTool
-[submodule ".vim/pack/benjaminwil/opt/goyo"]
-	path = .vim/pack/benjaminwil/opt/goyo
+[submodule ".vim/pack/plugins/opt/goyo"]
+	path = .vim/pack/plugins/opt/goyo
 	url = https://github.com/junegunn/goyo.vim
-[submodule ".vim/pack/benjaminwil/start/markdown"]
-	path = .vim/pack/benjaminwil/start/markdown
+[submodule ".vim/pack/plugins/opt/languagetool"]
+	path = .vim/pack/plugins/opt/languagetool
+	url = https://github.com/dpelle/vim-LanguageTool
+[submodule ".vim/pack/plugins/start/markdown"]
+	path = .vim/pack/plugins/start/markdown
 	url = https://github.com/tpope/vim-markdown
-[submodule ".vim/pack/benjaminwil/start/rhubarb"]
-	path = .vim/pack/benjaminwil/start/rhubarb
-	url = https://github.com/tpope/vim-rhubarb
-[submodule ".vim/pack/benjaminwil/start/rspec"]
-	path = .vim/pack/benjaminwil/start/rspec
-	url = https://github.com/thoughtbot/vim-rspec
-[submodule ".vim/pack/benjaminwil/start/prettier"]
-	path = .vim/pack/benjaminwil/start/prettier
-	url = https://github.com/prettier/vim-prettier
-[submodule ".vim/pack/benjaminwil/start/rg"]
-	path = .vim/pack/benjaminwil/start/rg
-	url = https://github.com/gevann/vim-rg
-[submodule ".vim/pack/benjaminwil/start/polyglot"]
-	path = .vim/pack/benjaminwil/start/polyglot
-	url = https://github.com/sheerun/vim-polyglot
-[submodule ".vim/pack/benjaminwil/opt/plist"]
-	path = .vim/pack/benjaminwil/opt/plist
+[submodule ".vim/pack/plugins/opt/plist"]
+	path = .vim/pack/plugins/opt/plist
 	url = https://github.com/darfink/vim-plist
+[submodule ".vim/pack/plugins/start/polyglot"]
+	path = .vim/pack/plugins/start/polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule ".vim/pack/plugins/start/prettier"]
+	path = .vim/pack/plugins/start/prettier
+	url = https://github.com/prettier/vim-prettier
+[submodule ".vim/pack/plugins/start/rhubarb"]
+	path = .vim/pack/plugins/start/rhubarb
+	url = https://github.com/tpope/vim-rhubarb
