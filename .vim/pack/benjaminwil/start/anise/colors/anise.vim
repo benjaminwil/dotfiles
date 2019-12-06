@@ -37,9 +37,9 @@ if &background ==# 'dark'
   hi StatusLineNC cterm=none ctermbg=8 ctermfg=0
   hi String       cterm=none ctermbg=none ctermfg=15
   hi Title        cterm=bold ctermbg=none ctermfg=1
+  hi Todo         cterm=bold ctermbg=none ctermfg=3
   hi Type         cterm=none ctermbg=none ctermfg=15
   hi Underlined   cterm=underline ctermbg=none ctermfg=1
   hi VertSplit    cterm=none ctermbg=none ctermfg=8
   hi Visual       cterm=none ctermbg=15 ctermfg=0
 endif
-
