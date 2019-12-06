@@ -9,5 +9,6 @@
 .Spotlight-V100
 .Trashes
 node_modules
+docker-compose.local.yml
 Procfile.local
 vendor/bundle
