@@ -2,7 +2,9 @@
 source ~/.zsh/antigen.zsh
 
 # aliases
-alias dotfiles="command git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles="command git  \
+  --git-dir=$HOME/.dotfiles/ \
+  --work-tree=$HOME"
 
 if [ -x "$(command -v exa)" ]; then
   alias ls="exa --classify --git --group-directories-first --long"
