@@ -3,6 +3,7 @@ colorscheme anise
 set background=dark
 set cursorline
 set display+=lastline
+set encoding=utf-8
 set number
 set scrolloff=12
 set wrap
