@@ -36,6 +36,9 @@ bindkey -e
 # man colorscheme
 source ~/.zsh/man.zsh
 
+# nix package manager
+source ~/.nix-profile/etc/profile.d/nix.sh
+
 # private
 if [ -e ~/.zsh/private.zsh ]; then
   source ~/.zsh/private.zsh
