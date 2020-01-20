@@ -1,7 +1,7 @@
 [alias]
   autosquash = rebase -i --autosquash
+  ctags = !.git/hooks/ctags
   lease = push --force-with-lease
-  staged = diff --cached
   uncommit = reset --soft HEAD^
   unstage = reset
 [core]
@@ -9,6 +9,8 @@
   editor = vim
 [format]
   pretty = format:%Cgreen%h %Cblue%ci %Creset%s %Cblue<%aE> %Cred%d
+[init]
+  templatedir = ~/.config/git/template
 [log]
   date = short
 [merge]
