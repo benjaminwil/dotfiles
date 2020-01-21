@@ -7,7 +7,7 @@
   uncommit = reset --soft HEAD^
   unstage = reset
 [core]
-  excludesfile = ~/.gitignore.global
+  excludesfile = ~/.config/git/excludes
   editor = vim
 [format]
   pretty = format:%Cgreen%h %Cblue%ci %Creset%s %Cblue<%aE> %Cred%d
@@ -25,4 +25,4 @@
 # You can add this to your .gitconfig file with this syntax:
 #
 # [include]
-#   path = ~/.gitconfig.global
+#   path = ~/.config/git/config
