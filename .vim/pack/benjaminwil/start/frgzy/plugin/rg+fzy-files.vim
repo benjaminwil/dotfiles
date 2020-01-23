@@ -40,6 +40,3 @@ if has('nvim')
     startinsert
   endfunction
 endif
-
-nnoremap <leader>fe :call RgFzyFileSearch(':e')<cr>
-nnoremap <leader>fv :call RgFzyFileSearch(':vs')<cr>

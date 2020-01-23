@@ -62,6 +62,3 @@ if has('nvim')
     startinsert
   endfunction
 endif
-
-nnoremap <leader>re :call RgFzyGlobSearch(':e')<cr>
-nnoremap <leader>rv :call RgFzyGlobSearch(':vs')<cr>
