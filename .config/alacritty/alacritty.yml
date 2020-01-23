@@ -8,26 +8,26 @@ tabspaces: 8
 themes:
   lite: &lite
     primary:
-      foreground: '0xff1414'
-      background: '0xfafafb'
+      background: '0xf9f9f9'
+      foreground: '0x2a2c33'
     normal:
-      black:   '0xfafafb'
-      red:     '0xc30771'
-      green:   '0x73be73'
-      yellow:  '0xe3c68e'
-      blue:    '0xc773d9'
-      magenta: '0xec7d8f'
-      cyan:    '0x316bcd'
-      white:   '0x607080'
+      white:   '0xa3a3b3'
+      red:     '0xde3e35'
+      green:   '0x3f953a'
+      yellow:  '0xd2b67c'
+      blue:    '0x2f5af3'
+      magenta: '0x950095'
+      cyan:    '0x3f953a'
+      black:   '0xf9f9f9'
     bright:
-      black:   '0xd9dde2'
-      red:     '0x660000'
-      green:   '0x008800'
-      yellow:  '0xcd9731'
-      blue:    '0x9900bb'
-      magenta: '0xdd1133'
-      cyan:    '0x2222dd'
-      white:   '0x212121'
+      white:   '0x7a7a9b'
+      red:     '0xde3e35'
+      green:   '0x3f953a'
+      yellow:  '0xd2b67c'
+      blue:    '0x2f5af3'
+      magenta: '0x950095'
+      cyan:    '0x3f953a'
+      black:   '0x586e75'
   dark: &dark
     primary:
       background: '0x1e2127'
@@ -75,14 +75,24 @@ mouse:
 scrolling:
   history: 99999
   multiplier: 3
-  faux_multiplier: 3
   auto_scroll: false
 
-shell:
- program: /usr/local/bin/zsh
- args:
-   - -c
-   - tmux attach || tmux new
+linux_shell: &linux_shell
+  program: /home/bw/.nix-profile/bin/tmux
+  args:
+    - -u
+    - new-session
+    - -s
+    - main
+    - -A
+
+macos_shell: &macos_shell
+  program: /usr/local/bin/zsh
+  args:
+    - -c
+    - tmux attach || tmux new
+
+shell: *macos_shell
 
 window:
   dimensions:
