@@ -3,6 +3,7 @@
   ctags = !.git/hooks/ctags
   dull = diff /dev/null
   dulls = !git ls-files --others --exclude-standard | xargs -n 1 git --no-pager diff --color=always /dev/null | less -R
+  index = "!sh -c \"git log $1 --color=always | nl -v 0\" -"
   lease = push --force-with-lease
   uncommit = reset --soft HEAD^
   unstage = reset
