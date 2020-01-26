@@ -1,3 +1,4 @@
-set folder = "~/mail"
+set folder = "~/.mutt/mail"
+set record = "~/.mutt/sent-mail"
 
 source ~/.mutt/colours

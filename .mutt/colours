@@ -3,15 +3,15 @@ color attachment brightwhite black
 color bold brightwhite black
 color error red black
 color hdrdefault blue black
-color indicator black yellow
-color markers red black
+color indicator black white
+color markers blue black
 color message white black
 color normal white black
 color search black yellow
 color signature brightwhite black
-color status yellow black
-color tilde green black
-color tree red black
+color status blue black
+color tilde blue black
+color tree white black
 
 color quoted white black
 color quoted1 green black
@@ -44,6 +44,8 @@ mono index bold ~N
 mono index bold ~F
 mono index bold ~T
 mono index bold ~D
+
+set narrow_tree = yes
 
 # messages
 color body brightwhite black "(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
