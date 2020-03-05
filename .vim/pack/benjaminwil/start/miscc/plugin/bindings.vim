@@ -2,6 +2,10 @@
 " view buffer list and prompt for buffer number input
 nnoremap Bs :buffers<cr>:b
 
+" BS
+" create a (vertical) scratch buffer
+nnoremap BS :call ScratchPad()<cr>
+
 " <leader>a
 " <leader>aa
 " switch to file alternates (.vim/pack/plugins/projectionist)
