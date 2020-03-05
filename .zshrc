@@ -13,13 +13,6 @@ source ~/.asdf/asdf.sh
 # colours
 export TERM=screen-256color
 
-# ctags
-if [ "$(uname)" = "Darwin" ]; then
-  alias ctags="`brew --prefix`/bin/ctags -R -f ./.tags ."
-else
-  alias ctags="ctags -R -f ./.tags ."
-fi
-
 # functions
 fpath=(~/.zsh/functions $fpath)
 
@@ -37,14 +30,17 @@ bindkey -e
 source ~/.zsh/man.zsh
 
 # nix package manager
-source ~/.nix-profile/etc/profile.d/nix.sh
+if [ -e ~/.nix-profile ]; then
+  source ~/.nix-profile/etc/profile.d/nix.sh
+fi
 
 # private
 if [ -e ~/.zsh/private.zsh ]; then
   source ~/.zsh/private.zsh
 else
   cat ~/.zsh/benjaminwil.txt
-  echo "Initializing ~/.zsh/private.zsh 👌" && touch ~/.zsh/private.zsh
+  echo "Initializing ~/.zsh/private.zsh 👌" && \
+    touch ~/.zsh/private.zsh
 fi
 
 # prompt
