@@ -34,3 +34,9 @@
 [submodule ".vim/pack/plugins/start/vimcompletesme"]
 	path = .vim/pack/plugins/start/vimcompletesme
 	url = https://github.com/ajh17/vimcompletesme
+[submodule ".vim/pack/plugins/start/lexima"]
+	path = .vim/pack/plugins/start/lexima
+	url = https://github.com/cohama/lexima.vim
+[submodule ".vim/pack/plugins/start/ragtag"]
+	path = .vim/pack/plugins/start/ragtag
+	url = https://github.com/tpope/vim-ragtag
