@@ -3,11 +3,13 @@ env:
 
 dynamic_title: true
 live_config_reload: true
+tabspaces: 8
 
 themes:
   lite: &lite
     primary:
       foreground: '0x1e2127'
+      background: '0xeeeeee'
       background: '0xffffff'
     normal:
       white:   '0x1e2127'
@@ -50,7 +52,7 @@ themes:
       cyan:    '0x56b6c2'
       white:   '0xffffff'
 
-colors: *dark
+colors: *lite
 
 draw_bold_text_with_bright_colors: false
 
@@ -74,6 +76,7 @@ mouse:
 scrolling:
   history: 99999
   multiplier: 3
+  auto_scroll: true
 
 linux_shell: &linux_shell
   program: /home/bw/.nix-profile/bin/tmux
