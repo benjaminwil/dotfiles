@@ -1,6 +1,7 @@
 *.DS_Store
 *.log
 *.swp
+*#*.*#
 .netrwbook
 .netrwhist
 .projections.json
@@ -12,3 +13,4 @@ node_modules
 docker-compose.local.yml
 Procfile.local
 vendor/bundle
+web-build/
