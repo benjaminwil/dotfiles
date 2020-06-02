@@ -3,7 +3,6 @@ env:
 
 dynamic_title: true
 live_config_reload: true
-tabspaces: 8
 
 themes:
   lite: &lite
@@ -75,7 +74,6 @@ mouse:
 scrolling:
   history: 99999
   multiplier: 3
-  auto_scroll: false
 
 linux_shell: &linux_shell
   program: /home/bw/.nix-profile/bin/tmux
