@@ -9,6 +9,12 @@ nnoremap Bs :buffers<cr>:b
 nnoremap <expr> <leader>eD  ':e ' . strftime("%Y-%m-%d")
 nnoremap <expr> <leader>ed  ':e ' . strftime("%Y-%m-%d-%H%M")
 
+" <leader>gr
+" open ripgrep results for current word under cursor as quickfix window
+nnoremap <silent> <expr> <leader>gr
+      \ ':cexpr system("rg --vimgrep '
+      \ . expand("<cword>") . ' *") \| cw<cr>'
+
 " BS
 " create a (vertical) scratch buffer
 nnoremap BS :call ScratchPad()<cr>
