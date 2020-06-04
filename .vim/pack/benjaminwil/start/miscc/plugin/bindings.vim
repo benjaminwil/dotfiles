@@ -2,6 +2,13 @@
 " view buffer list and prompt for buffer number input
 nnoremap Bs :buffers<cr>:b
 
+" <leader>eD
+" <leader>ed
+" <leader>edm
+" template date and datetime filenames because bloggin'
+nnoremap <expr> <leader>eD  ':e ' . strftime("%Y-%m-%d")
+nnoremap <expr> <leader>ed  ':e ' . strftime("%Y-%m-%d-%H%M")
+
 " BS
 " create a (vertical) scratch buffer
 nnoremap BS :call ScratchPad()<cr>
