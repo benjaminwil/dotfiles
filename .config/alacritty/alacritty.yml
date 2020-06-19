@@ -57,11 +57,14 @@ draw_bold_text_with_bright_colors: false
 font:
   user_thin_strokes: true
   normal:
-    family: Operator Mono Book
+    family: Operator Mono
+    style: Medium
   bold:
-    family: Operator Mono Bold
+    family: Operator Mono
+    style: Bold
   italic:
-    family: Operator Mono Book Italic
+    family: Operator Mono
+    style: Italic
   size: 14.0
   offset:
     x: 0
