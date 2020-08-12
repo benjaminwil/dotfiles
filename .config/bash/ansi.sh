@@ -1,0 +1,10 @@
+ANSI_COLOR_NORMAL=$(printf '\e[0m')
+
+ANSI_COLOR_BLACK=$(printf '\e[30m')
+ANSI_COLOR_RED=$(printf '\e[31m')
+ANSI_COLOR_GREEN=$(printf '\e[32m')
+ANSI_COLOR_YELLOW=$(printf '\e[33m')
+ANSI_COLOR_BLUE=$(printf '\e[34m')
+ANSI_COLOR_MAGENTA=$(printf '\e[35m')
+ANSI_COLOR_CYAN=$(printf '\e[36m')
+ANSI_COLOR_WHITE=$(printf '\e[37m')
