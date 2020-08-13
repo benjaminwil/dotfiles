@@ -37,6 +37,6 @@ git_info() {
 }
 
 PS1="
-$(ssh_info)${PROMPT_COLOR}\W$(git_info)
-${PROMPT_COLOR}⚫${ANSI_COLOR_NORMAL}"
+\[$(ssh_info)\]\[${PROMPT_COLOR}\]\[\W\]\[$(git_info)\]
+\[${PROMPT_COLOR}\]⚫\[${ANSI_COLOR_NORMAL}\]"
 
