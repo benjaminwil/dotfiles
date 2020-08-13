@@ -5,7 +5,7 @@ alias dotfiles="command git    \
     --git-dir=$HOME/.dotfiles/ \
     --work-tree=$HOME"
 alias ls="ls -Glh"
-alias hist="rg . ~/.bash_history | fzy -l 20 | bash"
+alias hist="rg . ~/.bash_history | fzy -l 5 | xargs -d '\n' bash -ic"
 
 # asdf
 source ~/.asdf/asdf.sh
