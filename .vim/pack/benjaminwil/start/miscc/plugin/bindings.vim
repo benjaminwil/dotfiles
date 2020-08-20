@@ -10,10 +10,10 @@ nnoremap <expr> <leader>eD  ':e ' . strftime("%Y-%m-%d")
 nnoremap <expr> <leader>ed  ':e ' . strftime("%Y-%m-%d-%H%M")
 
 " <leader>gr
-" open ripgrep results for current word under cursor as quickfix window
-nnoremap <silent> <expr> <leader>gr
-      \ ':cexpr system("rg --vimgrep '
-      \ . expand("<cword>") . ' *") \| cw<cr>'
+" open ripgrep results for visual selection. if no, visual selection, prompt
+" user for regular expression query
+nnoremap <leader>qf :call GrepToQuickFixWindow()<cr>
+vmap <leader>qf :call GrepToQuickFixWindow()<cr>
 
 " BS
 " create a (vertical) scratch buffer
