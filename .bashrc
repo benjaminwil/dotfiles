@@ -1,11 +1,11 @@
 [[ $- != *i* ]] && return
 
 # aliases
-alias dotfiles="command git    \
-    --git-dir=$HOME/.dotfiles/ \
-    --work-tree=$HOME"
-alias ls="ls -AgFGhv"
-alias hist="rg . ~/.bash_history | fzy -l 5 | xargs -d '\n' bash -ic"
+alias bx="bundle exec"
+alias dotfiles="command git --git-dir=$HOME/.dotfiles/ \
+                            --work-tree=$HOME"
+alias ls="ls -gFGhv"
+alias hist="rg . ~/.bash_history | fzy -l 5 | xargs '\n' bash -ic"
 
 # colours
 export TERM=screen-256color
