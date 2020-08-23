@@ -1,4 +1,0 @@
-tmux new-window -n app
-tmux new-window -n engine
-tmux new-window -n server
-tmux move-window -s server -t 9
