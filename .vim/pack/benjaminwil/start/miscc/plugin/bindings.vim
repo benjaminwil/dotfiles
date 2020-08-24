@@ -4,16 +4,14 @@ nnoremap Bs :buffers<cr>:b
 
 " <leader>eD
 " <leader>ed
-" <leader>edm
-" template date and datetime filenames because bloggin'
+" template date and datetime filenames because blogging
 nnoremap <expr> <leader>eD  ':e ' . strftime("%Y-%m-%d")
 nnoremap <expr> <leader>ed  ':e ' . strftime("%Y-%m-%d-%H%M")
 
 " <leader>gr
 " open ripgrep results for visual selection. if no, visual selection, prompt
 " user for regular expression query
-nnoremap <leader>qf :call GrepToQuickFixWindow()<cr>
-vmap <leader>qf :call GrepToQuickFixWindow()<cr>
+nnoremap <leader>ff :call RgProjectSearch()<cr>
 
 " BS
 " create a (vertical) scratch buffer
