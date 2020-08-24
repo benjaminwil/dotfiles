@@ -1,6 +1,6 @@
 " Bs
-" view buffer list and prompt for buffer number input
-nnoremap Bs :buffers<cr>:b
+" view buffer list in a location-list split
+nnoremap Bs :call OpenBufferSwitcher()<cr>
 
 " <leader>eD
 " <leader>ed
