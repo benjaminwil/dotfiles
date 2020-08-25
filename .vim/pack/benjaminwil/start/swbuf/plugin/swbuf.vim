@@ -2,7 +2,9 @@ function! OpenBufferSwitcher()
   let buffers = split(execute(":buffers"), "\n")
   let entries = map(buffers, function('s:ParseBufferListEntry'))
 
-  call setloclist(0, [], 'r', { 'title': 'Open Buffers', 'items': entries })
+  call setloclist(0, [], 'r', { 'title': 'Open Buffers',
+                              \ 'items': entries,
+                              \ 'quickfixtextfunc': 's:SwitcherDisplay' })
   execute ":lopen"
   setlocal nonumber
 
@@ -28,6 +30,22 @@ function! s:ParseBufferListEntry(index, entry)
     return
   endif
 
-  return { 'bufnr': buffer_number, 'filename': buffer_name }
+  return { 'bufnr': buffer_number,
+         \ 'filename': buffer_name,
+         \ 'type': 'n',
+         \ 'lnum': 1,
+         \ 'col': 1 }
 endfunction
 
+function! s:SwitcherDisplay(info) abort
+  let rows = []
+  let results_list = getloclist(a:info.winid, #{id: a:info.id, items: 0}).items
+
+  for idx in range(a:info.start_idx - 1, a:info.end_idx - 1)
+    let row = results_list[idx]
+    let fname = bufname(row.bufnr)
+    call add(rows, printf('%s %s', row.bufnr, fname))
+  endfor
+
+  return rows
+endfunction
