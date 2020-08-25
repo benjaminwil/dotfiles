@@ -10,6 +10,13 @@ function! RgProjectSearch()
 
   let rg_options = "--max-columns 60 --max-columns-preview --vimgrep"
   let results = split(system("rg " . rg_options . " '" . regex . "' *"), '\n')
+
+  if len(results) == 0
+    redraw!
+    echo "No results for \"" . regex . "\""
+    return
+  endif
+
   let entries = map(results, function('s:ParseRgEntries'))
 
   call setqflist([], 'r', { 'title': 'Project Results',
