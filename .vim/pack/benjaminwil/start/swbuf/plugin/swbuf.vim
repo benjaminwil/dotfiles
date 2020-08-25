@@ -4,11 +4,10 @@ function! OpenBufferSwitcher()
 
   call setloclist(0, [], 'r', { 'title': 'Open Buffers', 'items': entries })
   execute ":lopen"
+  setlocal nonumber
 
-  " style the location-list split in an opinionated way
-  setlocal nonumber conceallevel=2 concealcursor=nc
-  execute ":hi QuickFixLine ctermfg=NONE cterm=bold guifg=NONE gui=bold"
-  execute ":syntax match qfSeparator /\|/ transparent conceal"
+  " always close the buffer switcher when leaving it
+  au! BufLeave <buffer> bdelete
 endfunction
 
 function! s:GetBufferNumber(entry)
