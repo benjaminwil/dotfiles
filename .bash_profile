@@ -6,6 +6,8 @@ export WEECHAT_HOME=$HOME/.config/weechat/
 export EDITOR='vim'
 export VISUAL='vim'
 
+[ -f /usr/local/etc/bash_completion  ] && . /usr/local/etc/bash_completion
+
 # asdf version manager
 if [ -e $HOME/.asdf/asdf.sh ]; then
   . $HOME/.asdf/asdf.sh
