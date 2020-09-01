@@ -1,6 +1,7 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 export PATH=$HOME/.scripts:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar:/bin:$PATH
+export WEECHAT_HOME=$HOME/.config/weechat/
 
 export EDITOR='vim'
 export VISUAL='vim'
