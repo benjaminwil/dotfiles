@@ -80,17 +80,19 @@ scrolling:
 linux_shell: &linux_shell
   program: /home/bw/.nix-profile/bin/tmux
   args:
-    - -u
+    - -
     - new-session
     - -s
     - main
     - -A
 
 macos_shell: &macos_shell
-  program: /usr/local/bin/zsh
+  program: /usr/local/bin/tmux
   args:
-    - -c
-    - tmux attach || tmux new
+    - new-session
+    - -s
+    - main
+    - -A
 
 shell: *macos_shell
 
