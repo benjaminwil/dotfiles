@@ -1,7 +1,6 @@
 env:
   TERM: screen-256color
 
-dynamic_title: true
 live_config_reload: true
 
 themes:
@@ -103,6 +102,7 @@ window:
     x: 8
     y: 8
   dynamic_padding: false
+  dynamic_title: true
   decorations: full
   start-maximized: true
 
