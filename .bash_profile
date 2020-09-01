@@ -13,6 +13,9 @@ if [ -e $HOME/.asdf/asdf.sh ]; then
   . $HOME/.asdf/asdf.sh
 fi
 
+# bundler (for ruby)
+source ~/.config/bundler/global.sh
+
 # nix package manager
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
   . $HOME/.nix-profile/etc/profile.d/nix.sh
