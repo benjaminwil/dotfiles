@@ -87,12 +87,11 @@ linux_shell: &linux_shell
     - -A
 
 macos_shell: &macos_shell
-  program: /usr/local/bin/tmux
+  program: /usr/local/bin/bash
   args:
-    - new-session
-    - -s
-    - main
-    - -A
+    - -l
+    - -c
+    - "tmux new-session -s main -A"
 
 shell: *macos_shell
 
