@@ -1,6 +1,3 @@
-[submodule ".zsh/antigen"]
-	path = .zsh/antigen
-	url = https://github.com/zsh-users/antigen
 [submodule ".vim/pack/plugins/start/fugitive"]
 	path = .vim/pack/plugins/start/fugitive
 	url = https://github.com/tpope/vim-fugitive
@@ -31,12 +28,3 @@
 [submodule ".vim/pack/plugins/start/dispatch"]
 	path = .vim/pack/plugins/start/dispatch
 	url = https://github.com/tpope/vim-dispatch.git
-[submodule ".vim/pack/plugins/start/vimcompletesme"]
-	path = .vim/pack/plugins/start/vimcompletesme
-	url = https://github.com/ajh17/vimcompletesme
-[submodule ".vim/pack/plugins/start/lexima"]
-	path = .vim/pack/plugins/start/lexima
-	url = https://github.com/cohama/lexima.vim
-[submodule ".vim/pack/plugins/start/ragtag"]
-	path = .vim/pack/plugins/start/ragtag
-	url = https://github.com/tpope/vim-ragtag
