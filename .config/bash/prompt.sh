@@ -3,7 +3,7 @@ source ~/.config/bash/ansi.sh
 PROMPT_COLOR=${ANSI_COLOR_BLUE}
 
 current_dir() {
-  basename $PWD
+  basename "$PWD"
 }
 
 git_info() {
