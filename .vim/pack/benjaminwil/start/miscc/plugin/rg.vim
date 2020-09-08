@@ -8,8 +8,15 @@ function! RgProjectSearch()
     return
   endif
 
-  let rg_options = "--max-columns 60 --max-columns-preview --vimgrep"
-  let results = split(system("rg " . rg_options . " '" . regex . "' *"), '\n')
+  let rg_command = "rg --ignore-case
+                     \ --hidden
+                     \ --follow
+                     \ --max-columns-preview
+                     \ --max-columns 40
+                     \ --glob '!{.git,./node_modules,./tmp}'
+                     \ --vimgrep"
+
+  let results = split(system(rg_command . " '" . regex . "' *"), '\n')
 
   if len(results) == 0
     redraw!
