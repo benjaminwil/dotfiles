@@ -78,13 +78,11 @@ scrolling:
   multiplier: 3
 
 linux_shell: &linux_shell
-  program: /home/bw/.nix-profile/bin/tmux
+  program: /bin/bash
   args:
-    - -
-    - new-session
-    - -s
-    - main
-    - -A
+    - -l
+    - -c
+    - "tmux new-session -s main -A"
 
 macos_shell: &macos_shell
   program: /usr/local/bin/bash
