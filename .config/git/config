@@ -7,6 +7,8 @@
   lease = push --force-with-lease
   uncommit = reset --soft HEAD^
   unstage = reset
+[commit]
+  verbose = true
 [core]
   excludesfile = ~/.config/git/excludes
   editor = vim
