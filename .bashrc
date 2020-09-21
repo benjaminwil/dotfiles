@@ -27,6 +27,7 @@ bind '"\e[B": history-search-forward'
 bind '"\C-r": "hist \C-j"'
 bind '"\e[C": forward-char'
 bind '"\e[D": backward-char'
+bind '"\t":   menu-complete'
 
 # prompt
 source ~/.config/bash/prompt.sh
