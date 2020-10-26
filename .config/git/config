@@ -13,6 +13,8 @@
 [core]
   excludesfile = ~/.config/git/excludes
   editor = vim
+[diff]
+  tool = vimdiff
 [format]
   pretty = format:%Cgreen%h %Cblue%ci %Creset%s %Cblue<%aE> %Cred%d
 [init]
