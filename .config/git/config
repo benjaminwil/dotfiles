@@ -1,6 +1,7 @@
 [alias]
   autosquash = rebase -i --autosquash
   ctags = !.git/hooks/ctags
+  brunt = !git checkout "$(git branch | fzy)"
   dull = diff /dev/null
   dulls = !git ls-files --others --exclude-standard | xargs -n 1 git --no-pager diff --color=always /dev/null | less -R
   index = "!sh -c \"git log $1 --color=always | nl -v 0\" -"
