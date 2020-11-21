@@ -29,6 +29,10 @@ bind '"\C-r": "hist \C-j"'
 bind '"\e[C": forward-char'
 bind '"\e[D": backward-char'
 bind '"\t":   menu-complete'
+bind '"\e[Z": menu-complete-backward'
+bind '"\C-t": complete'
+
+set show-all-if-unmodified on
 
 # prompt
 source ~/.config/bash/prompt.sh
