@@ -9,12 +9,10 @@ export VISUAL='vim'
 [ -f /usr/local/etc/bash_completion  ] && . /usr/local/etc/bash_completion
 
 # asdf version manager
-if [ -e $HOME/.asdf/asdf.sh ]; then
-  . $HOME/.asdf/asdf.sh
-fi
+[ -e $HOME/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
 
 # bundler (for ruby)
-source ~/.config/bundler/global.sh
+source $HOME/.config/bundler/global.sh
 
 # nix package manager
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
