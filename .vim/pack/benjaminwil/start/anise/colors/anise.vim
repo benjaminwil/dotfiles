@@ -27,7 +27,7 @@ if &background ==# 'dark'
   hi NonText      cterm=none ctermbg=none ctermfg=3
   hi Number       cterm=none ctermbg=none ctermfg=5
   hi PreProc      cterm=none ctermbg=none ctermfg=7
-  hi Search       cterm=none ctermbg=3 ctermfg=0
+  hi Search       cterm=none ctermbg=3 ctermfg=15
   hi Special      cterm=none ctermbg=none ctermfg=1
   hi SpellCap     cterm=none ctermbg=none ctermfg=3
   hi SpellLocal   cterm=none ctermbg=none ctermfg=none
