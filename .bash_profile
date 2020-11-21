@@ -14,6 +14,9 @@ export VISUAL='vim'
 # bundler (for ruby)
 source $HOME/.config/bundler/global.sh
 
+# macos only
+[[ "$OSTYPE" == "darwin"* ]] && . $HOME/.config/macos/global.sh
+
 # nix package manager
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
   . $HOME/.nix-profile/etc/profile.d/nix.sh
