@@ -8,13 +8,6 @@ set number
 set scrolloff=12
 set wrap
 
-" clipboard
-if has('Darwin')
-  set clipboard+=unnamed,unnamedplus
-else
-  set clipboard=unnamed
-endif
-
 " files
 filetype plugin on
 filetype plugin indent on
