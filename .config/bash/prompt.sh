@@ -8,7 +8,7 @@ current_dir() {
 
 git_info() {
     local GIT_BRANCH=$(git symbolic-ref --short HEAD 2> /dev/null)
-    local GIT_COLOR="${ANSI_COLOR_NORMAL}"
+    local GIT_COLOR="${ANSI_COLOR_CYAN}"
     local GIT_COMMIT=$(git rev-parse --short HEAD 2> /dev/null)
     local GIT_DIR=$(git rev-parse --git-dir 2> /dev/null)
     local GIT_TAG=$(git describe --tags 2> /dev/null)
