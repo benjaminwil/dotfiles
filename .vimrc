@@ -27,9 +27,9 @@ set spellfile=~/.vim/spell/custom.utf-8.add
 set directory=$HOME/.vim/swap/
 
 " tabs
+set autoindent
 set expandtab
-set softtabstop=0
-set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 
 " project-specific vim configuration
