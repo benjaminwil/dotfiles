@@ -24,7 +24,7 @@ syntax on
 set spellfile=~/.vim/spell/custom.utf-8.add
 
 " swap
-set directory=$HOME/.vim/swap//
+set directory=$HOME/.vim/swap/
 
 " tabs
 set expandtab
