@@ -56,15 +56,15 @@ draw_bold_text_with_bright_colors: false
 font:
   user_thin_strokes: true
   normal:
-    family: Operator Mono
-    style: Medium
+    family: JetBrains Mono
+    style: Regular
   bold:
-    family: Operator Mono
+    family: JetBrains Mono
     style: Bold
   italic:
-    family: Operator Mono
+    family: JetBrains Mono
     style: Italic
-  size: 14.0
+  size: 13.0
   offset:
     x: 0
     y: 0
