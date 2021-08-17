@@ -1,5 +1,6 @@
 [alias]
   autosquash = rebase -i --autosquash
+  coauthor = "!f() { git commit --trailer \"Co-Authored-By: $(git shortlog -e -s @~50 | cut -f2 | uniq | fzy)\"; }; f"
   ctags = !.git/hooks/ctags
   brunt = "!f() { git checkout $(git branch --sort=-committerdate | fzy -q "${@:-''}"); }; f"
   dull = diff /dev/null
