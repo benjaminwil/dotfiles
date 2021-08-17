@@ -5,9 +5,9 @@ set cursorline
 set display+=lastline
 set encoding=utf-8
 set fillchars+=vert:\¦
+set nowrap
 set number
 set scrolloff=12
-set wrap
 
 " files
 filetype plugin on
@@ -37,3 +37,7 @@ set exrc
 set secure
 
 set updatetime=100
+
+autocmd BufNewFile,BufRead *.deface set syntax=eruby
+
+autocmd CursorHold * update
