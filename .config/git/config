@@ -1,7 +1,7 @@
 [alias]
   autosquash = rebase -i --autosquash
   ctags = !.git/hooks/ctags
-  brunt = "!f() { git checkout $(git branch | fzy -q "$@"); }; f"
+  brunt = "!f() { git checkout $(git branch --sort=-committerdate | fzy -q "${@:-''}"); }; f"
   dull = diff /dev/null
   dulls = !git ls-files --others --exclude-standard | xargs -n 1 git --no-pager diff --color=always /dev/null | less -R
   index = "!sh -c \"git log $1 --color=always | nl -v 0\" -"
