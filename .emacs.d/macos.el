@@ -1,7 +1,3 @@
-(add-to-list 'default-frame-alist '(height . 100))
-(add-to-list 'default-frame-alist '(width  . 165))
-
-(set-face-attribute 'default nil :height 165)
 (set-face-attribute 'default nil :family "Operator Mono")
 
 (defun copy-from-osx ()
@@ -13,7 +9,10 @@
     (process-send-string proc text)
     (process-send-eof proc))))
 
+(setq frame-resize-pixelwise t)
+
 (setq interprogram-cut-function 'paste-to-osx)
 (setq interprogram-paste-function 'copy-from-osx)
 
 (setq dired-use-ls-dired nil)
+
