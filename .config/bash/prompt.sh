@@ -6,6 +6,14 @@ current_dir() {
   basename "$PWD"
 }
 
+suspended_jobs() {
+  local count=`jobs -s | wc -l | sed -e "s/ //g"`
+
+  if [ $count -ne 0 ]; then
+    echo " $ANSI_COLOR_MAGENTA($count)$ANSI_COLOR_NORMAL"
+  fi
+}
+
 git_info() {
     local GIT_BRANCH=$(git symbolic-ref --short HEAD 2> /dev/null)
     local GIT_COLOR="${ANSI_COLOR_CYAN}"
@@ -46,6 +54,6 @@ ssh_info() {
 }
 
 PS1="
-\[$(ssh_info)\]\[${PROMPT_COLOR}\]\[\$(current_dir)\]\[\$(git_info)\]
+\[$(ssh_info)\]\[${PROMPT_COLOR}\]\[\$(current_dir)\]\[\$(git_info)\]\[\$(suspended_jobs)\]
 \[${PROMPT_COLOR}\]⅋ \[${ANSI_COLOR_NORMAL}\]"
 
