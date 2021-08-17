@@ -12,5 +12,6 @@
 node_modules
 docker-compose.local.yml
 Procfile.local
+public/assets
 vendor/bundle
 web-build/
