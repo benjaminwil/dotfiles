@@ -6,7 +6,6 @@ set statusline+=\ %3{FileType()}
 set statusline+=\ \ %5f
 set statusline+=\ %r%=\ %{Modified()}
 set statusline+=\ %3c\•%1{LineLength()}
-set statusline+=\ %3l\/%1L
 set statusline+=\ \ |
 
 function! FileType()
