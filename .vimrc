@@ -1,3 +1,7 @@
+" encoding
+set encoding=utf-8
+scriptencoding utf-8
+
 " aesthetics
 colorscheme anise
 set background=dark
