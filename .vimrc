@@ -8,7 +8,8 @@ set background=dark
 set cursorline
 set display+=lastline
 set encoding=utf-8
-set fillchars+=vert:\¦
+set fillchars+=vert:\┊
+set listchars=tab:»\ ,trail:▁,extends:…,precedes:…,nbsp:&,eol:¬
 set nowrap
 set number
 set scrolloff=12
