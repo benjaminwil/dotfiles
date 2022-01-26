@@ -15,19 +15,19 @@
   verbose = true
 [core]
   excludesfile = ~/.config/git/excludes
-  editor = vim
+  editor = kak
 [diff]
   tool = vimdiff
 [format]
   pretty = format:%Cgreen%h %Cblue%ad %Creset%<(51,trunc)%s %Cblue<%aE> %Cred%d
 [log]
   date = short
-[merge]
-  conflictstyle = diff3
 [pull]
   rebase = true
 [rebase]
   autosquash = true
+[rerere]
+  enabled = true
 
 # You can add this to your .gitconfig file with this syntax:
 #
