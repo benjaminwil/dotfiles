@@ -1,0 +1,10 @@
+verbosity = 2
+
+[server]
+timeout = 1800
+
+[language.ruby]
+filetypes = ["ruby"]
+roots = ["Gemfile", "*.gemspec"]
+command = "solargraph"
+args = ["stdio"]

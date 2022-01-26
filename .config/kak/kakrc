@@ -1,0 +1,24 @@
+add-highlighter global/ number-lines -hlcursor -min-digits 3 -separator "  "
+add-highlighter global/ regex \h+$ 0:Error
+add-highlighter global/ wrap -width 101 -indent -word -marker ' … '
+
+colorscheme terminal
+
+map global normal -- - ":ranger-choosefiles <ret>"
+
+map global user b ":buffer "
+map global user f ":rg-fzy-file-selector <ret>"
+
+set-option -add global ui_options terminal_padding_char=;
+set-option -add global ui_options terminal_assistant=none
+
+set-option global autoinfo "onkey"
+set-option global indentwidth 2
+set-option global scrolloff 3,6
+set-option global tabstop 2
+
+# `kak-lsp`
+eval %sh{kak-lsp --kakoune --session $kak_session}
+hook global WinSetOption filetype=(ruby) %{
+  lsp-enable-window
+}
