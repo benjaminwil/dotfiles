@@ -39,6 +39,9 @@ nnoremap <leader>fv :call RgFzyFileSearch(':vs')<cr>
 nnoremap <leader>re :call RgFzyGlobSearch(':e')<cr>
 nnoremap <leader>rv :call RgFzyGlobSearch(':vs')<cr>
 
-" <leader>w
-" save current file
-nnoremap <leader>w :w<cr>
+" <leader>t
+" <leader>T
+" Run the RSpec test under cursor (`t`), or the current file (`T`)
+" (.vim/pack/benjaminwil/miscc/testrunner.vim)
+nnoremap <silent> <leader>t :call RSpecRunForCurrentFile(1)<cr>
+nnoremap <silent> <leader>T :call RSpecRunForCurrentFile()<cr>
