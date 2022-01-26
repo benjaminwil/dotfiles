@@ -9,6 +9,7 @@
 .tool-versions
 .Spotlight-V100
 .Trashes
+__pycache__
 node_modules
 docker-compose.local.yml
 Procfile.local
