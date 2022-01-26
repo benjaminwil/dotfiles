@@ -19,8 +19,9 @@ HISTSIZE=-1
 export HISTIGNORE="&:[  ]*:exit:ls:bg:fg:history:clear"
 export PROMPT_COMMAND="history -a"
 
-shopt -s histappend
 shopt -s cmdhist
+shopt -s histappend
+shopt -s globstar
 
 # bindings
 bind '"\e[A": history-search-backward'
