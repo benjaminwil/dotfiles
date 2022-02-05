@@ -1,10 +1,10 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export PATH=$HOME/.scripts:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar:/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.scripts:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar:/bin:$PATH
 export WEECHAT_HOME=$HOME/.config/weechat/
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='kak'
+export VISUAL='kak'
 
 [ -f /usr/local/etc/bash_completion  ] && . /usr/local/etc/bash_completion
 
