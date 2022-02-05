@@ -2,6 +2,7 @@
 *.log
 *.swp
 *#*.*#
+*.kak.*
 .netrwbook
 .netrwhist
 .projections.json
