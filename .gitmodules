@@ -31,3 +31,6 @@
 [submodule ".vim/pack/plugins/start/rails"]
 	path = .vim/pack/plugins/start/rails
 	url = https://github.com/tpope/vim-rails
+[submodule ".config/kak/autoload/ansi"]
+	path = .config/kak/autoload/ansi
+	url = https://github.com/eraserhd/kak-ansi
