@@ -37,4 +37,3 @@ set show-all-if-unmodified on
 
 # prompt
 source ~/.config/bash/prompt.sh
-

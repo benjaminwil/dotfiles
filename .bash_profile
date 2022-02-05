@@ -6,7 +6,7 @@ export WEECHAT_HOME=$HOME/.config/weechat/
 export EDITOR='kak'
 export VISUAL='kak'
 
-[ -f /usr/local/etc/bash_completion  ] && . /usr/local/etc/bash_completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # asdf version manager
 [ -e $HOME/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
@@ -18,15 +18,17 @@ source $HOME/.config/bundler/global.sh
 [[ "$OSTYPE" == "darwin"* ]] && . $HOME/.config/macos/global.sh
 
 # nix package manager
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
-  . $HOME/.nix-profile/etc/profile.d/nix.sh
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]
+then
+    . $HOME/.nix-profile/etc/profile.d/nix.sh
 fi
 
 # private
-if [ -e $HOME/.config/bash/private.sh ]; then
+if [ -e $HOME/.config/bash/private.sh ]
+then
     . $HOME/.config/bash/private.sh
 else
     echo "~/.bashrc: Initializing ~/.config/bash/private.sh 👌" && \
-      touch $HOME/.config/bash/private.sh
+        touch $HOME/.config/bash/private.sh
 fi
 
