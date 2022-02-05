@@ -6,6 +6,26 @@ colorscheme terminal
 
 declare-user-mode ultra
 
+hook global BufWritePre ^[^*].* %{
+    try %{ execute-keys -draft \%s\h+$<ret>d }
+}
+
+# hook global InsertIdle .* %{ execute-keys "<esc>" }
+
+hook global NormalKey .* %{ set-face window PrimaryCursor PrimaryCursor }
+
+hook global WinCreate ^[^*].* %{
+    add-highlighter \
+        window/ number-lines -hlcursor -min-digits 3 -separator " "
+    add-highlighter window/ wrap -width 101 -indent -word -marker ' … '
+}
+
+hook global WinSetOption filetype=(git-commit) %{
+    set-option buffer autowrap_column 72
+    autowrap-enable
+}
+hook global WinSetOption filetype=(ruby) %{ lsp-enable-window }
+
 map global normal <space> ":enter-user-mode ultra <ret>" \
     -docstring "Enter Ultra user mode."
 
