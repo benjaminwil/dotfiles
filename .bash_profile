@@ -32,3 +32,7 @@ else
         touch $HOME/.config/bash/private.sh
 fi
 
+if command -v kcr &> /dev/null
+then
+    PATH="$HOME/.config/kcr/bin/:$PATH"
+fi

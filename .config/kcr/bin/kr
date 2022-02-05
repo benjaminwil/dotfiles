@@ -1,0 +1,17 @@
+#!/bin/sh
+
+. _kinit
+
+set -x
+
+initial_directory="${1}"
+
+
+if [ "$initial_directory" = . ]
+then
+    selection="$(nnn -p -)"
+else
+    selection="$(nnn -p - "$initial_directory")"
+fi
+
+command kcr edit "$selection"

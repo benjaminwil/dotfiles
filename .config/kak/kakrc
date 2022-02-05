@@ -4,10 +4,18 @@ add-highlighter global/ wrap -width 101 -indent -word -marker ' … '
 
 colorscheme terminal
 
-map global normal -- - ":ranger-choosefiles <ret>"
+declare-user-mode ultra
 
-map global user b ":buffer "
-map global user f ":rg-fzy-file-selector <ret>"
+map global normal <space> ":enter-user-mode ultra <ret>" \
+    -docstring "Enter Ultra user mode."
+
+map global ultra b ":buffer <tab>"
+map global ultra d ":connect tmux-repl-vertical kd <ret>"
+map global ultra f ":connect tmux-repl-vertical kf <ret>"
+map global ultra q "| fmt -w %opt{autowrap_column} <ret>"
+map global ultra s ":connect tmux-repl-horizontal <ret>"
+map global ultra v ":connect tmux-repl-vertical <ret>"
+map global ultra w ":connect tmux-repl-window <ret>"
 
 set-option -add global ui_options terminal_padding_char=;
 set-option -add global ui_options terminal_assistant=none
@@ -18,7 +26,7 @@ set-option global scrolloff 3,6
 set-option global tabstop 2
 
 # `kak-lsp`
-eval %sh{kak-lsp --kakoune --session $kak_session}
-hook global WinSetOption filetype=(ruby) %{
-  lsp-enable-window
-}
+eval %sh{ kak-lsp --kakoune --session $kak_session }
+
+# `kcr`
+evaluate-commands %sh{ kcr init kakoune }
