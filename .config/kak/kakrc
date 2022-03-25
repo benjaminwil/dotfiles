@@ -44,11 +44,6 @@ set-option global indentwidth 2
 set-option global scrolloff 3,6
 set-option global tabstop 2
 
-set-option global modelinefmt ''
-set-option -add global modelinefmt ' {{mode_info}} '
-set-option -add global modelinefmt '╷ %val{bufname} ☞ %opt{filetype} ╷'
-set-option -add global modelinefmt ' %val{cursor_char_column}∶?? '
-
 # `kak-lsp`
 eval %sh{ kak-lsp --kakoune --session $kak_session }
 
