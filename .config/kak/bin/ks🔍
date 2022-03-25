@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+. _kinit
+
+filename="$(kcr get --value bufname | jq --raw-output '.[]')"
+
+bundle exec rspec $filename || true
+_kwait

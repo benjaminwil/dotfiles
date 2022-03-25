@@ -2,8 +2,6 @@
 
 . _kinit
 
-set -x
-
 initial_directory="$(dirname "$KAKOUNE_CURRENT_BUFFER")"
 
 kr "${initial_directory/#\~/$HOME}"

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+. _kinit
+
+initial_directory="${1}"
+
+if [ "$initial_directory" = . ]
+then
+    selection="$(nnn -J -)"
+else
+    selection="$(nnn -J - "$initial_directory")"
+fi

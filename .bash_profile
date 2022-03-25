@@ -32,7 +32,7 @@ else
         touch $HOME/.config/bash/private.sh
 fi
 
-if command -v kcr &> /dev/null
+if command -v kak &> /dev/null
 then
-    PATH="$HOME/.config/kcr/bin/:$PATH"
+    PATH="$HOME/.config/kak/bin/:$PATH"
 fi

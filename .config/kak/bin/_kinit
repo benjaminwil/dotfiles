@@ -1,0 +1,11 @@
+#!/bin/sh
+
+[ -z "$KAKOUNE_CLIENT" ] && \
+    echo "Kakoune client is unset."
+[ -z "$KAKOUNE_CURRENT_BUFFER" ] && \
+    echo "Kakoune current buffer is unset."
+[ -z "$KAKOUNE_CURRENT_WORKING_DIRECTORY" ] && \
+    echo "Kakoune current working directory is unset."
+[ -z "$KAKOUNE_SESSION" ] && \
+    echo "Kakoune session is unset." && \
+        exit 1
