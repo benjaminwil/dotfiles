@@ -1,3 +1,13 @@
+declare-option str primary_cursor_focused "bright-black,bright-magenta"
+
+hook global FocusIn .* %{ evaluate-commands %{
+    set-face window PrimaryCursor "%opt{primary_cursor_focused}"
+}}
+
+hook global FocusOut .* %{ evaluate-commands %{
+    set-face window PrimaryCursor Default
+}}
+
 declare-option str black black
 declare-option str gray white
 declare-option str dark bright-black
@@ -18,7 +28,6 @@ declare-option str dimgray bright-black
 declare-option str background %opt{black}
 declare-option str dimmed_background %opt{gray}
 declare-option str foreground %opt{white}
-
 # Reference
 # https://github.com/mawww/kakoune/blob/master/colors/default.kak
 # For code
