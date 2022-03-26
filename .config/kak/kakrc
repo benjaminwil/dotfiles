@@ -23,16 +23,16 @@ map global normal <space> ":enter-user-mode ultra <ret>" \
 
 map global ultra B  ": buffer *<tab>"
 map global ultra b  ": buffer <tab>"
-map global ultra d  ": shackle tmux-repl-vertical kd <ret>"
-map global ultra f  ": shackle tmux-repl-vertical kf <ret>"
+map global ultra d  ": fetter tmux-repl-popup kd <ret>"
+map global ultra f  ": fetter tmux-repl-popup kf <ret>"
 map global ultra q  "| fmt -w %opt{autowrap_column} <ret>"
-map global ultra m  ": shackle tmux-repl-vertical kcp <ret>"
-map global ultra S  ": shackle tmux-repl-vertical ks🔍🔍 <ret>"
-map global ultra s  ": shackle tmux-repl-vertical ks🔍 <ret>"
-map global ultra w  ": shackle tmux-repl-window <ret>"
-map global ultra $  ": shackle tmux-repl-window ks <ret>"
-map global ultra |  ": shackle tmux-repl-vertical <ret>"
-map global ultra \" ": shackle tmux-repl-horizontal <ret>"
+map global ultra m  ": fetter tmux-repl-vertical kcp <ret>"
+map global ultra S  ": fetter tmux-repl-vertical ks🔍🔍 <ret>"
+map global ultra s  ": fetter tmux-repl-vertical ks🔍 <ret>"
+map global ultra w  ": fetter tmux-repl-window <ret>"
+map global ultra $  ": fetter tmux-repl-window ks <ret>"
+map global ultra |  ": fetter tmux-repl-vertical <ret>"
+map global ultra \" ": fetter tmux-repl-horizontal <ret>"
 
 set-option -add global ui_options terminal_padding_char=;
 set-option -add global ui_options terminal_assistant=none
@@ -46,21 +46,3 @@ set-option global tabstop 2
 
 # `kak-lsp`
 eval %sh{ kak-lsp --kakoune --session $kak_session }
-
-define-command shackle \
-    -params 1.. \
-    -command-completion \
-    -docstring 'Run a command as <command> sh -c {shackle} -- [arguments].' \
-    %{
-        %arg{1} sh -c %{
-            export KAKOUNE_CLIENT=$1
-            export KAKOUNE_CURRENT_BUFFER=$2
-            export KAKOUNE_CURRENT_WORKING_DIRECTORY=$3
-            export KAKOUNE_SESSION=$4
-            shift 5
-
-            [ $# = 0 ] && set "$SHELL"
-
-            "$@"
-    } -- %val{client} %val{buffile} %sh{pwd -P} %val{session} %arg{@}
-}
