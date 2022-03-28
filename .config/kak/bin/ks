@@ -1,6 +1,0 @@
-#!/bin/bash
-
-. _kinit
-
-bundle exec rspec || true
-_kwait

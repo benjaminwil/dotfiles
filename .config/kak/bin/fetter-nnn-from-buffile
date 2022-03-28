@@ -1,7 +1,7 @@
 #!/bin/sh
 
-. _kinit
+. fetter_init-check
 
 initial_directory="$(dirname "$KAKOUNE_CURRENT_BUFFER")"
 
-kr "${initial_directory/#\~/$HOME}"
+fetter-nnn "${initial_directory/#\~/$HOME}"

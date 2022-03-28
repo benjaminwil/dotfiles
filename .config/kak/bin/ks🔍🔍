@@ -1,9 +1,0 @@
-#!/bin/bash
-
-. _kinit
-
-filename="$(kcr get --value bufname | jq --raw-output '.[]')"
-line_num="$(kcr get --value cursor_line | jq --raw-output '.[]')"
-
-bundle exec rspec $filename:$line_num || true
-_kwait

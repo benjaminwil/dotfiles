@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. _kinit
+. fetter_init-check
 
 selected_file="$(rg \
     "$KAKOUNE_CURRENT_WORKING_DIRECTORY" --files | \

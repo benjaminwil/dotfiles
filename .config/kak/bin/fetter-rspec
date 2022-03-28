@@ -1,0 +1,6 @@
+#!/bin/bash
+
+. fetter_init-check
+
+bundle exec rspec || true
+fetter_wait-for-user

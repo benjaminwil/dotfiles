@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. _kinit
+. fetter_init-check
 
 initial_directory="${1}"
 
@@ -11,5 +11,5 @@ else
     selection="$(nnn -C -p - "$initial_directory")"
 fi
 
-printf "evaluate-commands -try-client $KAKOUNE_CLIENT -verbatim -- edit! '$selection'" | \
+printf "evaluate-commands -try-client $KAKOUNE_CLIENT -verbatim -- edit! -existing '$selection'" | \
     kak -p $KAKOUNE_SESSION

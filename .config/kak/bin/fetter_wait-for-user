@@ -1,0 +1,11 @@
+#!/bin/sh
+
+message='Press "ctrl-c" to exit.'
+
+read -n1 -p "$message" -r -s response
+while true
+do
+    case $response in
+        *) printf ""
+    esac
+done

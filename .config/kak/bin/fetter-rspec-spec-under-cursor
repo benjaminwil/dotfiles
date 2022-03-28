@@ -1,0 +1,6 @@
+#!/bin/bash
+
+. fetter_init-check
+
+bundle exec rspec $KAKOUNE_CURRENT_BUFFER:$KAKOUNE_CURRENT_CURSOR_LINE || true
+fetter_wait-for-user
