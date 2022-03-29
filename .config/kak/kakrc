@@ -25,7 +25,7 @@ map global normal <space> ":enter-user-mode ultra <ret>" \
 map global ultra B  ": buffer *<tab>"
 map global ultra b  ": buffer <tab>"
 map global ultra d  ": fetter tmux-repl-popup fetter-nnn-from-buffile <ret>"
-map global ultra f  ": fetter tmux-repl-popup fetter-rg-fzy <ret>"
+map global ultra f  ": fetter tmux-repl-vertical fetter-rg-fzy <ret>"
 map global ultra q  "| fmt -w %opt{autowrap_column} <ret>"
 map global ultra S  ": fetter tmux-repl-vertical fetter-rspec-spec-under-cursor <ret>"
 map global ultra s  ": fetter tmux-repl-vertical fetter-rspec-current-buffer <ret>"
