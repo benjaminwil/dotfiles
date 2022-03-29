@@ -31,8 +31,8 @@ map global ultra S  ": fetter tmux-repl-vertical fetter-rspec-spec-under-cursor 
 map global ultra s  ": fetter tmux-repl-vertical fetter-rspec-current-buffer <ret>"
 map global ultra w  ": fetter tmux-repl-window <ret>"
 map global ultra $  ": fetter tmux-repl-window fetter-rspec <ret>"
-map global ultra |  ": fetter tmux-repl-vertical <ret>"
-map global ultra \" ": fetter tmux-repl-horizontal <ret>"
+map global ultra |  ": fetter tmux-repl-horizontal <ret>"
+map global ultra \" ": fetter tmux-repl-vertical <ret>"
 
 set-option -add global ui_options terminal_padding_char=;
 set-option -add global ui_options terminal_assistant=none
