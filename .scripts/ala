@@ -1,7 +1,0 @@
-config=~/.config/alacritty/alacritty.yml
-
-if grep -q \*lite "$config"; then
-    sed -i -e 's/\*lite/\*dark/g' "$config"
-else
-    sed -i -e 's/\*dark/\*lite/g' "$config"
-fi
