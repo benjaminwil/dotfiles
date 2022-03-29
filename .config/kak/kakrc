@@ -3,6 +3,7 @@ colorscheme terminal
 declare-user-mode ultra
 
 hook global BufWritePre ^[^*].* %{
+    # Kill trailing whitespace.
     try %{ execute-keys -draft \%s\h+$<ret>d }
 }
 hook global FocusOut ^[^.git].* %{
