@@ -3,13 +3,13 @@ set encoding=utf-8
 scriptencoding utf-8
 
 " aesthetics
-colorscheme anise
 set background=dark
 set cursorline
 set display+=lastline
 set encoding=utf-8
 set fillchars+=vert:\┊
 set listchars=tab:»\ ,trail:▁,extends:…,precedes:…,nbsp:&,eol:¬
+set nocursorline
 set nowrap
 set number
 set scrolloff=12
@@ -28,9 +28,6 @@ set hlsearch
 syntax on
 set spellfile=~/.vim/spell/custom.utf-8.add
 
-" swap
-set directory=$HOME/.vim/swap/
-
 " tabs
 set autoindent
 set expandtab
@@ -41,11 +38,8 @@ set shiftwidth=2
 set exrc
 set secure
 
+" speedz
 set updatetime=100
-
-autocmd BufNewFile,BufRead *.deface set syntax=eruby
-
-autocmd CursorHold * update
 
 " system clipboard
 function! SetSystemClipboard()
