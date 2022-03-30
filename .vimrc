@@ -46,3 +46,27 @@ set updatetime=100
 autocmd BufNewFile,BufRead *.deface set syntax=eruby
 
 autocmd CursorHold * update
+
+" system clipboard
+function! SetSystemClipboard()
+  if !has("clipboard")
+    echo "Note: This version of Vim doesn't have system clipboard access"
+    return
+  endif
+
+  if has('Darwin')
+    set clipboard+=unnamed,unnamedplus
+  else
+    set clipboard=unnamed
+  endif
+endfunction
+call SetSystemClipboard()
+
+" clear trailing whitespace
+function <SID>RemoveTrailingWhiteSpace()
+    let line = line(".")
+    let column = col(".")
+    keepp %s/\s\+$//e
+    call cursor(line, column)
+endfunction
+autocmd BufWritePre * :call <SID>RemoveTrailingWhiteSpace()

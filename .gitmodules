@@ -1,36 +1,3 @@
-[submodule ".vim/pack/plugins/start/fugitive"]
-	path = .vim/pack/plugins/start/fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/pack/plugins/opt/goyo"]
-	path = .vim/pack/plugins/opt/goyo
-	url = https://github.com/junegunn/goyo.vim
-[submodule ".vim/pack/plugins/opt/languagetool"]
-	path = .vim/pack/plugins/opt/languagetool
-	url = https://github.com/dpelle/vim-LanguageTool
-[submodule ".vim/pack/plugins/start/markdown"]
-	path = .vim/pack/plugins/start/markdown
-	url = https://github.com/tpope/vim-markdown
-[submodule ".vim/pack/plugins/opt/plist"]
-	path = .vim/pack/plugins/opt/plist
-	url = https://github.com/darfink/vim-plist
-[submodule ".vim/pack/plugins/start/polyglot"]
-	path = .vim/pack/plugins/start/polyglot
-	url = https://github.com/sheerun/vim-polyglot
-[submodule ".vim/pack/plugins/start/prettier"]
-	path = .vim/pack/plugins/start/prettier
-	url = https://github.com/prettier/vim-prettier
-[submodule ".vim/pack/plugins/start/rhubarb"]
-	path = .vim/pack/plugins/start/rhubarb
-	url = https://github.com/tpope/vim-rhubarb
-[submodule ".vim/pack/plugins/start/projectionist"]
-	path = .vim/pack/plugins/start/projectionist
-	url = https://github.com/tpope/vim-projectionist
-[submodule ".vim/pack/plugins/start/dispatch"]
-	path = .vim/pack/plugins/start/dispatch
-	url = https://github.com/tpope/vim-dispatch.git
-[submodule ".vim/pack/plugins/start/rails"]
-	path = .vim/pack/plugins/start/rails
-	url = https://github.com/tpope/vim-rails
 [submodule ".config/kak/autoload/ansi"]
 	path = .config/kak/autoload/ansi
 	url = https://github.com/eraserhd/kak-ansi
