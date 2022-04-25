@@ -3,6 +3,7 @@
 *.swp
 *#*.*#
 *.kak.*
+**/vendor/bundle
 .netrwbook
 .netrwhist
 .projections.json
