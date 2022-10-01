@@ -17,10 +17,10 @@ source $HOME/.config/bundler/global.sh
 # macos only
 [[ "$OSTYPE" == "darwin"* ]] && . $HOME/.config/macos/global.sh
 
-# nix package manager
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]
+# nix
+if [ -n "$NIX_PROFILES" ]
 then
-    . $HOME/.nix-profile/etc/profile.d/nix.sh
+    export NIX_SHELL_PRESERVE_PROMPT=1
 fi
 
 # private
