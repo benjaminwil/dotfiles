@@ -57,7 +57,7 @@ git_info() {
 }
 
 ssh_info() {
-    [[ "$SSH_CONNECTION" != '' ]] && echo '%m ' || echo ''
+    [[ "$SSH_CONNECTION" != '' ]] && echo '$(hostname) ' || echo ''
 }
 
 PS1="
