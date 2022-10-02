@@ -2,9 +2,9 @@
 
 . fetter_init-check
 
-selected_file="$(rg \
-    "$KAKOUNE_CURRENT_WORKING_DIRECTORY" --files | \
-        fzy --lines 99)"
+selected_file="$(rg --files | fzy --lines 99)"
+
+[ -z $selected_file ] && exit
 
 printf "evaluate-commands -try-client $KAKOUNE_CLIENT -verbatim -- edit! -existing '$selected_file'" | \
     kak -p $KAKOUNE_SESSION
