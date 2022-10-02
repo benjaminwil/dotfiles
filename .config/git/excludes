@@ -4,6 +4,7 @@
 *#*.*#
 *.kak.*
 **/vendor/bundle
+.env
 .netrwbook
 .netrwhist
 .projections.json
