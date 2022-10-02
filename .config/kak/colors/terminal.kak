@@ -1,12 +1,27 @@
-declare-option str primary_cursor_focused "bright-black,bright-magenta"
+define-command mode-info-colours -hidden \
+%{
+    set-face global StatusLine %sh{
+        eval "set -- $kak_selections_length"
+        if [ $# -eq 1 ]
+        then
+            printf "white,black"
+        else
+            printf "black,bright-magenta"
+        fi
+    }
+}
 
-hook global FocusIn .* %{ evaluate-commands %{
-    set-face window PrimaryCursor "%opt{primary_cursor_focused}"
-}}
+define-command primary-cursor-focused-colours -hidden %{
+    set-face window PrimaryCursor "bright-black,bright-magenta"
+}
 
-hook global FocusOut .* %{ evaluate-commands %{
+define-command primary-cursor-unfocused-colours -hidden %{
     set-face window PrimaryCursor Default
-}}
+}
+
+hook global FocusIn .*   primary-cursor-focused-colours
+hook global FocusOut .*  primary-cursor-unfocused-colours
+hook global RawKey .*    mode-info-colours
 
 declare-option str black black
 declare-option str gray white
@@ -78,8 +93,7 @@ set-face global MenuBackground "bright-white,black"
 set-face global MenuInfo "%opt{orange},%opt{dark}"
 set-face global Information Default
 set-face global Error "%opt{red},%opt{black}"
-set-face global StatusLine "white,black"
-set-face global StatusLineMode Statusline
+set-face global StatusLineMode StatusLine
 set-face global StatusLineInfo StatusLine
 set-face global StatusLineValue StatusLine
 set-face global StatusCursor SecondaryCursor
