@@ -1,8 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 . fetter_init-check
-
-filename="$(kcr get --value bufname | jq --raw-output '.[]')"
 
 bundle exec rspec $KAKOUNE_CURRENT_BUFFER || true
 fetter_wait-for-user
