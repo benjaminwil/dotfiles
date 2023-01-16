@@ -1,3 +1,6 @@
 [submodule ".config/kak/autoload/ansi"]
 	path = .config/kak/autoload/ansi
 	url = https://github.com/eraserhd/kak-ansi
+[submodule ".config/kak/autoload/smarttab"]
+	path = .config/kak/autoload/smarttab
+	url = https://github.com/andreyorst/smarttab.kak
