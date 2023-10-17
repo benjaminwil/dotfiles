@@ -3,6 +3,23 @@ verbosity = 2
 [server]
 timeout = 1800
 
+[language.bash]
+filetypes = ["bash", "sh"]
+roots = [".git", ".hg"]
+command = "bash-language-server"
+args = ["start"]
+
+[language.c_cpp]
+filetypes = ["c", "cpp"]
+roots = ["compile_commands.json", ".clangd", ".git", ".hg"]
+command = "clangd"
+
+[language.go]
+filetypes = ["go"]
+roots = ["Gopkg.toml", "go.mod", ".git", ".hg"]
+command = "gopls"
+settings_section = "gopls"
+
 [language.ruby]
 filetypes = ["ruby"]
 roots = ["Gemfile", "*.gemspec"]
