@@ -8,9 +8,9 @@ initial_directory="${1}"
 
 if [ "$initial_directory" = . ]
 then
-    selection="$(nnn -C -p -)"
+    selection="$(nnn -C -o -p -)"
 else
-    selection="$(nnn -C -p - "$initial_directory")"
+    selection="$(nnn -C -o -p - "$initial_directory")"
 fi
 
 printf "evaluate-commands -try-client $KAKOUNE_CLIENT -verbatim -- edit! -existing '$selection'" | \
