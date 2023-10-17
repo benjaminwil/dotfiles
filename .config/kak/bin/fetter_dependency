@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+. fetter_init-check
+
+executable=$1
+
+error_message="${executable} is not in your PATH"
+
+eval_command="evaluate-commands -try-client $KAKOUNE_CLIENT -verbatim"
+echo_debug="echo -debug '${error_message}'"
+echo_error="echo -markup '{Error}${error_message}'"
+
+command -v "$executable" > /dev/null || \
+    printf "${eval_command} ${echo_error}; ${echo_debug}" | \
+        kak -p $KAKOUNE_SESSION

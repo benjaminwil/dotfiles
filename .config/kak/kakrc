@@ -1,3 +1,9 @@
+evaluate-commands %sh{
+    find -L "$kak_runtime/autoload" -name "*.kak" -exec \
+        sh -c 'echo "try %{ source $1 } \
+             catch %{ echo -debug cannot autoload $1 }"' _ {} \;
+}
+
 colorscheme terminal
 
 declare-user-mode ultra
@@ -27,6 +33,7 @@ map global ultra b  ": buffer <tab>"
 map global ultra d  ": fetter tmux-repl-popup fetter-nnn-from-buffile <ret>"
 map global ultra f  ": fetter tmux-repl-vertical fetter-rg-fzy <ret>"
 map global ultra q  "| fmt -w %opt{autowrap_column} <ret>"
+map global ultra m  ": fetter tmux-repl-vertical fetter-minitest-current-buffer <ret>"
 map global ultra S  ": fetter tmux-repl-vertical fetter-rspec-spec-under-cursor <ret>"
 map global ultra s  ": fetter tmux-repl-vertical fetter-rspec-current-buffer <ret>"
 map global ultra w  ": fetter tmux-repl-window <ret>"
