@@ -46,6 +46,12 @@ hook global WinSetOption filetype=.{0} %{
     remove-highlighter window/line-numbers
 }
 
+# `smarttab`
+#
+hook global ModuleLoaded smarttab %{ set-option global softtabstop 2 }
+hook global WinSetOption filetype=.* expandtab
+hook global WinSetOption filetype=(makefile) smarttab
+
 colorscheme terminal
 
 # Create `ultra` user mode and assign some commonly-used keybindings to it.
