@@ -2,5 +2,8 @@
 
 . fetter_init-check
 
+fetter_dependency ruby
+fetter_dependency bundle
+
 bundle exec rspec $KAKOUNE_CURRENT_BUFFER:$KAKOUNE_CURRENT_CURSOR_LINE || true
 fetter_wait-for-user

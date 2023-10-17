@@ -2,6 +2,8 @@
 
 . fetter_init-check
 
+fetter_dependency nnn
+
 initial_directory="${1}"
 
 if [ "$initial_directory" = . ]

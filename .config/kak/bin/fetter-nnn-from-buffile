@@ -2,6 +2,8 @@
 
 . fetter_init-check
 
+fetter_dependency nnn
+
 initial_directory="$(dirname "$KAKOUNE_CURRENT_BUFFER")"
 
 fetter-nnn "${initial_directory/#\~/$HOME}"
