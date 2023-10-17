@@ -9,5 +9,7 @@ selected_file="$(rg --files | fzy --lines 99)"
 
 [ -z $selected_file ] && exit
 
-printf "evaluate-commands -try-client $KAKOUNE_CLIENT -verbatim -- edit! -existing '$selected_file'" | \
+eval_command="evaluate-commands -try-client $KAKOUNE_CLIENT -verbatim --"
+
+printf "${eval_command} edit! -existing '$selected_file'" | \
     kak -p $KAKOUNE_SESSION
