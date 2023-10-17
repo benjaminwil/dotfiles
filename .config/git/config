@@ -7,6 +7,7 @@
   index = "!sh -c \"git log $1 --color=always | nl -v 0\" -"
   lease = push --force-with-lease
   mob = "!f() { git commit --trailer \"$(git shortlog -e -s @~50 | cut -f2 | uniq | sed -e 's/^/Co-Authored-By: /')\"; }; f"
+  uncommit = "!git reset --soft HEAD~1 && git reset ."
 [commit]
   verbose = true
 [core]
