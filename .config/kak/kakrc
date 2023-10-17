@@ -6,6 +6,10 @@ evaluate-commands %sh{
              catch %{ echo -debug cannot autoload $1 }"' _ {} \;
 }
 
+# Initialize `kak-tree-sitter`.
+#
+eval %sh{ kak-tree-sitter -dks --session $kak_session }
+
 # Initialize  `kak-lsp` and hooks for available LSPs.
 #
 eval %sh{
