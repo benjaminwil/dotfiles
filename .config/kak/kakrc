@@ -1,30 +1,52 @@
+# Load Kakounescripts distributed with Kakoune.
+#
 evaluate-commands %sh{
     find -L "$kak_runtime/autoload" -name "*.kak" -exec \
         sh -c 'echo "try %{ source $1 } \
              catch %{ echo -debug cannot autoload $1 }"' _ {} \;
 }
 
-colorscheme terminal
+# Initialize  `kak-lsp` and hooks for available LSPs.
+#
+eval %sh{
+    command -v kak-lsp &>/dev/null &&
+        kak-lsp --kakoune --session $kak_session
+}
+hook global WinSetOption filetype=(bash|c|cpp|go|ruby|sh) %{
+    lsp-enable-window
+    lsp-auto-hover-enable
+}
 
-declare-user-mode ultra
-
+# Other hooks.
+#
 hook global BufWritePre ^[^*].* %{
     # Kill trailing whitespace.
     try %{ execute-keys -draft \%s\h+$<ret>d }
 }
 hook global FocusOut ^[^.git].* %{
+    # Autosave.
     evaluate-commands %{ write-all }
-}
-hook global WinCreate ^[^*].* %{
-    add-highlighter \
-        window/ number-lines -hlcursor -min-digits 3 -separator "  "
 }
 hook global WinSetOption filetype=(git-commit) %{
     set-option buffer autowrap_column 72
     autowrap-enable
 }
-hook global WinSetOption filetype=(ruby) %{ lsp-enable-window }
+hook global WinSetOption \
+    filetype=(?!git-commit)(?!markdown)(?!txt).* %{
+        add-highlighter window/line-numbers number-lines \
+            -hlcursor \
+            -min-digits 3 \
+            -separator "  "
+}
+hook global WinSetOption filetype=.{0} %{
+    remove-highlighter window/line-numbers
+}
 
+colorscheme terminal
+
+# Create `ultra` user mode and assign some commonly-used keybindings to it.
+#
+declare-user-mode ultra
 map global normal <space> ":enter-user-mode ultra <ret>" \
     -docstring "Enter Ultra user mode."
 
@@ -42,6 +64,8 @@ map global ultra $  ": fetter tmux-repl-window fetter-rspec <ret>"
 map global ultra |  ": fetter tmux-repl-horizontal <ret>"
 map global ultra \" ": fetter tmux-repl-vertical <ret>"
 
+# Built-in options.
+#
 set-option -add global ui_options terminal_padding_char=;
 set-option -add global ui_options terminal_assistant=none
 
@@ -51,6 +75,3 @@ set-option global idle_timeout 500
 set-option global indentwidth 2
 set-option global scrolloff 3,6
 set-option global tabstop 2
-
-# `kak-lsp`
-eval %sh{ kak-lsp --kakoune --session $kak_session }
