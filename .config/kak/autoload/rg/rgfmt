@@ -1,0 +1,87 @@
+#!/usr/bin/env ruby
+
+require "json"
+
+# FIXME: Colors don't seem to work when this output gets displayed in my text
+# editor.
+class String
+  def colorize(color_code)
+    "\e[#{color_code}m#{self}\e[0m"
+  end
+
+  [
+    "red",
+    "green",
+    "yellow",
+    "blue"
+  ].each.with_index(31) do |color, index|
+    define_method(color) { colorize(index) }
+  end
+end
+
+class RGFmt
+  BUFFER = 2
+
+  def initialize(color = "yellow")
+    @color = color
+
+    parse_stdin && remap_results!
+  end
+
+  def render
+    @results.each do |r|
+      padding = max_link - [r[:path], r[:line], r[:column]].map(&:size).sum
+
+      link = [r[:path], ":", r[:line], ":", r[:column]].join
+      spacer = ["\s" * padding, "\s" * BUFFER].join
+      match = r[:preview].strip
+
+      puts [link, spacer, match].join
+    end
+  end
+
+  private
+
+  attr_reader :color
+
+  def max_link
+    @results.map { |r|
+      [r[:path], r[:line], r[:column]].map(&:size).sum
+    }.max
+  end
+
+  def parse_stdin
+    results = []
+
+    ARGF.read.each_line { |line|
+      data = JSON.parse(line)
+      results << data if data["type"] == "match"
+    }
+
+    @results = results
+  end
+
+  def remap_results!
+    @results.map! { |r|
+      data = r["data"]
+      matches = data["submatches"].map { |s| s["match"]["text"] }
+
+      {
+        column: data["absolute_offset"].to_s,
+        line: data["line_number"].to_s,
+        path: data["path"]["text"],
+        preview: data["lines"]["text"]
+      }
+    }
+  end
+
+  def colorize(preview, matches)
+    matches.each do |match|
+      preview.gsub!(match, match.send(color))
+    end
+
+    preview
+  end
+end
+
+RGFmt.new.render
