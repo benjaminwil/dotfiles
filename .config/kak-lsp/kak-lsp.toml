@@ -6,5 +6,5 @@ timeout = 1800
 [language.ruby]
 filetypes = ["ruby"]
 roots = ["Gemfile", "*.gemspec"]
-command = "SOLARGRAPH_GLOBAL_CONFIG=$HOME/kak-lsp/solargraph.yml solargraph"
+command = "solargraph"
 args = ["stdio"]

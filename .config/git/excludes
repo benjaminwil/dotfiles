@@ -8,6 +8,7 @@
 .netrwbook
 .netrwhist
 .projections.json
+.solargraph.yml
 .tags
 .tool-versions
 .Spotlight-V100
