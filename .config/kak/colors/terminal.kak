@@ -19,6 +19,7 @@ define-command primary-cursor-unfocused-colours -hidden %{
     set-face window PrimaryCursor Default
 }
 
+hook global WinCreate .* primary-cursor-focused-colours
 hook global FocusIn .*   primary-cursor-focused-colours
 hook global FocusOut .*  primary-cursor-unfocused-colours
 hook global RawKey .*    mode-info-colours
