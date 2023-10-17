@@ -4,7 +4,6 @@
 alias bx="bundle exec"
 alias dotfiles="command git --git-dir=$HOME/.dotfiles/ \
                             --work-tree=$HOME"
-alias ls="ls -gFGhv"
 alias hist="rg . ~/.bash_history | fzy -l 5 | xargs '\n' bash -ic"
 alias rg="rg -A 3 -B 3"
 
