@@ -1,27 +1,53 @@
+file_watch_support = false
+snippet_support = true
 verbosity = 2
 
 [server]
 timeout = 1800
 
-[language.bash]
+[language_ids]
+c = "c_cpp"
+cpp = "c_cpp"
+javascript = "javascriptreact"
+typescript = "typescriptreact"
+protobuf = "proto"
+sh = "shellscript"
+
+[language_server.bash-language-server]
 filetypes = ["bash", "sh"]
 roots = [".git", ".hg"]
 command = "bash-language-server"
 args = ["start"]
 
-[language.c_cpp]
+[language_server.clangd]
 filetypes = ["c", "cpp"]
 roots = ["compile_commands.json", ".clangd", ".git", ".hg"]
 command = "clangd"
 
-[language.go]
+[language_server.pylsp]
+filetypes = ["python"]
+roots = ["requirements.txt", "setup.py", ".git", ".hg"]
+command = "pylsp"
+offset_encoding = "utf-8"
+
+[language_server.gopls]
 filetypes = ["go"]
 roots = ["Gopkg.toml", "go.mod", ".git", ".hg"]
 command = "gopls"
 settings_section = "gopls"
 
-[language.ruby]
+[language_server.ruby-lsp]
 filetypes = ["ruby"]
 roots = ["Gemfile", "*.gemspec"]
-command = "solargraph"
-args = ["stdio"]
+command = "ruby-lsp"
+
+[language_server.typescript-language-server]
+filetypes = ["javascript", "typescript"]
+roots = ["package.json", "tsconfig.json", "jsconfig.json", ".git", ".hg"]
+command = "typescript-language-server"
+args = ["--stdio"]
+settings_section = "_"
+
+[language_server.typescript-language-server.settings._]
+quotePreference = "double"
+typescript.format.semicolons = "insert"
