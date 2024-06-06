@@ -2,8 +2,10 @@
 
 . fetter_init-check
 
+self="$(realpath "$0")"
+
 fetter_dependency ruby
 fetter_dependency bundle
 
 bundle exec rspec $KAKOUNE_CURRENT_BUFFER || true
-fetter_wait-for-user
+fetter_wait-for-user "$self"

@@ -5,5 +5,7 @@
 fetter_dependency ruby
 fetter_dependency bundle
 
+self="$(realpath "$0")"
+
 bundle exec ruby -I"lib:test" $KAKOUNE_CURRENT_BUFFER || true
-fetter_wait-for-user
+fetter_wait-for-user "$self"

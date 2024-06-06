@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 
-message='Press "ctrl-c" to exit.'
+parent_script="$1"
 
-read -n1 -p "$message" -r -s response
-while true
-do
-    case $response in
-        *) printf ""
-    esac
-done
+read -p $'Press "enter" to re-run. Press "ctrl-c" to exit.\n\n\n' -r
+bash "$parent_script"
