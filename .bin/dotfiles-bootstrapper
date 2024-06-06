@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+# Ignore the future home of the dotfiles repository from the user's home
+# directory.
+#
+echo ".dotfiles" >> $HOME/.gitignore
+
+# Prepare the dotfiles repository locally.
+#
+command git clone --bare \
+    git://github.com/benjaminwil/dotfiles.git \
+    $HOME/.dotfiles
+
+# Create a temporary dotfiles alias until the shell configuration file has been
+# loaded in a new shell with all of the dotfiles installed.
+#
+alias dotfiles="command git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# Bootstrap the dotfiles repository for everyday shell usage.
+#
+dotfiles checkout
+dotfiles config --local status.showUntrackedFiles no
+dotfiles submodule init && dotfiles submodule update
+
+# Bootstrap environment-specific settings based on the detected OS.
+#
+case "$OSTYPE" in
+    darwin*)
+        #sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        echo "FIXME: Bootstrap macOS environment."
+        ;;
+    *)
+        echo "FIXME: Bootstrap Linux environment."
+        ;;
+esac
