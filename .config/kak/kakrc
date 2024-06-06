@@ -57,22 +57,22 @@ colorscheme terminal
 # Create `ultra` user mode and assign some commonly-used keybindings to it.
 #
 declare-user-mode ultra
+
 map global normal <space> ":enter-user-mode ultra <ret>" \
-    -docstring "Enter Ultra user mode."
+   -docstring "Enter Ultra user mode."
 
 map global ultra B  ": buffer *<tab>"
 map global ultra b  ": buffer <tab>"
-map global ultra d  ": fetter tmux-repl-popup fetter-nnn-from-buffile <ret>"
-map global ultra f  ": fetter tmux-repl-vertical fetter-rg-fzy <ret>"
+map global ultra d  ": fetter terminal-popup fetter-nnn-from-buffile <ret>"
+map global ultra f  ": fetter terminal-vertical fetter-rg-fzy <ret>"
 map global ultra q  "| fmt -w %opt{autowrap_column} <ret>"
-map global ultra m  ": fetter tmux-repl-vertical fetter-minitest-current-buffer <ret>"
-map global ultra S  ": fetter tmux-repl-vertical fetter-rspec-spec-under-cursor <ret>"
-map global ultra s  ": fetter tmux-repl-vertical fetter-rspec-current-buffer <ret>"
-map global ultra w  ": fetter tmux-repl-window <ret>"
+map global ultra m  ": fetter terminal-vertical fetter-minitest-current-buffer <ret>"
+map global ultra S  ": fetter terminal-vertical fetter-rspec-spec-under-cursor <ret>"
+map global ultra s  ": fetter terminal-vertical fetter-rspec-current-buffer <ret>"
 map global ultra ?  ": evaluate-commands %{ echo %val{buffile} } <ret>"
-map global ultra $  ": fetter tmux-repl-window fetter-rspec <ret>"
-map global ultra |  ": fetter tmux-repl-horizontal <ret>"
-map global ultra \" ": fetter tmux-repl-vertical <ret>"
+map global ultra $  ": fetter terminal fetter-rspec <ret>"
+map global ultra |  ": fetter terminal-horizontal <ret>"
+map global ultra \" ": fetter terminal-vertical <ret>"
 
 # Built-in options.
 #
