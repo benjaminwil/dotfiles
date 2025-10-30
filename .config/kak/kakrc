@@ -16,9 +16,16 @@ eval %sh{ kak-tree-sitter -dks --session $kak_session }
 eval %sh{ kak-lsp --kakoune --session $kak_session }
 lsp-enable
 
-hook global WinSetOption filetype=(bash|c|cpp|go|python|ruby|sh|typescript|typescript.tsx) %{
+hook global WinSetOption filetype=(bash|c|cpp|go|haskell|python|ruby|sh|typescript|typescript.tsx) %{
     lsp-enable-window
     lsp-auto-hover-enable
+}
+hook -group lsp-filetype-ruby global BufSetOption filetype=ruby %{
+    set-option buffer lsp_servers %{
+        [ruby-lsp]
+        root_globs = ["Gemfile"]
+        args = ["stdio"]
+    }
 }
 
 # Other hooks.
