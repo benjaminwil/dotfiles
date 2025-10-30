@@ -1,6 +1,5 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 export PATH=$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.scripts:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar:$PATH
-export WEECHAT_HOME=$HOME/.config/weechat/
 
 # If the ASDF version manager is installed, integrate it with the shell.
 [ -e $HOME/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
