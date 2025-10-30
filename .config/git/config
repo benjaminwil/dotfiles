@@ -1,6 +1,7 @@
 [alias]
   brunt = "!f() { git checkout $(git branch --sort=-committerdate | fzy -q "${@:-''}"); }; f"
   coauthor = "!f() { git commit --trailer \"Co-Authored-By: $(git shortlog -e -s @~20 | cut -f2 | uniq | fzy)\"; }; f"
+  clean = '!git clean -e "$(git rev-parse --show-toplevel)/scratch" "$@"'
   conflicts = !command $EDITOR $(git diff --name-only --diff-filter=U)
   ctags = !.git/hooks/ctags
   dulls = !git ls-files --others --exclude-standard | xargs -n 1 git --no-pager diff --color=always /dev/null | less -R
