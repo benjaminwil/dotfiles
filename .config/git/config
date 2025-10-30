@@ -17,6 +17,7 @@
   excludesfile = ~/.config/git/excludes
   editor = kak
 [diff]
+  algorithm = histogram
   tool = vimdiff
 [format]
   pretty = format:%Cgreen%h %Cblue%ad %Creset%<(51,trunc)%s %Cblue<%aE> %Cred%d
@@ -27,6 +28,7 @@
 [rebase]
   autosquash = true
 [rerere]
+  autoupdate = true
   enabled = true
 
 # You can add this to your .gitconfig file with this syntax:
