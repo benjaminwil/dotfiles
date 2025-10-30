@@ -124,7 +124,7 @@ define-command soft-wrap-enable %{
     add-highlighter -override buffer/soft-wrap wrap \
         -indent \
         -marker "  \ " \
-        -width 120 \
+        -width 80 \
         -word
 }
 define-command soft-wrap-disable %{ remove-highlighter buffer/soft-wrap }
