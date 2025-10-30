@@ -44,7 +44,7 @@ hook global WinSetOption filetype=(git-commit) %{
 }
 hook global WinSetOption \
     filetype=(?!git-commit)(?!markdown)(?!txt).* %{
-        add-highlighter window/line-numbers number-lines \
+        add-highlighter -override window/line-numbers number-lines \
             -hlcursor \
             -min-digits 3 \
             -separator "  "
