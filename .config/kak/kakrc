@@ -114,6 +114,10 @@ set-option global scrolloff 3,6
 set-option global tabstop 2
 set-option global windowing_placement "horizontal"
 
+define-command copy-relative-path %{
+    evaluate-commands %sh{ printf "$kak_bufname" | pbcopy }
+}
+
 # Add soft-wrap toggler.
 #
 define-command soft-wrap-enable %{
