@@ -1,23 +1,21 @@
+# Set up Homebrew in the shell if it's installed.
 [ -f /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
-[ -f /usr/local/bin/brew ] && eval $(/usr/local/bin/brew shellenv)
 
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]
+# Set up Rust if it's installed via Homebrew.
+if [ -f /opt/homebrew/opt/rustup/bin ]
 then
- #   . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+    export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 fi
 
-if [ -f /opt/homebrew/opt/openjdk@17/bin ]
+# It is sometimes nice to have GNU-like coreutils installed on macOS so `sed` is
+# less weird, and so on.
+if [ -f /opt/homebrew/opt/corutils/libexec/gnubin ]
 then
-    export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+    export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 fi
 
-[ -z "${TERM##*xterm-kitty*}" ] && kitty @ set-window-title "Kitty"
-
-[[ -f "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-
-if shopt -q progcomp && [ -r /opt/homebrew/Cellar/bash-completion/1.3_3/etc/bash_completion ]; then
-    # Source completion code.
-    . /opt/homebrew/Cellar/bash-completion/1.3_3/etc/bash_completion
-fi
-
-export PATH="/opt/homebrew/opt/sphinx-doc/bin:$PATH"
+# In development mode, sometimes Rails gets really made if the following
+# environment variable is missing. More info:
+#
+#   https://stackoverflow.com/questions/52671926/rails-may-have-been-in-progress-in-another-thread-when-fork-was-called
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
