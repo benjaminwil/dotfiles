@@ -1,13 +1,12 @@
 #!/usr/bin/env sh
 
+
 . fetter_init-check
 
 fetter_dependency git
 fetter_dependency fzy
 
-fzy_prompt="   > "
-
-selected_file="$(git status --porcelain | fzy --prompt="${fzy_prompt}" | sed "s/^...//")"
+selected_file="$(git status --porcelain | fzy | awk '{print $2}')"
 
 [ -z $selected_file ] && exit
 
