@@ -33,3 +33,6 @@ set show-all-if-unmodified on
 
 # prompt
 source ~/.config/bash/prompt.sh
+
+# WezTerm integration
+[ "$TERM_PROGRAM" = "WezTerm" ] && . $HOME/.config/shell/wezterm.sh
