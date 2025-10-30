@@ -68,19 +68,38 @@ declare-user-mode ultra
 map global normal <space> ":enter-user-mode ultra <ret>" \
    -docstring "Enter Ultra user mode."
 
+define-command popup -params 1.. %{
+  set-option local windowing_placement "window"
+  evaluate-commands %{ terminal %arg{@} }
+}
+define-command split -params 1.. %{
+  set-option local windowing_placement "horizontal"
+  evaluate-commands %{ terminal %arg{@} }
+}
+define-command vsplit -params 1.. %{
+  set-option local windowing_placement "vertical"
+  evaluate-commands %{ terminal %arg{@} }
+}
+define-command vnew %{
+  evaluate-commands %{ vsplit kak -c %val{session} -e "%arg{@}" }
+}
+define-command newtab -params 1.. %{
+  set-option local windowing_placement "tab"
+  evaluate-commands %{ terminal %arg{@} }
+}
+
 map global ultra B  ": buffer *<tab>"
-map global ultra b  ": buffer <tab>"
-map global ultra d  ": fetter terminal-popup fetter-nnn-from-buffile <ret>"
-map global ultra f  ": fetter terminal-vertical fetter-rg-fzy <ret>"
-map global ultra g  ": fetter terminal-vertical fetter-git-status-files-fzy <ret>"
+map global ultra b  ": buffer "
+map global ultra d  ": fetter popup fetter-nnn-from-buffile <ret>"
+map global ultra f  ": fetter vsplit fetter-rg-fzy <ret>"
+map global ultra g  ": fetter vsplit fetter-git-status-files-fzy <ret>"
 map global ultra q  "| fmt -w %opt{autowrap_column} <ret>"
-map global ultra m  ": fetter terminal-vertical fetter-minitest-current-buffer <ret>"
-map global ultra S  ": fetter terminal-vertical fetter-rspec-spec-under-cursor <ret>"
-map global ultra s  ": fetter terminal-vertical fetter-rspec-current-buffer <ret>"
+map global ultra m  ": fetter vsplit fetter-minitest-current-buffer <ret>"
+map global ultra S  ": fetter vsplit fetter-rspec-spec-under-cursor <ret>"
+map global ultra s  ": fetter vsplit fetter-rspec-current-buffer <ret>"
+map global ultra w  ": delete-buffer! <ret>"
 map global ultra ?  ": evaluate-commands %{ echo %val{buffile} } <ret>"
 map global ultra $  ": fetter terminal fetter-rspec <ret>"
-map global ultra |  ": fetter terminal-horizontal <ret>"
-map global ultra \" ": fetter terminal-vertical <ret>"
 
 # Built-in options.
 #
@@ -93,6 +112,7 @@ set-option global idle_timeout 500
 set-option global indentwidth 2
 set-option global scrolloff 3,6
 set-option global tabstop 2
+set-option global windowing_placement "horizontal"
 
 # Add soft-wrap toggler.
 #
