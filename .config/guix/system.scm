@@ -76,6 +76,7 @@
   ;; And this is where we specify system-side services, including the desktop
   ;; environment and so on.
   (services (append (list
+                     (service bluetooth-service-type)
                      (service boltd-service-type)
                      (service gnome-desktop-service-type)
                      (service xfce-desktop-service-type)
