@@ -34,3 +34,6 @@ else
     echo "~/.bashrc: Initializing ~/.config/bash/private.sh 👌" && \
         touch $HOME/.config/bash/private.sh
 fi
+
+# Source the generic ~/.profile if it exists.
+[ -f "$HOME/.profile" ] && . $HOME/.profile
