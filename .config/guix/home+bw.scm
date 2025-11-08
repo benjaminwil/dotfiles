@@ -10,6 +10,7 @@
   #:use-module (gnu packages rust-apps)
   #:use-module (gnu packages shellutils)
   #:use-module (gnu packages ssh)
+  #:use-module (gnu packages terminals)
   #:use-module (gnu packages text-editors)
   #:use-module (gnu packages version-control)
   #:use-module (gnu services)
@@ -26,6 +27,7 @@
                   icedove
                   kakoune
                   kak-lsp
+                  kitty
                   nnn
                   openssh
                   password-store
