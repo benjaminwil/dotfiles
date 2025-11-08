@@ -14,6 +14,7 @@
   #:use-module (gnu packages version-control)
   #:use-module (gnu services)
   #:use-module (gnu home services desktop)
+  #:use-module (gnu home services sound)
   #:use-module (gnu home services syncthing)
   #:use-module (gnu system shadow))
 
@@ -31,5 +32,7 @@
                   ripgrep
                   senpai))
   (services (list
+             (service home-dbus-service-type)
+             (service home-pipewire-service-type)
              (service home-syncthing-service-type
                       (for-home (syncthing-configuration (user "bw")))))))

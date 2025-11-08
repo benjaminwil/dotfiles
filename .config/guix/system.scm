@@ -16,7 +16,12 @@
              (system private))
 
 (use-package-modules gnome gnome-xyz gnupg gstreamer)
-(use-service-modules desktop linux sddm shepherd xorg)
+(use-service-modules desktop linux sddm shepherd sound xorg)
+
+(define %my-desktop-services
+  (modify-services %desktop-services
+                   (delete pulseaudio-service-type)
+                   (delete alsa-service-type)))
 
 (operating-system
   (kernel linux)
@@ -87,7 +92,7 @@
                      gnome-fractional-scaling-enable-service
                      interception-udevmon-service
                      interception-dual-function-keys-config)
-                    %desktop-services))
+                    %my-desktop-services))
 
   ;; Allows the resolution of `.local` host names with mDNS.
   (name-service-switch %mdns-host-lookup-nss))
