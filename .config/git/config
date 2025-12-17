@@ -23,6 +23,8 @@
   tool = vimdiff
 [format]
   pretty = format:%Cgreen%h %Cblue%ad %Creset%<(51,trunc)%s %Cblue<%aE> %Cred%d
+[init]
+  defaultBranch = main
 [log]
   date = short
 [pull]
