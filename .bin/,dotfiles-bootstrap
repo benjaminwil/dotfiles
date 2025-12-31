@@ -1,4 +1,15 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+#
+# This Bash script will bootstrap the dotfiles on most normalish Linux or Mac
+# OS devices.
+#
+# Example usage:
+#
+#   curl -fsSL \
+#       https://raw.githubusercontent.com/benjaminwil/dotfiles/refs/heads/master/.bin/,dotfiles-bootstrap | \
+#       bash
+#
+echo "Bootstrapping ~benjaminwil's dotfiles..."
 
 # Ignore the future home of the dotfiles repository from the user's home
 # directory.
@@ -11,10 +22,12 @@ command git clone --bare \
     git://github.com/benjaminwil/dotfiles.git \
     $HOME/.dotfiles
 
-# Create a temporary dotfiles alias until the shell configuration file has been
-# loaded in a new shell with all of the dotfiles installed.
+# Create a temporary dotfiles fcuntion until the shell configuration file has
+# been loaded in a new shell with all of the dotfiles installed.
 #
-alias dotfiles="command git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+dotfiles() {
+    command git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
+}
 
 # Bootstrap the dotfiles repository for everyday shell usage.
 #
