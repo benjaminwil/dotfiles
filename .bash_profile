@@ -1,5 +1,5 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-export PATH=$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.scripts:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar:$PATH
+export PATH=$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar:$PATH
 
 # If the ASDF version manager is installed, integrate it with the shell.
 [ -e $HOME/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
