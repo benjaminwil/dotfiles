@@ -17,7 +17,9 @@
   #:use-module (gnu home services desktop)
   #:use-module (gnu home services sound)
   #:use-module (gnu home services syncthing)
-  #:use-module (gnu system shadow))
+
+  #:use-module (gnu system shadow)
+  #:use-module (bwix packages playdate-sdk)
 
 (home-environment
   (packages (list fzy
@@ -35,6 +37,9 @@
                   senpai))
   (services (list
              (service home-dbus-service-type)
+             (service home-playdate-sdk-service-type)
              (service home-pipewire-service-type)
+             (service home-symlink-manager-service-type)
              (service home-syncthing-service-type
-                      (for-home (syncthing-configuration (user "bw")))))))
+                      (for-home (syncthing-configuration (user "bw"))))
+             (service home-xdg-mime-applications-service-type))))

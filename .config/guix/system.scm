@@ -9,6 +9,8 @@
              (nongnu packages linux)
              (nongnu system linux-initrd)
 
+             (bwix packages playdate-sdk)
+
              ;; Local modules I wrote or lifted from other GNU Guix users. :-)
              (system boltd)
              (system gnome-customization)
@@ -86,7 +88,8 @@
                     (list
                      gnome-fractional-scaling-enable-service
                      interception-udevmon-service
-                     interception-dual-function-keys-config)
+                     interception-dual-function-keys-config
+                     (udev-rules-service 'playdate playdate-sdk))
                     %desktop-services))
 
   ;; Allows the resolution of `.local` host names with mDNS.
