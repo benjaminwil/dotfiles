@@ -6,8 +6,10 @@
 
   #:use-module (gnu packages)
   #:use-module (gnu packages admin)
+  #:use-module (gnu packages commencement)
   #:use-module (gnu packages gnupg)
   #:use-module (gnu packages gnuzilla)
+  #:use-module (gnu packages inkscape)
   #:use-module (gnu packages messaging)
   #:use-module (gnu packages password-utils)
   #:use-module (gnu packages rust-apps)
@@ -16,6 +18,8 @@
   #:use-module (gnu packages terminals)
   #:use-module (gnu packages text-editors)
   #:use-module (gnu packages version-control)
+  #:use-module (gnu packages xdisorg)
+
   #:use-module (gnu services)
   #:use-module (gnu home services desktop)
   #:use-module (gnu home services sound)
@@ -28,19 +32,21 @@
 
 (home-environment
   (packages (list fzy
+                  gcc-toolchain
                   ghostty
                   git
                   gnupg
                   htop
                   icedove
+                  inkscape
                   kakoune
                   kak-lsp
-                  kitty
                   nnn
                   openssh
                   password-store
                   ripgrep
-                  senpai))
+                  senpai
+                  wl-clipboard))
   (services (list
              (service home-dbus-service-type)
              (service home-playdate-sdk-service-type)
