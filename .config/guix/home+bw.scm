@@ -20,9 +20,12 @@
 
   #:use-module (gnu system shadow)
   #:use-module (bwix packages playdate-sdk)
+  #:use-module (saayix packages terminals))
+
 
 (home-environment
   (packages (list fzy
+                  ghostty
                   git
                   gnupg
                   htop
