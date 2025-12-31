@@ -1,6 +1,9 @@
 (define-module (guix-home-config)
   #:use-module (gnu home)
   #:use-module (gnu home services)
+  #:use-module (gnu home services symlink-manager)
+  #:use-module (gnu home services xdg)
+
   #:use-module (gnu packages)
   #:use-module (gnu packages admin)
   #:use-module (gnu packages gnupg)
