@@ -50,6 +50,10 @@
                          (type "ext4")
                          (dependencies mapped-devices))
                        (file-system
+                         (device (uuid storage-ext-partition-uuid))
+                         (mount-point "/storage/ext")
+                         (type "ext4"))
+                       (file-system
                          (device (uuid efi-partition-uuid 'fat))
                          (mount-point "/boot/efi")
                          (type "vfat")))
