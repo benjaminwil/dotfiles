@@ -15,11 +15,11 @@
             boltd-configuration?
             boltd-service-type))
 
-
 (define-record-type* <boltd-configuration>
-  boltd-configuration make-boltd-configuration boltd-configuration?
-  (package boltd-configuration-package ; package
-           (default bolt)))
+  boltd-configuration
+  make-boltd-configuration
+  boltd-configuration?
+  (package boltd-configuration-package (default bolt)))
 
 (define (boltd-shepherd-service config)
   (shepherd-service
