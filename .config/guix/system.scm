@@ -13,6 +13,7 @@
 
              ;; Local modules I wrote or lifted from other GNU Guix users. :-)
              (system boltd)
+             (system freetype-font-rendering)
              (system gnome-customization)
              (system interception-config)
              (system private))
@@ -90,6 +91,7 @@
                        (xorg-configuration
                          (keyboard-layout keyboard-layout))))
                     (list
+                     freetype-font-rendering-service
                      gnome-fractional-scaling-enable-service
                      interception-udevmon-service
                      interception-dual-function-keys-config
