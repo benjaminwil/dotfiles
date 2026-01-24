@@ -1,6 +1,8 @@
 ;; -*- mode: scheme; -*-
 
 (use-modules (gnu)
+             (gnu packages audio)
+             (gnu packages linux)
              (gnu services)
              (gnu system nss)
 
@@ -64,10 +66,14 @@
   (swap-devices (list (swap-space
                        (target "/swapfile"))))
 
-  (users (cons (user-account
+  ;; "realtime" is a conventional group for realtime audio processes.
+  (groups (cons* (user-group (name "realtime") (system? #t))
+                %base-groups))
+
+  (users (cons* (user-account
                 (name "bw")
                 (group "users")
-                (supplementary-groups '("wheel" "netdev" "audio" "video")))
+                (supplementary-groups '("wheel" "audio" "netdev" "realtime" "video")))
                %base-user-accounts))
 
   ;; This is where we specify system-wide packages.
@@ -76,6 +82,9 @@
                      gnome-tweaks        ;; Exposes additional Gnome settings.
                      gst-libav           ;; Play web videos in Gnome Web.
                      gvfs                ;; For user mounts.
+
+                     jack-2
+
                      pinentry-tty        ;; For console GPG passphrase entry.
                     )
                     %base-packages))
@@ -86,7 +95,11 @@
                      (service bluetooth-service-type)
                      (service boltd-service-type)
                      (service gnome-desktop-service-type)
-                     (service xfce-desktop-service-type)
+                     (service lxqt-desktop-service-type)
+                     (service pam-limits-service-type
+                              (list
+                               (pam-limits-entry "@realtime" 'both 'rtprio 99)
+                               (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
                      (set-xorg-configuration
                        (xorg-configuration
                          (keyboard-layout keyboard-layout))))
