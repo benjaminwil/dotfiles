@@ -59,7 +59,20 @@ hook global ModuleLoaded smarttab %{ set-option global softtabstop 2 }
 hook global WinSetOption filetype=.* expandtab
 hook global WinSetOption filetype=(makefile) smarttab
 
-colorscheme terminal
+evaluate-commands %sh{
+    system_colourscheme="$(command ,current-system-colours)"
+    case "$system_colourscheme" in
+        light)
+            echo "colorscheme black-on-white"
+            ;;
+        dark)
+            echo "colorscheme terminal"
+            ;;
+        *)
+            echo "colorscheme terminal"
+            ;;
+    esac
+}
 
 # Create `ultra` user mode and assign some commonly-used keybindings to it.
 #

@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+gnome_colours="$(gsettings get org.gnome.desktop.interface color-scheme)"
+if [ -z "$gnome_colours" ]
+then
+  gnome_colours="null"
+fi
+
+case "$gnome_colours" in
+    \'default\')
+        echo "light"
+        ;;
+    \'prefer-dark\')
+        echo "dark"
+        ;;
+    *)
+        echo "unknown"
+        ;;
+esac
