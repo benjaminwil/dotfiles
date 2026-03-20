@@ -1,9 +1,13 @@
 ;; -*- mode: scheme; -*-
 
 (use-modules (gnu)
+             (gnu packages android)
              (gnu packages audio)
              (gnu packages linux)
              (gnu services)
+             (gnu services containers)
+             (gnu services networking)
+             (gnu system accounts)
              (gnu system nss)
 
              (guix utils)
@@ -66,14 +70,18 @@
   (swap-devices (list (swap-space
                        (target "/swapfile"))))
 
+  ;; "adbusers" and "plugdev" are for Android device connectivity via ADB, and
   ;; "realtime" is a conventional group for realtime audio processes.
   (groups (cons* (user-group (name "realtime") (system? #t))
+                 (user-group (name "adbusers") (system? #t))
+                 (user-group (name "plugdev") (system? #t))
                 %base-groups))
 
   (users (cons* (user-account
                 (name "bw")
                 (group "users")
-                (supplementary-groups '("wheel" "audio" "netdev" "realtime" "video")))
+                (supplementary-groups
+                 '("wheel" "adbusers" "audio" "cgroup" "netdev" "plugdev" "realtime" "video")))
                %base-user-accounts))
 
   ;; This is where we specify system-wide packages.
@@ -108,7 +116,8 @@
                      gnome-fractional-scaling-enable-service
                      interception-udevmon-service
                      interception-dual-function-keys-config
-                     (udev-rules-service 'playdate playdate-sdk))
+                     (udev-rules-service 'playdate playdate-sdk)
+                     (udev-rules-service 'android android-udev-rules))
                     %desktop-services))
 
   ;; Allows the resolution of `.local` host names with mDNS.
