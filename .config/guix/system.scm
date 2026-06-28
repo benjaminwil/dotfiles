@@ -7,6 +7,7 @@
              (gnu services)
              (gnu services containers)
              (gnu services networking)
+             (gnu services pm)
              (gnu system accounts)
              (gnu system nss)
 
@@ -19,6 +20,7 @@
 
              ;; Local modules I wrote or lifted from other GNU Guix users. :-)
              (system boltd)
+             (system framework-wakeup-devices)
              (system freetype-font-rendering)
              (system gnome-customization)
              (system interception-config)
@@ -29,9 +31,11 @@
 
 (operating-system
   (kernel linux)
+  (kernel-arguments
+    (append '("nvme.noacpi=1")
+            %default-kernel-arguments))
   (initrd microcode-initrd)
   (firmware (list linux-firmware amdgpu-firmware))
-
   (host-name "slipped")
   (timezone "America/Vancouver")
   (locale "en_US.utf8")
@@ -81,7 +85,15 @@
                 (name "bw")
                 (group "users")
                 (supplementary-groups
-                 '("wheel" "adbusers" "audio" "cgroup" "netdev" "plugdev" "realtime" "video")))
+                 '("wheel"
+                   "adbusers"
+                   "audio"
+                   "cgroup"
+                   "kvm"
+                   "netdev"
+                   "plugdev"
+                   "realtime"
+                   "video")))
                %base-user-accounts))
 
   ;; This is where we specify system-wide packages.
@@ -102,12 +114,18 @@
   (services (append (list
                      (service bluetooth-service-type)
                      (service boltd-service-type)
+                     (service framework-wakeup-service-type)
                      (service gnome-desktop-service-type)
                      (service lxqt-desktop-service-type)
                      (service pam-limits-service-type
                               (list
                                (pam-limits-entry "@realtime" 'both 'rtprio 99)
                                (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
+                     (service tlp-service-type
+                      (tlp-configuration
+                       (runtime-pm-on-ac "on")
+                       (runtime-pm-on-bat "auto")
+                       (runtime-pm-all? #t)))
                      (set-xorg-configuration
                        (xorg-configuration
                          (keyboard-layout keyboard-layout))))
