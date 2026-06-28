@@ -14,10 +14,15 @@ suspended_jobs() {
   fi
 }
 
-nix_shell_info() {
+shell_env_info() {
   if [ -n "$IN_NIX_SHELL" ]
   then
     printf "${ANSI_COLOR_YELLOW}★${ANSI_COLOR_NORMAL} "
+  fi
+
+  if [ -n "$GUIX_ENVIRONMENT" ]
+  then
+    printf "${ANSI_COLOR_CYAN}★${ANSI_COLOR_NORMAL} "
   fi
 }
 
@@ -61,5 +66,5 @@ ssh_info() {
 }
 
 PS1="
-\[$(nix_shell_info)\]\[$(ssh_info)\]\[${PROMPT_COLOR}\]\[\$(current_dir)\]\[\$(git_info)\]\[\$(suspended_jobs)\]
+\[$(shell_env_info)\]\[$(ssh_info)\]\[${PROMPT_COLOR}\]\[\$(current_dir)\]\[\$(git_info)\]\[\$(suspended_jobs)\]
 \[${PROMPT_COLOR}\]⅋ \[${ANSI_COLOR_NORMAL}\]"
