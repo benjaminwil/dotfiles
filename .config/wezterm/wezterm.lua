@@ -13,13 +13,13 @@ wezterm.on('format-window-title', formats.window_title)
 local font = {
   normal = wezterm.font({
     family = 'JetBrains Mono',
-    weight = 'Regular',
+    weight = 'Light',
   }),
   bold = wezterm.font({
     family = 'JetBrains Mono',
-    weight = 'Medium',
+    weight = 'Bold',
   }),
-  size = 12
+  size = 10
 }
 
 config.adjust_window_size_when_changing_font_size = false
