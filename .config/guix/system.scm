@@ -99,6 +99,11 @@
   ;; This is where we specify system-wide packages.
   (packages (append (list
                      bibata-cursor-theme ;; Self-explanatory, I think.
+
+                     ;; Ensure the Bolt package is available so that udev
+                     ;; rules are installed and so on.
+                     bolt
+
                      gnome-tweaks        ;; Exposes additional Gnome settings.
                      gst-libav           ;; Play web videos in Gnome Web.
                      gvfs                ;; For user mounts.
