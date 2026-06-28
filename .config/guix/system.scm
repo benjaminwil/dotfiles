@@ -126,6 +126,7 @@
                               (list
                                (pam-limits-entry "@realtime" 'both 'rtprio 99)
                                (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
+                     (service iptables-service-type)
                      (service tlp-service-type
                       (tlp-configuration
                        (runtime-pm-on-ac "on")
