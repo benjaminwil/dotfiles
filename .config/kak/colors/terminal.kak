@@ -1,4 +1,8 @@
-define-command mode-info-colours -hidden \
+# FIXME: If I want to change colorschemes whenever I want during a session,
+# I need to override the commands I'm defining in this file. That leads me to
+# believe that the whole pattern of defining commands in here is a bad one.
+#
+define-command mode-info-colours -override -hidden \
 %{
     set-face global StatusLine %sh{
         eval "set -- $kak_selections_length"
@@ -11,11 +15,11 @@ define-command mode-info-colours -hidden \
     }
 }
 
-define-command primary-cursor-focused-colours -hidden %{
+define-command primary-cursor-focused-colours -override -hidden %{
     set-face window PrimaryCursor "bright-black,bright-magenta"
 }
 
-define-command primary-cursor-unfocused-colours -hidden %{
+define-command primary-cursor-unfocused-colours -override -hidden %{
     set-face window PrimaryCursor Default
 }
 
