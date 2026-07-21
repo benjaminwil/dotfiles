@@ -46,7 +46,8 @@
                   password-store
                   ripgrep
                   senpai
-                  wl-clipboard))
+                  wl-clipboard
+                  xdg-utils))
   (services (list
              (service home-dbus-service-type)
              (service home-playdate-sdk-service-type)
