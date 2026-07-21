@@ -31,9 +31,6 @@
 
 (operating-system
   (kernel linux)
-  (kernel-arguments
-    (append '("nvme.noacpi=1")
-            %default-kernel-arguments))
   (initrd microcode-initrd)
   (firmware (list linux-firmware amdgpu-firmware))
   (host-name "slipped")
