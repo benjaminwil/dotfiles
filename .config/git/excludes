@@ -4,6 +4,7 @@
 *.kak.*
 *.log
 *.swp
+*~
 .Spotlight-V100
 .Trashes
 .env
