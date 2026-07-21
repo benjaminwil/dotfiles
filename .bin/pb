@@ -1,13 +1,14 @@
 #! /bin/sh
-# A copy and paste command for X11, Wayland, Termux, and macOS.
-# https://github.com/dbohdan/pb
-# License: MIT
+#
+# A copy and paste command for X11, Wayland, Termux, and macOS based on pb by
+# dbohdan. (https://github.com/dbohdan/pb; License: MIT.)
 set -eu
+
+# Program version.
+version='0.2.1'
 
 cmd=$(basename "$0")
 action=''
-# Program version.
-version='0.2.0'
 
 usage() {
     me=$cmd
@@ -143,7 +144,7 @@ elif [ -n "${WAYLAND_DISPLAY:-}" ] && command -v wl-copy >/dev/null 2>&1 && comm
     esac
 
     if [ "$action" = copy ]; then
-        exec wl-copy $wl_flag
+        exec wl-copy $wl_flag >/dev/null 2>&1
     else
         exec wl-paste $wl_flag
     fi
