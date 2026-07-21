@@ -118,7 +118,6 @@
                      (service boltd-service-type)
                      (service framework-wakeup-service-type)
                      (service gnome-desktop-service-type)
-                     (service lxqt-desktop-service-type)
                      (service pam-limits-service-type
                               (list
                                (pam-limits-entry "@realtime" 'both 'rtprio 99)
