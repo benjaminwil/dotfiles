@@ -9,7 +9,7 @@ define-command get-filetype-for-modeline -hidden \
 define-command get-cursor-line-length -hidden \
 %{
     set-option buffer cursor_line_length %sh{
-        [ -f $kak_buffile ] && \
+        [ -f "$kak_buffile" ] && \
             awk -v c=$kak_cursor_line "{if(NR==c) print (length)}" "$kak_buffile"
     }
 }
