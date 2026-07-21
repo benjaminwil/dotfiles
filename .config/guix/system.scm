@@ -131,10 +131,7 @@
                       (tlp-configuration
                        (runtime-pm-on-ac "on")
                        (runtime-pm-on-bat "auto")
-                       (runtime-pm-all? #t)))
-                     (set-xorg-configuration
-                       (xorg-configuration
-                         (keyboard-layout keyboard-layout))))
+                       (runtime-pm-all? #t))))
                     (list
                      freetype-font-rendering-service
                      gnome-fractional-scaling-enable-service
