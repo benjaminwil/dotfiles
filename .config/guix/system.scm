@@ -79,7 +79,20 @@
                 %base-groups))
 
   (users (cons* (user-account
-                (name "bw")
+                (name redacted-username-primary)
+                (group "users")
+                (supplementary-groups
+                 '("wheel"
+                   "adbusers"
+                   "audio"
+                   "cgroup"
+                   "kvm"
+                   "netdev"
+                   "plugdev"
+                   "realtime"
+                   "video")))
+                (user-account
+                (name redacted-username-secondary)
                 (group "users")
                 (supplementary-groups
                  '("wheel"
@@ -125,8 +138,8 @@
                      (service iptables-service-type)
                      (service rootless-podman-service-type
                       (rootless-podman-configuration
-                       (subuids (list (subid-range (name "bw") (start 100000) (count 65536))))
-                       (subgids (list (subid-range (name "bw") (start 100000) (count 65536))))))
+                       (subuids (list (subid-range (name redacted-username-primary) (start 100000) (count 65536))))
+                       (subgids (list (subid-range (name redacted-username-primary) (start 100000) (count 65536))))))
                      (service tlp-service-type
                       (tlp-configuration
                        (runtime-pm-on-ac "on")
