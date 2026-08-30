@@ -16,10 +16,19 @@ echo "Bootstrapping ~benjaminwil's dotfiles..."
 #
 echo ".dotfiles" >> $HOME/.gitignore
 
+# Cloning the dotfiles to the $HOME directory would overwrite files that may
+# already exist.
+#
+if [ -e "$HOME/.bash_profile" ]; then
+    existing_bash_profile_backup_destination="$HOME/bash_profile_$(date -u -I)"
+    echo "Backing up $HOME/.bash_profile to $existing_bash_profile_backup_destination..."
+    mv "$HOME/.bash_profile" "$existing_bash_profile_backup_destination"
+fi
+
 # Prepare the dotfiles repository locally.
 #
 command git clone --bare \
-    git://github.com/benjaminwil/dotfiles.git \
+    https://github.com/benjaminwil/dotfiles.git \
     $HOME/.dotfiles
 
 # Create a temporary dotfiles fcuntion until the shell configuration file has
