@@ -6,6 +6,12 @@ define-command autosave-all-buffers \
     -hidden \
 %{ evaluate-commands %{ write-all } }
 
+define-command copy-buffer-contents \
+    -docstring "Copies the open buffer's contents to the system clipboard." \
+%{
+  execute-keys \%<a-|> pbcopy<ret>\; %val{cursor_line}gh %val{cursor_char_column}l
+}
+
 define-command copy-relative-path \
     -docstring "Uses the pbcopy executable to copy the current relative path to the system clipboard." \
 %{ evaluate-commands %sh{ printf "$kak_bufname" | pbcopy } }
