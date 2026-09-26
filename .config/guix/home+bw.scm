@@ -1,7 +1,10 @@
 (define-module (guix-home-config)
   #:use-module (gnu home)
   #:use-module (gnu home services)
+  #:use-module (gnu home services desktop)
+  #:use-module (gnu home services sound)
   #:use-module (gnu home services symlink-manager)
+  #:use-module (gnu home services syncthing)
   #:use-module (gnu home services xdg)
 
   #:use-module (gnu packages)
@@ -22,20 +25,27 @@
   #:use-module (gnu packages xdisorg)
 
   #:use-module (gnu services)
-  #:use-module (gnu home services desktop)
-  #:use-module (gnu home services sound)
-  #:use-module (gnu home services syncthing)
 
   #:use-module (gnu system shadow)
+
+  #:use-module (bwix packages foliate)
   #:use-module (bwix packages playdate-sdk)
-  #:use-module (saayix packages terminals))
+
+  #:use-module (nongnu packages mozilla)
+
+  #:use-module (saayix packages terminals)
+
+  #:use-module (system private))
 
 
 (home-environment
-  (packages (list fzy
+  (packages (list firefox
+                  foliate
+                  fzy
                   gcc-toolchain
                   ghostty
                   git
+                  git-absorb
                   gnupg
                   htop
                   icedove
@@ -47,6 +57,7 @@
                   password-store
                   ripgrep
                   senpai
+                  tig
                   wl-clipboard
                   xdg-utils))
   (services (list
@@ -55,5 +66,10 @@
              (service home-pipewire-service-type)
              (service home-symlink-manager-service-type)
              (service home-syncthing-service-type
-                      (for-home (syncthing-configuration (user "bw"))))
-             (service home-xdg-mime-applications-service-type))))
+                      (for-home (syncthing-configuration
+				 (user redacted-username-primary))))
+             (service home-xdg-mime-applications-service-type
+                      (home-xdg-mime-applications-configuration
+                       (default
+                         '((text/html . "firefox.desktop")
+                           (x-scheme-handler/https . "firefox.desktop"))))))))
