@@ -25,3 +25,4 @@ vendor/bundle
 web-build/
 screenrc
 scratch
+.gem_path
