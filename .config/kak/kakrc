@@ -16,6 +16,10 @@ hook global KakBegin .* %{
     set-option global windowing_placement "horizontal"
 
     load-local-config
+
+    lsp-enable
+    lsp-enable-window
+    lsp-auto-hover-enable
 }
 
 # Match the system colorscheme (either dark or light).
@@ -55,12 +59,7 @@ hook global KakBegin .* %{
     set-option global idle_timeout 500
 }
 
-# Configure the Kakoune LSP for commonly used filetypes.
-hook global WinSetOption filetype=(bash|c|cpp|go|haskell|python|ruby|sh|typescript|typescript.tsx) %{
-    lsp-enable
-    lsp-enable-window
-    lsp-auto-hover-enable
-}
+# Configure the Kakoune LSP for Ruby.
 hook -group lsp-filetype-ruby global BufSetOption filetype=ruby %{
     set-option buffer lsp_servers %{
         [ruby-lsp]
@@ -99,7 +98,6 @@ hook global WinSetOption \
     filetype=(?!git-commit)(?!markdown)(?!txt).* %{ line-numbers-show }
 hook global WinSetOption \
     filetype=.{0} %{ line-numbers-hide }
-
 
 # Configure the smarttab plugin for various commonly used filetypes.
 hook global ModuleLoaded smarttab %{ set-option global softtabstop 2 }
