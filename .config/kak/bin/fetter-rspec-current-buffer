@@ -7,5 +7,5 @@ self="$(realpath "$0")"
 fetter_dependency ruby
 fetter_dependency bundle
 
-bundle exec rspec $KAKOUNE_CURRENT_BUFFER || true
+bundle exec rspec "$(kak_current_buffer)" || true
 fetter_wait-for-user "$self"

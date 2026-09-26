@@ -4,6 +4,6 @@
 
 fetter_dependency nnn
 
-initial_directory="$(dirname "$KAKOUNE_CURRENT_BUFFER")"
+initial_directory="$(dirname "$(kak_current_buffer)")"
 
 fetter-nnn "${initial_directory/#\~/$HOME}"
