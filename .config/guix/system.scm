@@ -24,7 +24,8 @@
              (system freetype-font-rendering)
              (system gnome-customization)
              (system interception-config)
-             (system private))
+             (system private)
+             (system substitutes))
 
 (use-package-modules gnome gnome-xyz gnupg gstreamer)
 (use-service-modules desktop linux sddm shepherd sound xorg)
@@ -150,6 +151,7 @@
                      gnome-fractional-scaling-enable-service
                      interception-udevmon-service
                      interception-dual-function-keys-config
+                     nonguix-substitutes-service
                      (udev-rules-service 'playdate playdate-sdk)
                      (udev-rules-service 'android android-udev-rules))
                     %desktop-services))
