@@ -1,0 +1,60 @@
+#!/usr/bin/env sh
+
+if [ $(id -u) = 0 ]; then
+    user_dir="/home/$SUDO_USER"
+else
+    user_dir="$HOME"
+fi
+
+command="${1:-help}"
+loadpath="$user_dir/.config/guix"
+
+help_action () {
+    echo "my-guix:"
+    echo "  This script stores commonly repeated guix commands that are a pain to type out."
+    echo
+    echo "Usage:"
+    echo "  my-guix [command]"
+    echo
+    echo "Valid commands:"
+    echo "  help:     this message."
+    echo "  home:     guix home reconfigure with local loadpaths."
+    echo "  pull:     guix pull with local loadpaths."
+    echo "  system:   guix system reconfigure with local loadpaths. (Requires sudo.)"
+    echo
+}
+
+home_action () {
+    guix home reconfigure -L "$loadpath" "$loadpath/home+bw.scm"
+}
+
+pull_action () {
+    guix pull -L="$loadpath"
+}
+
+system_action () {
+    if ! [ $(id -u) = 0 ]; then
+       echo "The my-guix system command needs to be run with sudo." >&2
+       exit 1
+    fi
+
+    guix system reconfigure -L "$loadpath" "$loadpath/system.scm"
+}
+
+case "$command" in
+    help*)
+        help_action
+        ;;
+    home*)
+        home_action
+        ;;
+    pull*)
+        pull_action
+        ;;
+    system*)
+        system_action
+        ;;
+    *)
+        help_action
+        ;;
+esac
