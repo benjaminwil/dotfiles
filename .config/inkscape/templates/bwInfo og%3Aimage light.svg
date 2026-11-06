@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="1200"
+   height="630"
+   viewBox="0 0 1200 630"
+   sodipodi:docname="og:image+light.png"
+   inkscape:export-filename="og:image+light.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Channel Painting"
+       id="filter39"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         id="feColorMatrix37" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="SourceGraphic"
+         result="colormatrix2"
+         id="feColorMatrix38" />
+      <feFlood
+         flood-color="rgb(0,63,145)"
+         flood-opacity="1"
+         result="flood"
+         id="feFlood38" />
+      <feComposite
+         in2="colormatrix2"
+         operator="out"
+         result="composite1"
+         id="feComposite38" />
+      <feMerge
+         result="merge"
+         id="feMerge39">
+        <feMergeNode
+           in="colormatrix1"
+           id="feMergeNode38" />
+        <feMergeNode
+           in="composite1"
+           id="feMergeNode39" />
+      </feMerge>
+      <feComposite
+         in="merge"
+         in2="SourceGraphic"
+         operator="in"
+         result="fbSourceGraphic"
+         id="feComposite39" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix39" />
+      <feColorMatrix
+         id="feColorMatrix40"
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix41"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="fbSourceGraphic"
+         result="colormatrix2" />
+      <feFlood
+         id="feFlood41"
+         flood-color="rgb(0,63,145)"
+         flood-opacity="1"
+         result="flood" />
+      <feComposite
+         id="feComposite41"
+         in2="colormatrix2"
+         operator="out"
+         result="composite1" />
+      <feMerge
+         id="feMerge41"
+         result="merge">
+        <feMergeNode
+           id="feMergeNode41"
+           in="colormatrix1" />
+        <feMergeNode
+           id="feMergeNode42"
+           in="composite1" />
+      </feMerge>
+      <feComposite
+         id="feComposite42"
+         in="merge"
+         in2="fbSourceGraphic"
+         operator="in"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix45" />
+      <feColorMatrix
+         id="feColorMatrix46"
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix47"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="fbSourceGraphic"
+         result="colormatrix2" />
+      <feFlood
+         id="feFlood47"
+         flood-color="rgb(0,63,145)"
+         flood-opacity="1"
+         result="flood" />
+      <feComposite
+         id="feComposite47"
+         in2="colormatrix2"
+         operator="out"
+         result="composite1" />
+      <feMerge
+         id="feMerge47"
+         result="merge">
+        <feMergeNode
+           id="feMergeNode47"
+           in="colormatrix1" />
+        <feMergeNode
+           id="feMergeNode48"
+           in="composite1" />
+      </feMerge>
+      <feComposite
+         id="feComposite48"
+         in="merge"
+         in2="fbSourceGraphic"
+         operator="in"
+         result="composite2" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Channel Painting"
+       id="filter60">
+      <feColorMatrix
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         id="feColorMatrix58" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="SourceGraphic"
+         result="colormatrix2"
+         id="feColorMatrix59" />
+      <feFlood
+         flood-color="rgb(240,230,140)"
+         flood-opacity="1"
+         result="flood"
+         id="feFlood59" />
+      <feComposite
+         in2="colormatrix2"
+         operator="out"
+         result="composite1"
+         id="feComposite59" />
+      <feMerge
+         result="merge"
+         id="feMerge60">
+        <feMergeNode
+           in="colormatrix1"
+           id="feMergeNode59" />
+        <feMergeNode
+           in="composite1"
+           id="feMergeNode60" />
+      </feMerge>
+      <feComposite
+         in="merge"
+         in2="SourceGraphic"
+         operator="in"
+         result="fbSourceGraphic"
+         id="feComposite60" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix60" />
+      <feColorMatrix
+         id="feColorMatrix61"
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix62"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="fbSourceGraphic"
+         result="colormatrix2" />
+      <feFlood
+         id="feFlood62"
+         flood-color="rgb(240,230,140)"
+         flood-opacity="1"
+         result="flood" />
+      <feComposite
+         id="feComposite62"
+         in2="colormatrix2"
+         operator="out"
+         result="composite1" />
+      <feMerge
+         id="feMerge62"
+         result="merge">
+        <feMergeNode
+           id="feMergeNode62"
+           in="colormatrix1" />
+        <feMergeNode
+           id="feMergeNode63"
+           in="composite1" />
+      </feMerge>
+      <feComposite
+         id="feComposite63"
+         in="merge"
+         in2="fbSourceGraphic"
+         operator="in"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix63" />
+      <feColorMatrix
+         id="feColorMatrix64"
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix65"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="fbSourceGraphic"
+         result="colormatrix2" />
+      <feFlood
+         id="feFlood65"
+         flood-color="rgb(240,230,140)"
+         flood-opacity="1"
+         result="flood" />
+      <feComposite
+         id="feComposite65"
+         in2="colormatrix2"
+         operator="out"
+         result="composite1" />
+      <feMerge
+         id="feMerge65"
+         result="merge">
+        <feMergeNode
+           id="feMergeNode65"
+           in="colormatrix1" />
+        <feMergeNode
+           id="feMergeNode66"
+           in="composite1" />
+      </feMerge>
+      <feComposite
+         id="feComposite66"
+         in="merge"
+         in2="fbSourceGraphic"
+         operator="in"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix66" />
+      <feColorMatrix
+         id="feColorMatrix67"
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix68"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="fbSourceGraphic"
+         result="colormatrix2" />
+      <feFlood
+         id="feFlood68"
+         flood-color="rgb(240,230,140)"
+         flood-opacity="1"
+         result="flood" />
+      <feComposite
+         id="feComposite68"
+         in2="colormatrix2"
+         operator="out"
+         result="composite1" />
+      <feMerge
+         id="feMerge68"
+         result="merge">
+        <feMergeNode
+           id="feMergeNode68"
+           in="colormatrix1" />
+        <feMergeNode
+           id="feMergeNode69"
+           in="composite1" />
+      </feMerge>
+      <feComposite
+         id="feComposite69"
+         in="merge"
+         in2="fbSourceGraphic"
+         operator="in"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix69" />
+      <feColorMatrix
+         id="feColorMatrix70"
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix71"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="fbSourceGraphic"
+         result="colormatrix2" />
+      <feFlood
+         id="feFlood71"
+         flood-color="rgb(240,230,140)"
+         flood-opacity="1"
+         result="flood" />
+      <feComposite
+         id="feComposite71"
+         in2="colormatrix2"
+         operator="out"
+         result="composite1" />
+      <feMerge
+         id="feMerge71"
+         result="merge">
+        <feMergeNode
+           id="feMergeNode71"
+           in="colormatrix1" />
+        <feMergeNode
+           id="feMergeNode72"
+           in="composite1" />
+      </feMerge>
+      <feComposite
+         id="feComposite72"
+         in="merge"
+         in2="fbSourceGraphic"
+         operator="in"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix72" />
+      <feColorMatrix
+         id="feColorMatrix73"
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix74"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="fbSourceGraphic"
+         result="colormatrix2" />
+      <feFlood
+         id="feFlood74"
+         flood-color="rgb(240,230,140)"
+         flood-opacity="1"
+         result="flood" />
+      <feComposite
+         id="feComposite74"
+         in2="colormatrix2"
+         operator="out"
+         result="composite1" />
+      <feMerge
+         id="feMerge74"
+         result="merge">
+        <feMergeNode
+           id="feMergeNode74"
+           in="colormatrix1" />
+        <feMergeNode
+           id="feMergeNode75"
+           in="composite1" />
+      </feMerge>
+      <feComposite
+         id="feComposite75"
+         in="merge"
+         in2="fbSourceGraphic"
+         operator="in"
+         result="composite2" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Channel Painting"
+       id="filter77"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         id="feColorMatrix75" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="SourceGraphic"
+         result="colormatrix2"
+         id="feColorMatrix76" />
+      <feFlood
+         flood-color="rgb(240,230,140)"
+         flood-opacity="1"
+         result="flood"
+         id="feFlood76" />
+      <feComposite
+         in2="colormatrix2"
+         operator="out"
+         result="composite1"
+         id="feComposite76" />
+      <feMerge
+         result="merge"
+         id="feMerge77">
+        <feMergeNode
+           in="colormatrix1"
+           id="feMergeNode76" />
+        <feMergeNode
+           in="composite1"
+           id="feMergeNode77" />
+      </feMerge>
+      <feComposite
+         in="merge"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite2"
+         id="feComposite77" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Channel Painting"
+       id="filter79"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         id="feColorMatrix77" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="SourceGraphic"
+         result="colormatrix2"
+         id="feColorMatrix78" />
+      <feFlood
+         flood-color="rgb(240,230,140)"
+         flood-opacity="1"
+         result="flood"
+         id="feFlood78" />
+      <feComposite
+         in2="colormatrix2"
+         operator="out"
+         result="composite1"
+         id="feComposite78" />
+      <feMerge
+         result="merge"
+         id="feMerge79">
+        <feMergeNode
+           in="colormatrix1"
+           id="feMergeNode78" />
+        <feMergeNode
+           in="composite1"
+           id="feMergeNode79" />
+      </feMerge>
+      <feComposite
+         in="merge"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite2"
+         id="feComposite79" />
+      <feColorMatrix
+         id="feColorMatrix79" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Channel Painting"
+       id="filter82"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         values="0.636885"
+         type="saturate"
+         result="colormatrix1"
+         id="feColorMatrix80" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -5.15576 10 6.8038 -9.37203 0 "
+         in="SourceGraphic"
+         result="colormatrix2"
+         id="feColorMatrix81" />
+      <feFlood
+         flood-color="rgb(0,63,145)"
+         flood-opacity="1"
+         result="flood"
+         id="feFlood81" />
+      <feComposite
+         in2="colormatrix2"
+         operator="out"
+         result="composite1"
+         id="feComposite81" />
+      <feMerge
+         result="merge"
+         id="feMerge82">
+        <feMergeNode
+           in="colormatrix1"
+           id="feMergeNode81" />
+        <feMergeNode
+           in="composite1"
+           id="feMergeNode82" />
+      </feMerge>
+      <feComposite
+         in="merge"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite2"
+         id="feComposite82" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.39859076"
+     inkscape:cx="500.51336"
+     inkscape:cy="329.91232"
+     inkscape:current-layer="g1" />
+  <rect
+     style="fill:#eecdbe;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+     id="rect48"
+     width="1200"
+     height="630"
+     x="-1.7699127e-06"
+     y="-1.0819763e-07"
+     inkscape:label="Background" />
+  <g
+     id="g79"
+     style="filter:url(#filter82)"
+     inkscape:label="Color Channel Filter Group">
+    <g
+       id="g1"
+       inkscape:label="Foreground" />
+  </g>
+  <inkscape:templateinfo>
+    <inkscape:name>bwInfo og:image light</inkscape:name>
+    <inkscape:author>benjamin wil</inkscape:author>
+    <inkscape:date>2026-11-06</inkscape:date>
+  </inkscape:templateinfo>
+</svg>
