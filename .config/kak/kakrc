@@ -54,8 +54,9 @@ hook global KakBegin .* %{
 
 # Set Kakoune UI options.
 hook global KakBegin .* %{
-    set-option -add global ui_options terminal_padding_char=;
     set-option -add global ui_options terminal_assistant=none
+    set-option -add global ui_options terminal_padding_char=;
+    set-option -add global ui_options terminal_set_title=no;
     set-option global idle_timeout 500
 }
 
