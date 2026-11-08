@@ -59,6 +59,7 @@
                   senpai
                   tig
                   wl-clipboard
+                  wofi
                   xdg-utils))
   (services (list
              (service home-dbus-service-type)
