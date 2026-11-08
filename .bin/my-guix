@@ -41,6 +41,10 @@ system_action () {
 
     pull_action
     guix system reconfigure -L "$loadpath" "$loadpath/system.scm"
+
+    echo "DONE!"
+    echo "Recommendation:"
+    echo "  Run 'my-guix home' after system reconfiguration. Sometimes system reconfiguration overrides bespoke home settings."
 }
 
 case "$command" in
