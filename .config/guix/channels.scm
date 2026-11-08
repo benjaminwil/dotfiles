@@ -5,8 +5,10 @@
 
       (channel
         (name 'saayix)
-        (branch "main")
         (url "https://codeberg.org/look/saayix")
+        (branch "main")
+        (commit
+         "26bb1d0d253d3288a80effc9ea2784fdf0fff662")
         (introduction
         (make-channel-introduction
           "12540f593092e9a177eb8a974a57bb4892327752"
@@ -18,7 +20,7 @@
         (url "https://gitlab.com/nonguix/nonguix")
         (branch "master")
         (commit
-          "bf39542ca537fde8839b209ac21d6f3254469b15")
+          "25226c35c150f03d469b0c855d10b2402a094bc1")
         (introduction
           (make-channel-introduction
             "897c1a470da759236cc11798f4e0a5f7d4d59fbc"
@@ -30,7 +32,7 @@
         (url "https://codeberg.org/guix/guix.git")
         (branch "master")
         (commit
-          "d1e9e23fd441fce828fa74616271b00b90853cee")
+          "1f56cdd4deba7ed6210e6232d172b10dfe4e5a6e")
         (introduction
           (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"
