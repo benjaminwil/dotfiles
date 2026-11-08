@@ -35,7 +35,7 @@
   (initrd microcode-initrd)
   (firmware (list linux-firmware amdgpu-firmware))
   (host-name "slipped")
-  (timezone "America/Vancouver")
+  (timezone "Etc/GMT+7")
   (locale "en_US.utf8")
   (keyboard-layout (keyboard-layout "us" "altgr-intl"))
 
