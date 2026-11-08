@@ -24,12 +24,13 @@ help_action () {
     echo
 }
 
-home_action () {
-    guix home reconfigure -L "$loadpath" "$loadpath/home+bw.scm"
+pull_action () {
+    guix pull -C "${loadpath}/channels.scm"
 }
 
-pull_action () {
-    guix pull -L="$loadpath"
+home_action () {
+    pull_action
+    guix home reconfigure -L "$loadpath" "$loadpath/home+bw.scm"
 }
 
 system_action () {
@@ -38,6 +39,7 @@ system_action () {
        exit 1
     fi
 
+    pull_action
     guix system reconfigure -L "$loadpath" "$loadpath/system.scm"
 }
 
